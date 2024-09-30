@@ -1,0 +1,1157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UI_PasswordConfirmNotMatch" xml:space="preserve">
+    <value>Confirm password does not match new password</value>
+  </data>
+  <data name="RoleNameNotUnique" xml:space="preserve">
+    <value>Role name must be unique.</value>
+  </data>
+  <data name="UserAccountUserIdNotUnique" xml:space="preserve">
+    <value>User ID already exists for user(s): </value>
+  </data>
+  <data name="UserAccountUserIdOutOfBounds" xml:space="preserve">
+    <value>User ID must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountUserIdRequired" xml:space="preserve">
+    <value>User ID is required.</value>
+  </data>
+  <data name="UserAccountLastNameOutOfBounds" xml:space="preserve">
+    <value>Last name must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountLastNameRequired" xml:space="preserve">
+    <value>Last name is required.</value>
+  </data>
+  <data name="DispensingSystemCustomerIdRequired" xml:space="preserve">
+    <value>Customer ID is required.</value>
+  </data>
+  <data name="DispensingSystemIdRequired" xml:space="preserve">
+    <value>System ID is required.</value>
+  </data>
+  <data name="DispensingSystemWebBrowserAuthenticationMethodInvalidValue" xml:space="preserve">
+    <value>Web browser authentication method only supports username and password.</value>
+  </data>
+  <data name="EmailAddressPatternInvalidValue" xml:space="preserve">
+    <value>Email address format must be "xx@xx.xx", e.g. "name@place.com".</value>
+  </data>
+  <data name="UserAccountPasswordRequired" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="UserAccountEmailAddressOutOfBounds" xml:space="preserve">
+    <value>Credentials must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountFirstNameOutOfBounds" xml:space="preserve">
+    <value>First name must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountInitialsOutOfBounds" xml:space="preserve">
+    <value>Initials must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountPasswordOutOfBounds" xml:space="preserve">
+    <value>Password must not exceed {5} characters.</value>
+  </data>
+  <data name="FacilityNameNotUnique" xml:space="preserve">
+    <value>Facility name must be unique.</value>
+  </data>
+  <data name="UserAccountPasswordAgeRule" xml:space="preserve">
+    <value>The password cannot be changed within {0} day(s) of previous change.</value>
+  </data>
+  <data name="UserAccountPasswordDoesNotMatch" xml:space="preserve">
+    <value>Current password is invalid.</value>
+  </data>
+  <data name="UserAccountPasswordLengthRule" xml:space="preserve">
+    <value>Password must contain at least {0} characters.</value>
+  </data>
+  <data name="UserAccountPasswordStrengthRule" xml:space="preserve">
+    <value>Password must contain at least {0} characters each from {1} of the following categories: upper case, lower case, numbers, special characters.</value>
+  </data>
+  <data name="UserAccountPasswordUniquenessRule" xml:space="preserve">
+    <value>Password must be different than previous {0} passwords.</value>
+  </data>
+  <data name="UserAccountConsoleUserIdNotUniqueFormat" xml:space="preserve">
+    <value>"{0}" already exists at {1} please change username or uncheck these consoles.</value>
+  </data>
+  <data name="DispensingSystemCustomerNameRequired" xml:space="preserve">
+    <value>Customer name is required.</value>
+  </data>
+  <data name="UserAccountPasswordRule" xml:space="preserve">
+    <value>The password must not exceed 127 characters.</value>
+  </data>
+  <data name="UserAccountUserNameIdPasswordNoMatchRule" xml:space="preserve">
+    <value>Password cannot be same as user ID, first or last name.</value>
+  </data>
+  <data name="RoleTemporaryRuleAlreadyAssigned" xml:space="preserve">
+    <value>Failed to check "Available for Temporary User" role with name '{0}' because role with that name is already assigned to user.  Please check "Available for Temporary User."</value>
+  </data>
+  <data name="UserAccountPasswordExpired" xml:space="preserve">
+    <value>User password has expired.</value>
+  </data>
+  <data name="UserAccountPasswordNoSpaceRule" xml:space="preserve">
+    <value>Password must not start or end with space character.</value>
+  </data>
+  <data name="FacilityTimeZoneIdRequired" xml:space="preserve">
+    <value>Time zone ID is required.</value>
+  </data>
+  <data name="EncounterLocationAssignedPatientCareAreaRequired" xml:space="preserve">
+    <value>Assigned patient care area is required.</value>
+  </data>
+  <data name="SystemBusTypeMustCabinetController" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (MEDMAINCABCTRL1).</value>
+  </data>
+  <data name="SystemBusDeviceTypeMustBeCabinet" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (MEDMAINCAB1)</value>
+  </data>
+  <data name="StorageSpaceTypeMustBeAux" xml:space="preserve">
+    <value>Storage space type equals "{0}" but must be (MEDAUXCAB1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubie" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEPKT1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeMiniTray" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (MINITRAY1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeMatrixDrawer" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (FLLMTRXDRWR1).</value>
+  </data>
+  <data name="DispensingDeviceContainsLoadedItems" xml:space="preserve">
+    <value>Dispensing device "{0}" contains loaded or pending items.</value>
+  </data>
+  <data name="StorageSpaceMustBeADrawerType" xml:space="preserve">
+    <value>Storage space type "{0}" is not allowed. Must be drawer type.</value>
+  </data>
+  <data name="StorageSpaceMustBeACabinetType" xml:space="preserve">
+    <value>Storage space "{0}" must be (MEDMAINCAB1) type.</value>
+  </data>
+  <data name="SystemBusDeviceTypeMustBeADrawer" xml:space="preserve">
+    <value>System bus device record "{0}" must be drawer type.</value>
+  </data>
+  <data name="StorageSpaceMustBeARemoteStockType" xml:space="preserve">
+    <value>Storage space "{0}" must be (REMOTESTOCK1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeAnAuxiliary" xml:space="preserve">
+    <value>Storage space "{0}" must be auxiliary type.</value>
+  </data>
+  <data name="InventoryEarliestNextExpirationDateLessThanCurrentDate" xml:space="preserve">
+    <value>Earliest next expiration date must not be less than current date.</value>
+  </data>
+  <data name="InventoryLoadQuantityGreaterThanZero" xml:space="preserve">
+    <value>Load quantity must be greater than or equal to zero.</value>
+  </data>
+  <data name="InventoryLoadQuantityLessThanMax" xml:space="preserve">
+    <value>Load quantity must be less than or equal to max.</value>
+  </data>
+  <data name="ItemScanCodeItemRequired" xml:space="preserve">
+    <value>Item is required.</value>
+  </data>
+  <data name="ItemScanCodeScanCodeOutOfBounds" xml:space="preserve">
+    <value>Barcode must not exceed '{5}' characters.</value>
+  </data>
+  <data name="ItemScanCodeScanCodeRequired" xml:space="preserve">
+    <value>Barcode is required.</value>
+  </data>
+  <data name="ItemScanCodeScanCodeNotUnique" xml:space="preserve">
+    <value>Barcode must be unique.</value>
+  </data>
+  <data name="ItemDisplayNameOutOfBounds" xml:space="preserve">
+    <value>Display name must not exceed {5} characters.</value>
+  </data>
+  <data name="ItemIdOutOfBounds" xml:space="preserve">
+    <value>Item ID must not exceed {5} characters.</value>
+  </data>
+  <data name="ItemIdRequired" xml:space="preserve">
+    <value>Item ID is required.</value>
+  </data>
+  <data name="MedItemBrandNameOutOfBounds" xml:space="preserve">
+    <value>Brand name must not exceed {5} characters.</value>
+  </data>
+  <data name="MedItemDosageFormRequired" xml:space="preserve">
+    <value>Dosage form is required.</value>
+  </data>
+  <data name="MedItemGenericNameOutOfBounds" xml:space="preserve">
+    <value>Generic name must not exceed {5} characters.</value>
+  </data>
+  <data name="MedItemGenericNameRequired" xml:space="preserve">
+    <value>Generic name is required.</value>
+  </data>
+  <data name="ItemIdNotUnique" xml:space="preserve">
+    <value>Item ID must be unique.</value>
+  </data>
+  <data name="DosageFormCodeNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="MedicationClassCodeNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="SecurityGroupDisplayCodeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="TherapeuticClassCodeNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="HazardousWasteClassDisplayCodeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="HazardousWasteClassDisposalInstructionsOutOfBounds" xml:space="preserve">
+    <value>Disposal instructions must not exceed {5} characters.</value>
+  </data>
+  <data name="UnitOfMeasureDisplayCodeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="OverrideGroupDisplayCodeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="AreaNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="PickAreaNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="RegistrationFingerprintDeviceTimedOutLatent" xml:space="preserve">
+    <value>Please lift and replace finger after every scan.</value>
+    <comment>{0} replace with Environment.NewLine</comment>
+  </data>
+  <data name="RegistrationFingerprintMismatch" xml:space="preserve">
+    <value>Fingerprint does not match previous scan.</value>
+    <comment>{0} replace with Environment.NewLine</comment>
+  </data>
+  <data name="RegistrationFingerprintSpoofError" xml:space="preserve">
+    <value>Spoofed finger found.</value>
+    <comment>{0} replace with Environment.NewLine</comment>
+  </data>
+  <data name="SignInFailure_InvalidUserId" xml:space="preserve">
+    <value>Invalid username.</value>
+  </data>
+  <data name="ZoneNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="RolePermissionSecurityGroupApplicableRuleFormat" xml:space="preserve">
+    <value>One or more security groups are being associated with permission "{0}" which does not support security groups.</value>
+  </data>
+  <data name="RolePermissionRequired" xml:space="preserve">
+    <value>Permission is required within role permission.</value>
+  </data>
+  <data name="FacilityItemRequired" xml:space="preserve">
+    <value>Item is required.</value>
+  </data>
+  <data name="LoginFingerprintMismatch" xml:space="preserve">
+    <value>Unable to verify fingerprint identification.</value>
+    <comment>Replace {0} with Environment.Newline.</comment>
+  </data>
+  <data name="LoginFingerprintSpoofError" xml:space="preserve">
+    <value>Spoofed finger found.</value>
+  </data>
+  <data name="ItemExternalKeyFacilityKeyRule" xml:space="preserve">
+    <value>External system key or facility key is required.</value>
+  </data>
+  <data name="FacilityItemFacilityKeyStandaloneRule" xml:space="preserve">
+    <value>Facility key is required when adding item.</value>
+  </data>
+  <data name="SignedInUserCannotWitness" xml:space="preserve">
+    <value>Witness cannot be the same as signed-in user.</value>
+  </data>
+  <data name="UserCannotWitness" xml:space="preserve">
+    <value>Insufficient privilege. User cannot act as witness.</value>
+  </data>
+  <data name="CriticalOverridePeriodEndTimeOfDayOutOfBounds" xml:space="preserve">
+    <value>End time of day must be between {3} and {5} minutes.</value>
+  </data>
+  <data name="CriticalOverridePeriodStartTimeOfDayOutOfBounds" xml:space="preserve">
+    <value>Start time of day must be between {3} and {5} minutes.</value>
+  </data>
+  <data name="DispensingDeviceAutoCriticalOverrideDurationOutOfBounds" xml:space="preserve">
+    <value>Auto-critical override duration must be greater than or equal to {3} minute(s).</value>
+  </data>
+  <data name="DispensingDeviceComputerNameOutOfBounds" xml:space="preserve">
+    <value>Computer name must not exceed {5} characters.</value>
+  </data>
+  <data name="DispensingDeviceEmptyReturnBinTimoutDurationOutOfBounds" xml:space="preserve">
+    <value>Empty return bin time-out must be between {3} and {5} seconds.</value>
+  </data>
+  <data name="DispensingDeviceMenuTimoutDurationOutOfBounds" xml:space="preserve">
+    <value>Menu time-out must be between {3} and {5} seconds.</value>
+  </data>
+  <data name="DispensingDeviceOpenDrawerTimeoutDurationOutOfBounds" xml:space="preserve">
+    <value>Open drawer time-out must be between {3} and {5} seconds.</value>
+  </data>
+  <data name="FingerprintNotRegistered" xml:space="preserve">
+    <value>This user cannot witness.{0}User has not registered fingerprint.</value>
+  </data>
+  <data name="DispensingDeviceNameNotUnique" xml:space="preserve">
+    <value>Dispensing device name must be unique.</value>
+  </data>
+  <data name="AuthenticationFingerprintDeviceTimedOutLatent" xml:space="preserve">
+    <value>Please lift and replace finger.</value>
+  </data>
+  <data name="WitnessAuthenticationFailed" xml:space="preserve">
+    <value>Witness authentication failed. </value>
+  </data>
+  <data name="DeviceNotConfigured" xml:space="preserve">
+    <value>Device is not configured to use. Only support user can sign in.</value>
+  </data>
+  <data name="AreaFacilityRequired" xml:space="preserve">
+    <value>Facility is required.</value>
+  </data>
+  <data name="AreaUnitFacilityMustBeSame" xml:space="preserve">
+    <value>Area and unit must belong to same facility.</value>
+  </data>
+  <data name="UnitFacilityRequired" xml:space="preserve">
+    <value>Facility is required.</value>
+  </data>
+  <data name="UnitNameNotUnique" xml:space="preserve">
+    <value>Unit name must be unique.</value>
+  </data>
+  <data name="StorageSpaceHalfHeightCubie1Module" xml:space="preserve">
+    <value>Two half-height cubie drawers already occupy this position.</value>
+  </data>
+  <data name="StorageSpaceTypeMustBeHalfHeightCubieModule" xml:space="preserve">
+    <value>Storage space "{0}" must be (HALFHTCUBIEMOD1) type.</value>
+  </data>
+  <data name="ItemScanCodeScanCodeVerifyRuleFormat" xml:space="preserve">
+    <value>Barcode "{0}" cannot be verified by same user that created association.</value>
+  </data>
+  <data name="ItemLoadedOrPendedCannotDeleteFormat" xml:space="preserve">
+    <value>Item "{0}" is identified to be pended and/or loaded or in a return bin and therefore cannot be deleted.</value>
+  </data>
+  <data name="DispensingDeviceUpgradeTimeOfDayOutOfBounds" xml:space="preserve">
+    <value>Upgrade time of day must be between {3} and {5} minutes.</value>
+  </data>
+  <data name="StorageSpaceMustBeExternalReturnBin" xml:space="preserve">
+    <value>Storage space "{0}" must be (GENERALEXTRETBIN1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeInternalReturnBin" xml:space="preserve">
+    <value>Storage space "{0}" must be (INTMATRIXRETBIN1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeAMatrixDrawer" xml:space="preserve">
+    <value>Storage space "{0}" must be (MTRXDRWR1) type.</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubieDrawer1" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEDRWR1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubieDrawer2" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEDRWR2).</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubieModule2" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEMDL2).</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubiePkt1" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEPKT1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubiePkt2" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEPKT2).</value>
+  </data>
+  <data name="SystemBusTypeMustBeCubieRow2" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (CUBIEROW2).</value>
+  </data>
+  <data name="SystemBusTypeMustBeMiniDrawer" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (MINIDRWR1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeMiniPkt" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (MINIDRWRPKT1).</value>
+  </data>
+  <data name="StorageSpaceMustBeACubie1Drawer" xml:space="preserve">
+    <value>Storage space "{0}" must be (CUBIEDRWR1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeACubie2Drawer" xml:space="preserve">
+    <value>Storage space "{0}" must be (CUBIEDRWR2) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeAMiniDrawer" xml:space="preserve">
+    <value>Storage space "{0}" must be (MINIDRWR1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeACubie1Pocket" xml:space="preserve">
+    <value>Storage space "{0}" must be (CUBIEPKT1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeACubie2Pocket" xml:space="preserve">
+    <value>Storage space "{0}" must be (CUBIEPKT2) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeAMiniPocket" xml:space="preserve">
+    <value>Storage space "{0}" must be (MINIDRWRPKT1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeAMiniTray" xml:space="preserve">
+    <value>Storage space "{0}" must be (MINITRAY1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeMedMainCab" xml:space="preserve">
+    <value>Storage space "{0}" must be (MEDMAINCAB1) type.</value>
+  </data>
+  <data name="ClinicalDataSubjectDescriptionRequired" xml:space="preserve">
+    <value>Clinical data subject description is required.</value>
+  </data>
+  <data name="ClinicalDataSubjectTitleRequired" xml:space="preserve">
+    <value>Clinical data subject title is required.</value>
+  </data>
+  <data name="ClinicalDataSubjectTitleNotUnique" xml:space="preserve">
+    <value>Clinical data subject title must be unique.</value>
+  </data>
+  <data name="UserAccountPasswordComplexityRule" xml:space="preserve">
+    <value>Password must contain at least:</value>
+  </data>
+  <data name="UserAccountPasswordComplexityRuleDigit" xml:space="preserve">
+    <value> {0} digit(s) (0-9)</value>
+    <comment>There is space appended at the start of string</comment>
+  </data>
+  <data name="UserAccountPasswordComplexityRuleLowerCase" xml:space="preserve">
+    <value> {0} lower case letters (a-z)</value>
+    <comment>There is space appended at the start of string</comment>
+  </data>
+  <data name="UserAccountPasswordComplexityRuleSpecialChars" xml:space="preserve">
+    <value> {0} non-alphabetic characters (such as !, $, #, %)</value>
+    <comment>There is space appended at the start of string</comment>
+  </data>
+  <data name="UserAccountPasswordComplexityRuleUpperCase" xml:space="preserve">
+    <value> {0} upper case letters (A -Z)</value>
+    <comment>There is space appended at the start of string</comment>
+  </data>
+  <data name="StorageSpaceIsLoaded" xml:space="preserve">
+    <value>Storage space type "{0}" with position ID "{1}" is currently loaded.</value>
+  </data>
+  <data name="UserAccountDomainPasswordComplexityRule" xml:space="preserve">
+    <value>Password must contain at least 3 of the following 4 character groups:</value>
+  </data>
+  <data name="DomainUserChangePasswordNotSupported" xml:space="preserve">
+    <value>Corporate password cannot be changed through this application.</value>
+  </data>
+  <data name="PasswordComplianceError" xml:space="preserve">
+    <value>Password error.</value>
+  </data>
+  <data name="FacilityCodeNotUnique" xml:space="preserve">
+    <value>Facility code must be unique.</value>
+  </data>
+  <data name="StorageSpaceMustBeTallAux" xml:space="preserve">
+    <value>Storage space "{0}" must be (MEDTALLAUXCAB1) type.</value>
+  </data>
+  <data name="StorageSpaceMustBeSRM" xml:space="preserve">
+    <value>Storage space "{0}" must be (SMRTREMOTEMGR1) type.</value>
+  </data>
+  <data name="SystemBusTypeMustBeSRM" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (SMRTRMTMGR1).</value>
+  </data>
+  <data name="SystemBusTypeMustBeTallAux" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (MEDTALLAUXCAB1).</value>
+  </data>
+  <data name="StorageSpaceMustBeTallAuxDoor" xml:space="preserve">
+    <value>Storage space type equal "{0}" but must be (TALLAUXDOOR1).</value>
+  </data>
+  <data name="SystemBusDeviceMustBeTallAuxDoor" xml:space="preserve">
+    <value>System bus device type equals "{0}" but must be (TALLAUXDOOR1).</value>
+  </data>
+  <data name="ItemScanCodeScanCodeItemNotFound" xml:space="preserve">
+    <value>Item for barcode specified was not found.</value>
+  </data>
+  <data name="UserAccountLegacyPasswordRule" xml:space="preserve">
+    <value>Password must not exceed 8 characters.</value>
+  </data>
+  <data name="Global_CodeOutOfBounds" xml:space="preserve">
+    <value>Code must not exceed {5} characters.</value>
+  </data>
+  <data name="Global_CodeRequired" xml:space="preserve">
+    <value>Code is required.</value>
+  </data>
+  <data name="Global_DescriptionOutOfBounds" xml:space="preserve">
+    <value>Description must not exceed {5} characters.</value>
+  </data>
+  <data name="Global_DescriptionRequired" xml:space="preserve">
+    <value>Description is required.</value>
+  </data>
+  <data name="Global_DisplayCodeOutOfBounds" xml:space="preserve">
+    <value>Display code must not exceed {5} characters.</value>
+  </data>
+  <data name="Global_DisplayCodeRequired" xml:space="preserve">
+    <value>Display code is required.</value>
+  </data>
+  <data name="Global_NameOutOfBounds" xml:space="preserve">
+    <value>Name must not exceed {5} characters.</value>
+  </data>
+  <data name="Global_NameRequired" xml:space="preserve">
+    <value>Name is required.</value>
+  </data>
+  <data name="UserAccountJobTitleOutOfBounds" xml:space="preserve">
+    <value>Job title must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountMiddleNameOutOfBounds" xml:space="preserve">
+    <value>Middle name must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountSuffixOutOfBounds" xml:space="preserve">
+    <value>Suffix must not exceed {5} characters.</value>
+  </data>
+  <data name="UserAccountUserIdRestrictedCharacters" xml:space="preserve">
+    <value>User ID cannot contain "@" or "\" characters.</value>
+  </data>
+  <data name="ClinicalDataCategoryDescriptionNotUnique" xml:space="preserve">
+    <value>Clinical data category must be unique.</value>
+  </data>
+  <data name="ClinicalDataCategoryDescriptionRequired" xml:space="preserve">
+    <value>Clinical data category description is required.</value>
+  </data>
+  <data name="ExternalSystemNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="OverrideReasonDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="TooCloseReasonDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="PrinterNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="PatientIdentificationTypeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="GenderNotUnique" xml:space="preserve">
+    <value>Display code and/or description is not unique, only one display code and/or description is allowed per dispensing system.</value>
+  </data>
+  <data name="RepeatPatternNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="ExternalSystemAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>External system "{0}" is associated with other parts of system and cannot be deleted.</value>
+  </data>
+  <data name="PatientSiloAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Patient silo "{0}" is associated with other parts of system and cannot be deleted.</value>
+  </data>
+  <data name="PatientSiloNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="TimingRecordPriorityNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="CFSupportChangePasswordNotSupported" xml:space="preserve">
+    <value>Password for CF Support account cannot be changed through this application.</value>
+  </data>
+  <data name="ExternalGenderNotUnique_Code" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="ExternalGenderNotUnique_UseOnOutbound" xml:space="preserve">
+    <value>Each gender is only allowed 1 use on outbound per ADT system</value>
+  </data>
+  <data name="ExternalPatientIdentificationTypeNotUnique_Code" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="ExternalPatientIdentificationTypeNotUnique_UseOnOutbound" xml:space="preserve">
+    <value>Each patient identification type is only allowed 1 use on outbound per ADT system.</value>
+  </data>
+  <data name="ExternalUnitOfMeasureNotUnique_Code" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="ExternalUnitOfMeasureNotUnique_UseOnOutbound" xml:space="preserve">
+    <value>Each unit of measure is allowed only 1 use on outbound per unit of measure role and ADT system.</value>
+  </data>
+  <data name="RepeatPatternDayOfWeekNumberOutOfBounds" xml:space="preserve">
+    <value>Day of week number must be between {3} and {5}.</value>
+  </data>
+  <data name="RepeatPatternDayOfWeekRequired" xml:space="preserve">
+    <value>Day of week is required.</value>
+  </data>
+  <data name="RepeatPatternPeriodAmountRequired" xml:space="preserve">
+    <value>Period amount is required and must be greater than {0}.</value>
+  </data>
+  <data name="AllergyTypeNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="StorageSpacesAreLoaded" xml:space="preserve">
+    <value>Storage spaces are loaded and cannot be deleted.</value>
+  </data>
+  <data name="RepeatPatternExplicitTimesSetsRequired" xml:space="preserve">
+    <value>Must define set of {0} explicit time(s).</value>
+  </data>
+  <data name="RepeatPatternExplicitTimesDuplicateFacilities" xml:space="preserve">
+    <value>Duplicate PIS facilities mapped with explicit times.</value>
+  </data>
+  <data name="ClinicalDataCategoryCannotDeleteFormat" xml:space="preserve">
+    <value>Unable to delete '{0}' as category contains one or more clinical data subjects.</value>
+  </data>
+  <data name="ValidationMessageSeparator" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="RepeatPatternExplicitTimesNotOrdered" xml:space="preserve">
+    <value>Explicit times must be entered in ascending order.</value>
+  </data>
+  <data name="RepeatPatternExplicitTimesOutOfBounds" xml:space="preserve">
+    <value>Explicit times must be between {0} and {1}.</value>
+  </data>
+  <data name="RepeatPatternExplicitTimesSetsRangeRequired" xml:space="preserve">
+    <value>Must define set of minimum of {0} and maximum of {1} explicit time(s).</value>
+  </data>
+  <data name="DeviceRecoveryFailed" xml:space="preserve">
+    <value>Device could not be recovered because it contains failed children.</value>
+  </data>
+  <data name="ExternalUnitOfMeasureRoleNotSupported" xml:space="preserve">
+    <value>The unit of measure’s role is not consistent with at least one role of the mapped unit of measure.</value>
+  </data>
+  <data name="UnitOfMeasureRoleUsedByExternalUnitOfMeasure" xml:space="preserve">
+    <value>The following mapped external unit measure entry(s) use the role you are attempting to remove: {0}.</value>
+  </data>
+  <data name="ExternalSystemProvidesRule" xml:space="preserve">
+    <value>'Provides Med Class' and/or 'Provides Therapeutic Class' cannot be selected unless 'Pharmacy System' is selected.</value>
+  </data>
+  <data name="ExternalSystemReplaceAllergiesRule" xml:space="preserve">
+    <value>'Replace Allergies' cannot be selected unless 'Provides Allergies' is selected.</value>
+  </data>
+  <data name="ExternalSystemRule" xml:space="preserve">
+    <value>At least one of following must be selected: 'ADT System', 'Pharmacy System', 'Subscriber', 'Provides Allergies', or 'Provide Non-Allergy Clinical Data'.</value>
+  </data>
+  <data name="DosageFormAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Dosage form '{0}' is identified to be associated with formulary items and cannot be deleted.</value>
+  </data>
+  <data name="MedicationClassAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Medication class '{0}' is identified to be associated with formulary items and cannot be deleted.</value>
+  </data>
+  <data name="FacilityItemSecurityGroupRequired" xml:space="preserve">
+    <value>Security group is required.</value>
+  </data>
+  <data name="AreaAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Area '{0}' is identified to be associated with units and/or active users and cannot be deleted.</value>
+  </data>
+  <data name="RepeatPatternAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Repeat pattern '{0}' is identified to be associated with orders and cannot be deleted.</value>
+  </data>
+  <data name="TimingRecordPriorityAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Order Priority '{0}' is identified to be associated with orders and cannot be deleted.</value>
+  </data>
+  <data name="ActiveDirectoryDomainFullyQualifiedNameNotUnique" xml:space="preserve">
+    <value>Fully qualified name is not unique.</value>
+  </data>
+  <data name="ActiveDirectoryDomainFullyQualifiedNameRequired" xml:space="preserve">
+    <value>Fully qualified name is required.</value>
+  </data>
+  <data name="ActiveDirectoryDomainPollingDurationRequired" xml:space="preserve">
+    <value>Polling Duration is required.</value>
+  </data>
+  <data name="ActiveDirectoryDomainSystemAccountIdRequired" xml:space="preserve">
+    <value>System account ID is required.</value>
+  </data>
+  <data name="ActiveDirectoryDomainSystemAccountPasswordRequired" xml:space="preserve">
+    <value>System account password is required.</value>
+  </data>
+  <data name="ActiveDirectoryDomainSupportUsersNotUnique" xml:space="preserve">
+    <value>A support user domain already exists, only one is allowed per system.</value>
+  </data>
+  <data name="UnitAdmissionProlongedInactivityDurationOutOfBounds" xml:space="preserve">
+    <value>Admission inactivity must be between {3} day(s) and {5} day(s).</value>
+  </data>
+  <data name="UnitDischargeDelayDurationOutOfBounds" xml:space="preserve">
+    <value>Discharge delay must be between {3} hour(s) and {5} hour(s).</value>
+  </data>
+  <data name="UnitPreadmissionLeadDurationOutOfBounds" xml:space="preserve">
+    <value>Preadmission lead must be between {3} hour(s) and {5} hour(s).</value>
+  </data>
+  <data name="UnitPreadmissionProlongedInactivityDurationOutOfBounds" xml:space="preserve">
+    <value>Preadmission inactivity must be between {3} hour(s) and {5} hour(s).</value>
+  </data>
+  <data name="UnitTransferDelayDurationOutOfBounds" xml:space="preserve">
+    <value>Transfer delay must be between {3} hour(s) and {5} hour(s).</value>
+  </data>
+  <data name="RepeatPatternDuplicateExplicitTimes" xml:space="preserve">
+    <value>There are duplicate times.</value>
+  </data>
+  <data name="UnitAreasRequired" xml:space="preserve">
+    <value>Unit(s) must have at least one Area selected.</value>
+  </data>
+  <data name="UnitAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Unit '{0}' is associated with patient encounters. Deselect the unit and try again.</value>
+  </data>
+  <data name="ItemLocalIdNotUnique" xml:space="preserve">
+    <value>Item ID is not unique, only one Item ID is allowed per facility.</value>
+  </data>
+  <data name="FacilityItemQueueIdNotUnique" xml:space="preserve">
+    <value>There is already a facility item with the same item ID of '{0}', either change the existing ID or delete the existing facility item.</value>
+  </data>
+  <data name="UserAccountDeleted" xml:space="preserve">
+    <value>This account has been deleted. Unable to save changes.</value>
+  </data>
+  <data name="FacilityItemCriticalLowPercentageOutOfBounds" xml:space="preserve">
+    <value>Critical low percentage must be between {3}% and {5}%.</value>
+  </data>
+  <data name="FacilityItemTooCloseRemoveDurationOutOfBounds" xml:space="preserve">
+    <value>Too close remove must be between {3} minute(s) and {5} minute(s).</value>
+  </data>
+  <data name="FacilityItemUnitsOfIssuePerUnitOfRefillOutOfBounds" xml:space="preserve">
+    <value>Incorrect ratio: value cannot be less than {0}.</value>
+  </data>
+  <data name="FacilityItemUnitsOfIssuePerUnitOfRefillRule" xml:space="preserve">
+    <value>You cannot enter a ratio greater than 1 if the unit of issue and unit of refill are the same.</value>
+  </data>
+  <data name="MedItemMedicationClassRequired" xml:space="preserve">
+    <value>Medication class is required.</value>
+  </data>
+  <data name="FacilityItemMedReturnModeRequired" xml:space="preserve">
+    <value>Return option is required.</value>
+  </data>
+  <data name="DispensingDeviceComputerNameNotUnique" xml:space="preserve">
+    <value>Dispensing device computer name is not unique, only one computer name is allowed per facility.</value>
+  </data>
+  <data name="ItemsLoadedOrPendedCannotDeactivate" xml:space="preserve">
+    <value>Some Items were identified to be loaded or pended and cannot be deactivated.</value>
+  </data>
+  <data name="InventoryCannotPendToAPendedPocket" xml:space="preserve">
+    <value>Cannot pend to a pocket that has already been pended.</value>
+  </data>
+  <data name="InventoryCannotChangeNumberOfPocketsInALoadedMiniTray" xml:space="preserve">
+    <value>Cannot pend a different number of pockets than are already loaded in a mini tray</value>
+  </data>
+  <data name="StorageSpaceNameNotUnique" xml:space="preserve">
+    <value>Storage space name must be unique.</value>
+  </data>
+  <data name="PendItemCurrentValueIncorrectMessage" xml:space="preserve">
+    <value>Current value must be less than or equal to the Physical Capacity value.</value>
+  </data>
+  <data name="PendItemExpirationDateIncorrectMessage" xml:space="preserve">
+    <value>Expiration Date must be between current date and up to five years from the current date.</value>
+  </data>
+  <data name="PendItemLoadPocketsMismatchMessage" xml:space="preserve">
+    <value>The number of pockets to load cannot be more than the number of pockets available.</value>
+  </data>
+  <data name="PendItemParValueIncorrectMessage" xml:space="preserve">
+    <value>Par value must be less than or equal to the Physical Capacity value.</value>
+  </data>
+  <data name="PendItemPocketItemCountInvalidFormat" xml:space="preserve">
+    <value>The number of items to load in pocket {0} cannot be greater than the max number of items in the pocket.</value>
+  </data>
+  <data name="PendItemPocketsMaxNumberMismatchMessage" xml:space="preserve">
+    <value>The minimum number cannot be greater than the sum of all the pocket max quantities.</value>
+  </data>
+  <data name="PendItemRefillPointValueIncorrectMessage" xml:space="preserve">
+    <value>Refill point value must be less than or equal to Par value.</value>
+  </data>
+  <data name="PendItemCurrentlyLoaded" xml:space="preserve">
+    <value>Unable to pend '{0}' to this location since it is currently loaded.</value>
+  </data>
+  <data name="PendItemCurrentlyPended" xml:space="preserve">
+    <value>Unable to pend '{0}' to this location since it is currently pended.</value>
+  </data>
+  <data name="ActiveDirectoryPollingDurationOutOfRange" xml:space="preserve">
+    <value>Synchronization interval (in hours) must be between 1 and 500.</value>
+  </data>
+  <data name="CriticalOverridePeriodAttributesNotUnique" xml:space="preserve">
+    <value>Critical Override Schedule {0}: Schedule week day(s) and time range must be unique</value>
+  </data>
+  <data name="CriticalOverridePeriodNameNotUnique" xml:space="preserve">
+    <value>Critical Override Schedule {0}: Name must be unique for each device.</value>
+  </data>
+  <data name="Cubie2DrawerHasBadData" xml:space="preserve">
+    <value>The cubie2 drawer contains incomplete Device Information Tree data.</value>
+  </data>
+  <data name="PendItemLoadPocketsNotDefined" xml:space="preserve">
+    <value>The number of pockets to load was not defined. Please select number of pockets to load.</value>
+  </data>
+  <data name="FacilityKitItemFacilityItemRequired" xml:space="preserve">
+    <value>Item is required.</value>
+  </data>
+  <data name="FacilityKitItemQuantityOutOfBounds" xml:space="preserve">
+    <value>Quantity must be between {0} and {1}.</value>
+  </data>
+  <data name="FacilityKitNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="UnitOfMeasureConversionOutOfBounds" xml:space="preserve">
+    <value>Conversion factor must be between {0} and {1}.</value>
+  </data>
+  <data name="UnitOfMeasureConversionRule" xml:space="preserve">
+    <value>Cannot have a conversion factor without base unit of measure.</value>
+  </data>
+  <data name="FacilityPharmacyInformationSystemChangeNotAllowed" xml:space="preserve">
+    <value>Changing pharmacy information system is not allowed until all current facility items are deleted.</value>
+  </data>
+  <data name="FacilityItemUnitsOfIssuePerUnitOfRefillRequiresIssueAndRefillRule" xml:space="preserve">
+    <value>You cannot enter a ratio without a unit of issue and unit of refill. Enter unit of issue and refill.</value>
+  </data>
+  <data name="FacilityItemUnitsOfIssuePerUnitOfRefillRequiredRule" xml:space="preserve">
+    <value>You must have a ratio if a unit of issue and unit of refill are defined.</value>
+  </data>
+  <data name="FacilityItemRefillUnitOfMeasureRequiresIssueUnitOfMeasureRule" xml:space="preserve">
+    <value>Cannot have a refill unit of measure without an issue unit of measure.</value>
+  </data>
+  <data name="ItemLoadedOrPendedCannotDeactivate" xml:space="preserve">
+    <value>Item was identified to be loaded or pended and cannot be deactivated.</value>
+  </data>
+  <data name="HazardousWasteClassCannotBeDeleted" xml:space="preserve">
+    <value>Hazardous waste class "{0}" is linked to formulary(ies) and cannot be deleted.</value>
+  </data>
+  <data name="OutOfTemperatureRangeResolutionDescriptionCodeNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="MedItemConcentrationVolumeAmountOutOfBounds" xml:space="preserve">
+    <value>Concentration volume amount must be greater than 0.</value>
+  </data>
+  <data name="MedItemStrengthAmountOutOfBounds" xml:space="preserve">
+    <value>Strength amount must be greater than 0.</value>
+  </data>
+  <data name="MedItemTotalVolumeAmountOutOfBounds" xml:space="preserve">
+    <value>Total volume amount must be greater than 0.</value>
+  </data>
+  <data name="DiscrepancyResolutionDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="DispensingDeviceLoadedControlledItemsDeleteFormat" xml:space="preserve">
+    <value>Unable to delete {0}: loaded with controlled items. Please unload these items and then try again.</value>
+  </data>
+  <data name="EquivalencyDosageFormGroupDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="EquivalencyDosageFormGroupDisplayCodeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="EquivalencyDosageFormGroupAssociatedCannotDeleteFormat" xml:space="preserve">
+    <value>Dosage Form Group '{0}' is identified to be associated with dosage forms and cannot be deleted.</value>
+  </data>
+  <data name="UnitOfMeasureBaseUnitInUse" xml:space="preserve">
+    <value>Cannot have a base unit because this unit of measure is used as a base unit.</value>
+  </data>
+  <data name="UnitOfMeasureBaseUnitHasBaseUnit" xml:space="preserve">
+    <value>The base unit of measure cannot be assigned because it has a base unit of measure.</value>
+  </data>
+  <data name="ExternalSystemInUse" xml:space="preserve">
+    <value>'{0}' is identified to be associated with patient silos and cannot be modified.</value>
+  </data>
+  <data name="UserAccountUserTypeRequired" xml:space="preserve">
+    <value>User Type is required for non-support users.</value>
+  </data>
+  <data name="UserTypeNotUnique" xml:space="preserve">
+    <value>Display code is not unique, only one display code is allowed per dispensing system.</value>
+  </data>
+  <data name="UserTypeAssociatedToUserAccounts" xml:space="preserve">
+    <value>User Type '{0}' is associated to one or more user accounts.</value>
+  </data>
+  <data name="DispensingSystemFailedAuthenticationAttemptsRequired" xml:space="preserve">
+    <value>Failed authentication attempts is required.</value>
+  </data>
+  <data name="RoomNameNotUnique" xml:space="preserve">
+    <value>Room name must be unique.</value>
+  </data>
+  <data name="ZoneReplenishmentIDNotUnique" xml:space="preserve">
+    <value>Replenishment ID must be unique.</value>
+  </data>
+  <data name="ProductIdProductIdNotFound" xml:space="preserve">
+    <value>Item for product ID specified was not found</value>
+  </data>
+  <data name="ProductIdProductIdNotUnique" xml:space="preserve">
+    <value>Product ID must be unique</value>
+  </data>
+  <data name="HospitalServiceNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="PatientClassCodeNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="SignInPasswordRequired" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="SignInUsernamePasswordRequired" xml:space="preserve">
+    <value>Username/Password is required.</value>
+  </data>
+  <data name="SignInUsernameRequired" xml:space="preserve">
+    <value>Username is required.</value>
+  </data>
+  <data name="VirtualStockLocationNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="AdministrationRouteDisplayCodeNotUnique" xml:space="preserve">
+    <value>Display code must be unique.</value>
+  </data>
+  <data name="DeliveryLocationNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="DistributorIDNotUnique" xml:space="preserve">
+    <value>ID must be unique.</value>
+  </data>
+  <data name="DistributorIDRequired" xml:space="preserve">
+    <value>ID is required.</value>
+  </data>
+  <data name="AuthenticateNoFingerprint" xml:space="preserve">
+    <value>User has not registered fingerprint.</value>
+  </data>
+  <data name="AuthenticateUserCannotBeSameAsSignedIn" xml:space="preserve">
+    <value>User cannot be the same as signed-in user.</value>
+  </data>
+  <data name="FormularyTemplateNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="AuthenticationInsufficientPrivileges" xml:space="preserve">
+    <value>Insufficient privileges.</value>
+  </data>
+  <data name="MyItemsNoPermissionToItem" xml:space="preserve">
+    <value>Insufficient privilege.  User does not have permission to the item.</value>
+  </data>
+  <data name="MyItemsNoPermissionToItems" xml:space="preserve">
+    <value>Insufficient privilege.  User does not have permission to the items.</value>
+  </data>
+  <data name="FacilityItemFailoverReturnOption" xml:space="preserve">
+    <value>Fail over return option is required.</value>
+  </data>
+  <data name="FacilityItemVerifyCountModeRequired" xml:space="preserve">
+    <value>Verify count mode is required.</value>
+  </data>
+  <data name="DeliveryLocationScanCodeNotUnique" xml:space="preserve">
+    <value>Scan Code must be unique</value>
+  </data>
+  <data name="Global_ScanCodeRequired" xml:space="preserve">
+    <value>Scan Code is required.</value>
+  </data>
+  <data name="RxCheckReasonDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="FacilityItemPrintLabelOnRemove" xml:space="preserve">
+    <value>Print label on remove is required.</value>
+  </data>
+  <data name="DeliveryStateChangeReasonTypeRequired" xml:space="preserve">
+    <value>Reason type is required.</value>
+  </data>
+  <data name="DeliveryStateChangeReasonDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique.</value>
+  </data>
+  <data name="PendItemExpirationDateIncorrectFormatMessage" xml:space="preserve">
+    <value>Earliest Expiration Date is not in the correct format.  The expected format is {0}.</value>
+  </data>
+  <data name="PendItemExpirationDateInFutureMessage" xml:space="preserve">
+    <value>Earliest Expiration Date must be in the future.</value>
+  </data>
+  <data name="PendItemExpirationDateMaxInFutureMessage" xml:space="preserve">
+    <value>Earliest Expiration Date must be up to 7 years in the future.</value>
+  </data>
+  <data name="ExternalSystemAdtAndHasSilo" xml:space="preserve">
+    <value>External System '{0}' is associated to a patient silo and must remain an 'ADT System'.</value>
+  </data>
+  <data name="ExternalSystemInUseAndActive" xml:space="preserve">
+    <value>External System '{0}' is in use and must remain active.</value>
+  </data>
+  <data name="ExternalSystemPisAndHasFacility" xml:space="preserve">
+    <value>External System '{0}' is associated to a facility and must remain a 'Pharmacy System'.</value>
+  </data>
+  <data name="InventoryTrayCurrentQuantityMinRule" xml:space="preserve">
+    <value>Tray current quantity cannot be less than zero.</value>
+  </data>
+  <data name="ItemFacilityUndergoingHostConversionCannotDeleteFormat" xml:space="preserve">
+    <value>Facility '{0} is undergoing a host conversion and item '{1}' cannot be deleted at this time.</value>
+  </data>
+  <data name="PatientSiloPrimaryPatientIdHasDuplicates" xml:space="preserve">
+    <value>There is {0} patient(s) in the system that have duplicate IDs matching the specified primary patient ID type.</value>
+  </data>
+  <data name="PatientSiloPrimaryPatientIdMissing" xml:space="preserve">
+    <value>There is {0} patient(s) in the system that do not have an ID matching the specified primary patient ID type.</value>
+  </data>
+  <data name="ServerAddressNotUnique" xml:space="preserve">
+    <value>IP address must be unique.</value>
+  </data>
+  <data name="ServerAddressRequired" xml:space="preserve">
+    <value>IP address is required.</value>
+  </data>
+  <data name="ServerNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="UserAccountNoPersonalInfoRule" xml:space="preserve">
+    <value>Password cannot contain personal information.</value>
+  </data>
+  <data name="PasswordFourCharDiffRule" xml:space="preserve">
+    <value>Password must differ by at least 4 characters from a previous password</value>
+  </data>
+  <data name="PasswordContainNoDictionaryWord" xml:space="preserve">
+    <value>Password can not contain a dictionary word</value>
+  </data>
+  <data name="DispensingDeviceProfileModeIncorrectMessage" xml:space="preserve">
+    <value>Can not select "Enable Temporary Non-profile Mode" if the "Profile Mode" is unselected.</value>
+  </data>
+  <data name="CodeOutOfBounds" xml:space="preserve">
+    <value>Code must not exceed {0} characters.</value>
+  </data>
+  <data name="DescriptionOutOfBounds" xml:space="preserve">
+    <value>Description must not exceed {0} characters.</value>
+  </data>
+  <data name="DisplayCodeOutOfBounds" xml:space="preserve">
+    <value>Display code must not exceed {0} characters.</value>
+  </data>
+  <data name="NameOutOfBounds" xml:space="preserve">
+    <value>Name must not exceed {0} characters.</value>
+  </data>
+  <data name="VirtualStockLocationDeleteWarning" xml:space="preserve">
+    <value>Virtual Stock Location, {0}, is associated with one or more devices.</value>
+  </data>
+  <data name="ActiveDirectoryDomainUserDirectoryTypeUnique" xml:space="preserve">
+    <value>Only one type of User Directory is supported at the same time.</value>
+  </data>
+  <data name="AdministrationRouteCodeNotUnique" xml:space="preserve">
+    <value>Code must be unique.</value>
+  </data>
+  <data name="DispensingSystemServerIdRequired" xml:space="preserve">
+    <value>Server ID is required.</value>
+  </data>
+  <data name="ActiveDirectoryDomainUserDirectoryTypeRequired" xml:space="preserve">
+    <value>User Directory Type is required.</value>
+  </data>
+  <data name="CompoundTemplateNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="CompoundTemplateMedIdNotUnique" xml:space="preserve">
+    <value>Med ID can only be associated to one standard compound template.</value>
+  </data>
+  <data name="CompoundTemplateMedIdRequired" xml:space="preserve">
+    <value>Med ID is required</value>
+  </data>
+  <data name="CompoundTemplateDescriptionNotUnique" xml:space="preserve">
+    <value>Description must be unique for the facility.</value>
+  </data>
+  <data name="CompoundTemplateMedIdOutOfBounds" xml:space="preserve">
+    <value>Med ID must not exceed {5} characters.</value>
+  </data>
+  <data name="InvoiceTypeNameNotUnique" xml:space="preserve">
+    <value>Name must be unique</value>
+  </data>
+  <data name="ControlledSubstanceLicenseIDNotUnique" xml:space="preserve">
+    <value>License ID must be unique.</value>
+  </data>
+  <data name="DistributorDeleteErrorMessage" xml:space="preserve">
+    <value>Cannot delete Distributor  {0} - {1} as it is in use. Please remove all associations for this distributor and try again.</value>
+  </data>
+  <data name="NonAdmLocationNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="RestockGroupNameNotUnique" xml:space="preserve">
+    <value>Name must be unique.</value>
+  </data>
+  <data name="SheetConfigurationMissing" xml:space="preserve">
+    <value>Sheet Configuration is missing for {0}.</value>
+  </data>
+  <data name="ItemNonStndCompoundCannotDelete" xml:space="preserve">
+    <value>Item "{0}" is identified to be a Non-Standard Compound therefore cannot be deleted.</value>
+  </data>
+  <data name="ItemPhysicalKitCannotDelete" xml:space="preserve">
+    <value>Item "{0}" is identified to be a CII Safe Kit therefore cannot be deleted.</value>
+  </data>
+  <data name="ActiveDirectoryLDAPCertificateFileExtension" xml:space="preserve">
+    <value>LDAP Cerfiticate File must be with extension {0}</value>
+  </data>
+  <data name="ActiveDirectoryLDAPCertificateFileRequired" xml:space="preserve">
+    <value>LDAP Certificate File is required if using SSL</value>
+  </data>
+  <data name="ActiveDirectoryPortNumberRequired" xml:space="preserve">
+    <value>Port Number is required if using SSL</value>
+  </data>
+  <data name="MedClassGroupAlreadyInUse" xml:space="preserve">
+    <value>Med Class Group '{0}' is in use in a Facility and cannot be deleted.</value>
+  </data>
+  <data name="ItemInPhysicalKitCannotDelete" xml:space="preserve">
+    <value>Item "{0}" is identified to be part of a CII Safe Kit therefore cannot be deleted.</value>
+  </data>
+  <data name="ItemHasOutstandingTransactionCannotDelete" xml:space="preserve">
+    <value>There are outstanding transactions for {0} at the following CII Safe devices: {1}. These transactions must be resolved before deleting this item.</value>
+  </data>
+  <data name="ItemHasUnresolvedDiscrepanciesCannotDelete" xml:space="preserve">
+    <value>{0} has unresolved discrepancies at {1}. Resolve the discrepancies before deleting this item.</value>
+  </data>
+  <data name="ItemHasUnresolvedInvoicesCannotDelete" xml:space="preserve">
+    <value>{0} is on a receive invoice at {1}. Complete the invoice before deleting this item.</value>
+  </data>
+</root>

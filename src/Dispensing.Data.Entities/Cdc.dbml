@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSServerOLTP" Class="CdcDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSServerOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="CDCat.vw_ClinicalDataCategoryCurrent" Member="ClinicalDataCategoryEntities">
+    <Type Name="ClinicalDataCategoryEntity">
+      <Column Name="ClinicalDataCategoryKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataCategoryEntity_ClinicalDataSubjectEntity" Member="ClinicalDataSubjectEntities" ThisKey="Key" OtherKey="ClinicalDataCategoryKey" Type="ClinicalDataSubjectEntity" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.vw_ClinicalDataSubjectCurrent" Member="ClinicalDataSubjectEntities">
+    <Type Name="ClinicalDataSubjectEntity">
+      <Column Name="ClinicalDataSubjectKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataCategoryKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOnceFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TitleText" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="StatKitFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectDispensingDeviceEntity" Member="ClinicalDataSubjectDispensingDeviceEntities" ThisKey="Key" OtherKey="ClinicalDataSubjectKey" Type="ClinicalDataSubjectDispensingDeviceEntity" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataResponseEntity" Member="ClinicalDataResponseEntities" ThisKey="Key" OtherKey="ClinicalDataSubjectKey" Type="ClinicalDataResponseEntity" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectFacilityItemFunctionEntity" Member="ClinicalDataSubjectFacilityItemFunctionEntities" ThisKey="Key" OtherKey="ClinicalDataSubjectKey" Type="ClinicalDataSubjectFacilityItemFunctionEntity" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectUserTypeEntity" Member="ClinicalDataSubjectUserTypeEntities" ThisKey="Key" OtherKey="ClinicalDataSubjectKey" Type="ClinicalDataSubjectUserTypeEntity" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectAreaEntity" Member="ClinicalDataSubjectAreaEntities" ThisKey="Key" OtherKey="ClinicalDataSubjectKey" Type="ClinicalDataSubjectAreaEntity" />
+      <Association Name="ClinicalDataCategoryEntity_ClinicalDataSubjectEntity" Member="ClinicalDataCategoryEntity" ThisKey="ClinicalDataCategoryKey" OtherKey="Key" Type="ClinicalDataCategoryEntity" IsForeignKey="true" />
+      <Association Name="ClinicalDataSubjectTypeEntity_ClinicalDataSubjectEntity" Member="ClinicalDataSubjectTypeEntity" ThisKey="ClinicalDataSubjectTypeInternalCode" OtherKey="InternalCode" Type="ClinicalDataSubjectTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.vw_ClinicalDataSubjectDispensingDeviceCurrent" Member="ClinicalDataSubjectDispensingDeviceEntities">
+    <Type Name="ClinicalDataSubjectDispensingDeviceEntity">
+      <Column Name="ClinicalDataSubjectDispensingDeviceKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectDispensingDeviceEntity" Member="ClinicalDataSubjectEntity" ThisKey="ClinicalDataSubjectKey" OtherKey="Key" Type="ClinicalDataSubjectEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.ClinicalDataSubjectType" Member="ClinicalDataSubjectTypeEntities">
+    <Type Name="ClinicalDataSubjectTypeEntity">
+      <Column Name="ClinicalDataSubjectTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectTypeEntity_ClinicalDataSubjectEntity" Member="ClinicalDataSubjectEntities" ThisKey="InternalCode" OtherKey="ClinicalDataSubjectTypeInternalCode" Type="ClinicalDataSubjectEntity" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.vw_ClinicalDataResponseCurrent" Member="ClinicalDataResponseEntities">
+    <Type Name="ClinicalDataResponseEntity">
+      <Column Name="ClinicalDataResponseKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataResponseSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataAssentInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ResponseText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="InstructionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataResponseEntity" Member="ClinicalDataSubjectEntity" ThisKey="ClinicalDataSubjectKey" OtherKey="Key" Type="ClinicalDataSubjectEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.vw_ClinicalDataSubjectFacilityItemFunctionCurrent" Member="ClinicalDataSubjectFacilityItemFunctionEntities">
+    <Type Name="ClinicalDataSubjectFacilityItemFunctionEntity">
+      <Column Name="ClinicalDataSubjectFacilityItemFunctionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientCareFunctionInternalCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectFacilityItemFunctionEntity" Member="ClinicalDataSubjectEntity" ThisKey="ClinicalDataSubjectKey" OtherKey="Key" Type="ClinicalDataSubjectEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.vw_ClinicalDataSubjectUserTypeCurrent" Member="ClinicalDataSubjectUserTypeEntities">
+    <Type Name="ClinicalDataSubjectUserTypeEntity">
+      <Column Name="ClinicalDataSubjectUserTypeKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserTypeKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectUserTypeEntity" Member="ClinicalDataSubjectEntity" ThisKey="ClinicalDataSubjectKey" OtherKey="Key" Type="ClinicalDataSubjectEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="CDCat.vw_ClinicalDataSubjectAreaCurrent" Member="ClinicalDataSubjectAreaEntities">
+    <Type Name="ClinicalDataSubjectAreaEntity">
+      <Column Name="ClinicalDataSubjectAreaKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataSubjectEntity_ClinicalDataSubjectAreaEntity" Member="ClinicalDataSubjectEntity" ThisKey="ClinicalDataSubjectKey" OtherKey="Key" Type="ClinicalDataSubjectEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="CDCat.usp_ClinicalDataCategoryDelete" Method="usp_ClinicalDataCategoryDelete">
+    <Parameter Name="EndUTCDateTime" Parameter="endUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndLocalDateTime" Parameter="endLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataCategoryKey" Parameter="clinicalDataCategoryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataCategoryInsert" Method="usp_ClinicalDataCategoryInsert">
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CreatedUTCDateTime" Parameter="createdUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedLocalDateTime" Parameter="createdLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataCategoryKey" Parameter="clinicalDataCategoryKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataCategoryUpdate" Method="usp_ClinicalDataCategoryUpdate">
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="EndUTCDateTime" Parameter="endUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndLocalDateTime" Parameter="endLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClinicalDataCategoryKey" Parameter="clinicalDataCategoryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataResponseDelete" Method="usp_ClinicalDataResponseDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataResponseKey" Parameter="clinicalDataResponseKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataResponseInsert" Method="usp_ClinicalDataResponseInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataAssentInternalCode" Parameter="clinicalDataAssentInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ResponseText" Parameter="responseText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="InstructionText" Parameter="instructionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataResponseKey" Parameter="clinicalDataResponseKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataResponseUpdate" Method="usp_ClinicalDataResponseUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataAssentInternalCode" Parameter="clinicalDataAssentInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ResponseText" Parameter="responseText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="InstructionText" Parameter="instructionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClinicalDataResponseKey" Parameter="clinicalDataResponseKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectDelete" Method="usp_ClinicalDataSubjectDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectDispensingDeviceDelete" Method="usp_ClinicalDataSubjectDispensingDeviceDelete">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectDispensingDeviceInsert" Method="usp_ClinicalDataSubjectDispensingDeviceInsert">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectUserTypeDelete" Method="usp_ClinicalDataSubjectUserTypeDelete">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectUserTypeInsert" Method="usp_ClinicalDataSubjectUserTypeInsert">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectAreaDelete" Method="usp_ClinicalDataSubjectAreaDelete">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectAreaInsert" Method="usp_ClinicalDataSubjectAreaInsert">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectUpdate" Method="usp_ClinicalDataSubjectUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ClinicalDataCategoryKey" Parameter="clinicalDataCategoryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataSubjectTypeInternalCode" Parameter="clinicalDataSubjectTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DisplayOnceFlag" Parameter="displayOnceFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TitleText" Parameter="titleText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="StatKitFlag" Parameter="statKitFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="CDCat.usp_ClinicalDataSubjectInsert" Method="usp_ClinicalDataSubjectInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ClinicalDataCategoryKey" Parameter="clinicalDataCategoryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataSubjectTypeInternalCode" Parameter="clinicalDataSubjectTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DisplayOnceFlag" Parameter="displayOnceFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TitleText" Parameter="titleText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="StatKitFlag" Parameter="statKitFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

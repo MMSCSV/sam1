@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>CareFusion.Dispensing.Data.Entities</RootNamespace>
+    <AssemblyName>CareFusion.Dispensing.Data.Entities</AssemblyName>
+    <PackageId>Dispensing.Data.Entities</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dispensing\Dispensing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Data.Linq" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Adt.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Adt.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Cdc.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Cdc.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Core.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Core.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="DSServerOLTP.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DSServerOLTP.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Ext.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Ext.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Item.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Item.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Location.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Location.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Rx.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Rx.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Storage.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Storage.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Sync.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Sync.dbml</DependentUpon>
+    </Compile>
+    <Compile Update="Tx.designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Tx.dbml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Adt.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Adt.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Cdc.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Cdc.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Core.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Core.designer.cs</LastGenOutput>
+    </None>
+    <None Update="DSServerOLTP.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DSServerOLTP.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Ext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Ext.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Item.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Item.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Location.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Location.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Rx.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Rx.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Storage.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Storage.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Sync.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Sync.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Tx.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Tx.designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

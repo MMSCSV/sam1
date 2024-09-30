@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Removed" xml:space="preserve">
+    <value>Removed</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start: </value>
+  </data>
+  <data name="StartEndDateTimeFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="STAT" xml:space="preserve">
+    <value>STAT</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All Orders</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Due Now</value>
+  </data>
+  <data name="Discontinued" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+  <data name="Due" xml:space="preserve">
+    <value>Due</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>End: </value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="Future" xml:space="preserve">
+    <value>Future</value>
+  </data>
+  <data name="Last24Hours" xml:space="preserve">
+    <value>Last 24 Hours</value>
+  </data>
+  <data name="MedProfileTimeRangeFormat" xml:space="preserve">
+    <value>{0}({1})</value>
+  </data>
+  <data name="MedProfileViewTitle" xml:space="preserve">
+    <value>Med Profile</value>
+  </data>
+  <data name="NEW" xml:space="preserve">
+    <value>NEW</value>
+  </data>
+  <data name="OnHold" xml:space="preserve">
+    <value>OnHold</value>
+  </data>
+  <data name="PrnHeaderFormat" xml:space="preserve">
+    <value>PRN ({0}) / Continuous Infusions ({1}) / On Call ({2})</value>
+  </data>
+  <data name="RemoveViewTitle" xml:space="preserve">
+    <value>Remove Med</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="SelectedMeds" xml:space="preserve">
+    <value>Selected Meds</value>
+  </data>
+  <data name="FormularyNotelbl" xml:space="preserve">
+    <value>Formulary Note:</value>
+  </data>
+  <data name="Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="Frequencylbl" xml:space="preserve">
+    <value>Frequency:</value>
+  </data>
+  <data name="LastRemoved" xml:space="preserve">
+    <value>Last Removed</value>
+  </data>
+  <data name="LastRemovedDateTimeFormat" xml:space="preserve">
+    <value>{0:HH:mm MMM dd}</value>
+  </data>
+  <data name="LastRemovedlbl" xml:space="preserve">
+    <value>Last Removed:</value>
+  </data>
+  <data name="LastRemovedTodayTimeFormat" xml:space="preserve">
+    <value>{0:HH:mm} Today</value>
+  </data>
+  <data name="MedNameFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="NameDose" xml:space="preserve">
+    <value>Name/Dose</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes: </value>
+  </data>
+  <data name="Physician" xml:space="preserve">
+    <value>Physician: </value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Removelbl" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Waste" xml:space="preserve">
+    <value>Waste</value>
+  </data>
+  <data name="ToWaste" xml:space="preserve">
+    <value>Waste</value>
+  </data>
+  <data name="WitnessAnd" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="WitnessOn" xml:space="preserve">
+    <value>Witness on</value>
+  </data>
+  <data name="WitnessOnText" xml:space="preserve">
+    <value>Witness on</value>
+  </data>
+  <data name="LastTranscations" xml:space="preserve">
+    <value>Last Transcations</value>
+  </data>
+  <data name="Override" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="PastRemoved" xml:space="preserve">
+    <value>Past Removed</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="NonProfile" xml:space="preserve">
+    <value>Non Profile Meds</value>
+  </data>
+  <data name="BrandNamelbl" xml:space="preserve">
+    <value>Brand Name:</value>
+  </data>
+  <data name="GenericNamelbl" xml:space="preserve">
+    <value>Generic Name:</value>
+  </data>
+  <data name="LastRemovedStationlbl" xml:space="preserve">
+    <value>Station Last Removed From:</value>
+  </data>
+  <data name="MedIDlbl" xml:space="preserve">
+    <value>MedID:</value>
+  </data>
+  <data name="LastRemovedUserlbl" xml:space="preserve">
+    <value>Last Removed By:</value>
+  </data>
+  <data name="LastRemovedDateLabel" xml:space="preserve">
+    <value>Last Removed:</value>
+  </data>
+  <data name="LastRemovedReason" xml:space="preserve">
+    <value>Select a Reason:</value>
+  </data>
+  <data name="NextRemoveDate" xml:space="preserve">
+    <value>Can Be Removed After:</value>
+  </data>
+  <data name="RemovedLbl" xml:space="preserve">
+    <value>Removed:</value>
+  </data>
+  <data name="UserLbl" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="OrderIDlbl" xml:space="preserve">
+    <value>Order#</value>
+  </data>
+  <data name="Routelbl" xml:space="preserve">
+    <value>Route:</value>
+  </data>
+  <data name="EndTimelbl" xml:space="preserve">
+    <value>End:</value>
+  </data>
+  <data name="StartTimelbl" xml:space="preserve">
+    <value>Start:</value>
+  </data>
+  <data name="PRN" xml:space="preserve">
+    <value>PRN</value>
+  </data>
+  <data name="CancelMed" xml:space="preserve">
+    <value>Cancel Med</value>
+  </data>
+  <data name="CreditPatient" xml:space="preserve">
+    <value>Credit Patient</value>
+  </data>
+  <data name="UndocumentedWaste" xml:space="preserve">
+    <value>Undocumented Waste</value>
+  </data>
+  <data name="WitnessRequired" xml:space="preserve">
+    <value>Witness Required</value>
+  </data>
+  <data name="ReturnViewTitle" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="CountHardwareCloseAlertText" xml:space="preserve">
+    <value>Must complete count before closing drawer or pocket</value>
+  </data>
+  <data name="ShowMoreHistory" xml:space="preserve">
+    <value>Show More History...</value>
+  </data>
+  <data name="OnCall" xml:space="preserve">
+    <value>On Call</value>
+  </data>
+  <data name="EnableCriticalOverride" xml:space="preserve">
+    <value>Enable Critical Override for Device</value>
+  </data>
+  <data name="EnableTempNonProfile" xml:space="preserve">
+    <value>Enable Temporary Non-Profile Mode for Device</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="LastRemovedUserBy" xml:space="preserve">
+    <value>By:</value>
+  </data>
+  <data name="SelectMed" xml:space="preserve">
+    <value>Select one or more medications</value>
+  </data>
+  <data name="SearchMeds" xml:space="preserve">
+    <value>Search Meds</value>
+  </data>
+  <data name="WasteMed" xml:space="preserve">
+    <value>Waste Med</value>
+  </data>
+  <data name="MedicationsToWaste" xml:space="preserve">
+    <value>Medications to Waste</value>
+  </data>
+  <data name="MedsToWaste" xml:space="preserve">
+    <value>Meds to Waste</value>
+  </data>
+  <data name="MedItemHeader" xml:space="preserve">
+    <value>Med Item Header</value>
+  </data>
+  <data name="RemoveList" xml:space="preserve">
+    <value>Remove List</value>
+  </data>
+  <data name="EnableOutOfService" xml:space="preserve">
+    <value>Enable Device out of Service</value>
+  </data>
+  <data name="EmptyDosageFormCode" xml:space="preserve">
+    <value>Each</value>
+  </data>
+  <data name="FacilityKits" xml:space="preserve">
+    <value>Facility Kits</value>
+  </data>
+  <data name="SelectMeds" xml:space="preserve">
+    <value>Select Meds</value>
+  </data>
+  <data name="AllMeds" xml:space="preserve">
+    <value>All Meds</value>
+  </data>
+  <data name="Kits" xml:space="preserve">
+    <value>Kits</value>
+  </data>
+  <data name="SecuredMeds" xml:space="preserve">
+    <value>Secured Meds</value>
+  </data>
+  <data name="Expiration" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="Lot" xml:space="preserve">
+    <value>Lot</value>
+  </data>
+  <data name="Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="TrackingInformation" xml:space="preserve">
+    <value>Tracking Information</value>
+  </data>
+  <data name="AdministrationNote" xml:space="preserve">
+    <value>Administration Instructions:</value>
+  </data>
+  <data name="DispensingNote" xml:space="preserve">
+    <value>Dispensing Instructions:</value>
+  </data>
+  <data name="Doselbl" xml:space="preserve">
+    <value>Dose:</value>
+  </data>
+  <data name="UndocumentedWasteAmountInstruction" xml:space="preserve">
+    <value>Enter reason for undocumented waste {0} than expected amount of {1}</value>
+  </data>
+  <data name="WasteAllMeds" xml:space="preserve">
+    <value>Search All Meds to Waste</value>
+  </data>
+  <data name="SearchAllMeds" xml:space="preserve">
+    <value>Search All Meds</value>
+  </data>
+  <data name="WasteRemoveTransaction" xml:space="preserve">
+    <value>Waste Removed Meds</value>
+  </data>
+  <data name="SearchAllMedsInstruction" xml:space="preserve">
+    <value>Use Search box to retrieve matching meds</value>
+  </data>
+  <data name="ReturnRemovedMeds" xml:space="preserve">
+    <value>Return Removed Meds</value>
+  </data>
+  <data name="ReturnAllMeds" xml:space="preserve">
+    <value>Search All Meds to Return</value>
+  </data>
+  <data name="AmountGreaterthanMax" xml:space="preserve">
+    <value>Entered amount cannot be greater than 99999</value>
+  </data>
+  <data name="AlternateLocationLbl" xml:space="preserve">
+    <value>Alternate Locations:</value>
+  </data>
+  <data name="WasteWithoutRemoveTransaction" xml:space="preserve">
+    <value>Wasted without an associated remove transaction</value>
+  </data>
+  <data name="MyUndocumentedWaste" xml:space="preserve">
+    <value>My Undocumented Wastes</value>
+  </data>
+  <data name="WitnessOnRemove" xml:space="preserve">
+    <value>Witness on remove </value>
+  </data>
+  <data name="WitnessOnRemoveAndWaste" xml:space="preserve">
+    <value>Witness on remove and waste</value>
+  </data>
+  <data name="WitnessOnWaste" xml:space="preserve">
+    <value>Witness on waste</value>
+  </data>
+  <data name="Prioritylbl" xml:space="preserve">
+    <value>Priority:</value>
+  </data>
+  <data name="OverrideTaskTitle" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="Greater" xml:space="preserve">
+    <value>greater</value>
+  </data>
+  <data name="Less" xml:space="preserve">
+    <value>less</value>
+  </data>
+</root>

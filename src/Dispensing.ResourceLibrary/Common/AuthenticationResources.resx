@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthenticationErrorTitle" xml:space="preserve">
+    <value>Authentication Error</value>
+  </data>
+  <data name="BioIdDeviceError" xml:space="preserve">
+    <value>BioId Error</value>
+  </data>
+  <data name="CannotWitnessYourself" xml:space="preserve">
+    <value>Cannot be a witness for yourself</value>
+  </data>
+  <data name="ChangeBioIdWarning" xml:space="preserve">
+    <value>(*You are an exempt BioId user.)</value>
+  </data>
+  <data name="ChangePasswordButtonTitle" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ChangePasswordViewTitle" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ChangePasswordWarning" xml:space="preserve">
+    <value>(*You cannot change network password.)</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="ContinueButtonTitle" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="DomainNotFound" xml:space="preserve">
+    <value>Domain not found.</value>
+  </data>
+  <data name="DomainTitle" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="FingerprintConfirmation1" xml:space="preserve">
+    <value>Your fingerprint identification is not on record.</value>
+  </data>
+  <data name="FingerprintConfirmation2" xml:space="preserve">
+    <value>Do you want to register your fingerprint?</value>
+  </data>
+  <data name="FingerprintDeviceFailover" xml:space="preserve">
+    <value>BioId device requires maintenance.</value>
+  </data>
+  <data name="FingerprintErrorTitle" xml:space="preserve">
+    <value>Registration Required</value>
+  </data>
+  <data name="FingerprintFailoverConfirmationViewTitle" xml:space="preserve">
+    <value>BioId Failover</value>
+  </data>
+  <data name="FingerprintFailoverPasswordAction" xml:space="preserve">
+    <value>Press Ok to access device using password.{0}Press Cancel to sign out from device</value>
+  </data>
+  <data name="FingerprintFailoverWitnessAction" xml:space="preserve">
+    <value>Device access using password requires witness.</value>
+  </data>
+  <data name="FingerprintLoginMessage" xml:space="preserve">
+    <value>User ({0}): Place finger on the scanner, covering the entire lens.</value>
+    <comment>Replace 0 with UserId or Username</comment>
+  </data>
+  <data name="FingerprintLoginViewTitle" xml:space="preserve">
+    <value>BioId Login</value>
+  </data>
+  <data name="FingerprintMatchMessage" xml:space="preserve">
+    <value>Matching all three fingerprints...</value>
+  </data>
+  <data name="FingerprintRegistrationConfirmationViewTitle" xml:space="preserve">
+    <value>BioId Confirmation</value>
+  </data>
+  <data name="FingerprintRegistrationInstructionViewTitle" xml:space="preserve">
+    <value>BioId Instruction</value>
+  </data>
+  <data name="FingerprintRegistrationViewTitle" xml:space="preserve">
+    <value>BioId Registration</value>
+  </data>
+  <data name="FingerprintReregisterationButtonTitle" xml:space="preserve">
+    <value>Change BioId</value>
+  </data>
+  <data name="FingerprintScanMessage" xml:space="preserve">
+    <value>Scanning fingerprint {0} of 3</value>
+    <comment>Replace 0 with number of fingerprint scaning</comment>
+  </data>
+  <data name="FingerprintUserScanFailover" xml:space="preserve">
+    <value>Your fingerprint verification has failed.</value>
+  </data>
+  <data name="GrantUser" xml:space="preserve">
+    <value>Grant User</value>
+  </data>
+  <data name="InactiveDomainAuthenticationError" xml:space="preserve">
+    <value>User account belongs to an inactive domain. Please contact your system administrator.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NonDomainAccount" xml:space="preserve">
+    <value>LocalAccount</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+  <data name="PasswordViewTitle" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RedoScanButtonTitle" xml:space="preserve">
+    <value>Redo Scan</value>
+  </data>
+  <data name="RegisterButtonTitle" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="ScanButtonTitle" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="TryAgainButtonTitle" xml:space="preserve">
+    <value>Try Again</value>
+  </data>
+  <data name="UsePasswordButtonTitle" xml:space="preserve">
+    <value>Use Password</value>
+  </data>
+  <data name="UserIdPasswordViewTitle" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="UserIdViewTitle" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserPreferenceButtonTitle" xml:space="preserve">
+    <value>User Preference</value>
+  </data>
+  <data name="UserPreferenceViewTitle" xml:space="preserve">
+    <value>User Preference</value>
+  </data>
+  <data name="VisitorAccess" xml:space="preserve">
+    <value>Visitor Access</value>
+  </data>
+  <data name="WitnessFingerprintLoginMessage" xml:space="preserve">
+    <value>Witness ({0}): Place finger on the scanner, covering the entire lens.</value>
+    <comment>Replace 0 with witness UserId or Username</comment>
+  </data>
+  <data name="SignInWitnessTitle" xml:space="preserve">
+    <value>Please have an authorized witness verify sign in</value>
+  </data>
+  <data name="AuthenticationWarningTitle" xml:space="preserve">
+    <value>Authentication Warning</value>
+  </data>
+  <data name="HardwareErrorTitle" xml:space="preserve">
+    <value>Hardware Error</value>
+  </data>
+  <data name="UserPreferenceChangeBioIDTitle" xml:space="preserve">
+    <value>Please validate your password before changing BioId.</value>
+  </data>
+  <data name="ReverificationAuthenticationTitle" xml:space="preserve">
+    <value>Please reverify your credential for the above meds.</value>
+  </data>
+  <data name="ReverificationFingerprintLoginTitle" xml:space="preserve">
+    <value>User ({0}): Please verify your fingerprint for the above meds.</value>
+    <comment>Replace 0 with reverification UserId or Username</comment>
+  </data>
+  <data name="WitnessAuthorizationTitle" xml:space="preserve">
+    <value>Please have an authorized witness enter their credentials</value>
+  </data>
+  <data name="DestockWitnessAuthorizationTitle" xml:space="preserve">
+    <value>Please have an authorized witness verify destock of the above meds</value>
+  </data>
+  <data name="FingerprintUpdateCancel" xml:space="preserve">
+    <value>BioId update is cancelled.</value>
+  </data>
+  <data name="FingerprintUpdateMessage" xml:space="preserve">
+    <value>BioId is changed successfully.</value>
+  </data>
+  <data name="PasswordUpdateCancel" xml:space="preserve">
+    <value>Password update is cancelled.</value>
+  </data>
+  <data name="PasswordUpdateMessage" xml:space="preserve">
+    <value>Password is changed successfully.</value>
+  </data>
+  <data name="DomainUserPasswordExpiryWarning" xml:space="preserve">
+    <value>Your ({0}) password expires in {1} day(s). Please contact your system administrator for instructions.</value>
+    <comment>Replace 0 with UserID and 1 with number of days</comment>
+  </data>
+  <data name="LocalUserPasswordExpiryWarning" xml:space="preserve">
+    <value>Your ({0}) password expires in {1} day(s). Do you want to change your password?</value>
+    <comment>Replace 0 with UserID and 1 with number of days</comment>
+  </data>
+  <data name="PasswordExpirationWarning" xml:space="preserve">
+    <value>Password Expiration Warning</value>
+  </data>
+  <data name="RemindMeLaterButtonTitle" xml:space="preserve">
+    <value>Remind me later</value>
+  </data>
+  <data name="ScanIdMessage" xml:space="preserve">
+    <value>Please scan your ID.</value>
+  </data>
+  <data name="FingeprintExemptRequireScanId" xml:space="preserve">
+    <value>Fingerprint exempt user is required to scan User ID.</value>
+  </data>
+  <data name="UserIdScannerFailed" xml:space="preserve">
+    <value>UserId scan is required for all users but barcode scanner is not detected. Please contact system administrator.</value>
+  </data>
+  <data name="UserIdScannerFailoverFPWitness" xml:space="preserve">
+    <value>You require finger print user as a witness to sign in.</value>
+  </data>
+  <data name="UserIdScannerFailoverMultipleAttempts" xml:space="preserve">
+    <value>Unable to find user account matching scan code. Please try typing in your Username.</value>
+  </data>
+  <data name="UserIdScannerFailoverScannerFailed" xml:space="preserve">
+    <value>Barcode scanner is not detected. Please sign in using your password. </value>
+  </data>
+  <data name="UserIdScannerFailoverWitness" xml:space="preserve">
+    <value>You require witness to sign in.</value>
+  </data>
+  <data name="UserIdScanWarningCaption" xml:space="preserve">
+    <value>UserId Scan Warning</value>
+  </data>
+  <data name="PositiveIDRequired" xml:space="preserve">
+    <value>System require to scan UserId or Fingerprint as positive Id verification.</value>
+  </data>
+  <data name="RequireScanAllUsers" xml:space="preserve">
+    <value>System require to scan UserId for all users.</value>
+  </data>
+  <data name="SkipButtonTitle" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="SchedulePasswordSignInTitle" xml:space="preserve">
+    <value>Please enter your password to prevent your account from expiring. For questions contact your System Administrator.</value>
+  </data>
+  <data name="PasswordExpiryLessThanADayText" xml:space="preserve">
+    <value>less than a</value>
+    <comment>This resource is used in LocalUserPasswordExpiryWarning/DomainUserPasswordExpiryWarning if # of days == 0</comment>
+  </data>
+  <data name="DomainUserPasswordExpiredWarning" xml:space="preserve">
+    <value>Your ({0}) password is expired. Please contact your system administrator for instructions.</value>
+    <comment>Replace 0 with UserID</comment>
+  </data>
+  <data name="LocalUserPasswordExpiredWarning" xml:space="preserve">
+    <value>Your ({0}) password is expired. Do you want to change your password?</value>
+    <comment>Replace 0 with UserID</comment>
+  </data>
+  <data name="LastSuccessfulSignIn" xml:space="preserve">
+    <value>Last successful sign in:</value>
+  </data>
+  <data name="NumberOfFailedAttempts" xml:space="preserve">
+    <value>Number of failed attempts:</value>
+  </data>
+  <data name="AuthenticationEventInfo" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="LastUnsuccessfulSignIn" xml:space="preserve">
+    <value>Last unsuccessful sign in:</value>
+  </data>
+  <data name="NoPreviousSigninInformation" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="RecentAuthenticationInformation" xml:space="preserve">
+    <value>Recent Authentication Information</value>
+  </data>
+  <data name="AuthenticationFailedErrorMessage" xml:space="preserve">
+    <value>Unable to authenticate</value>
+    <comment>Generic error message for all types of authentication failed</comment>
+  </data>
+  <data name="FingerPrintFailoverUIDPWDWMessage" xml:space="preserve">
+    <value>A witness will not be able to scan their fingerprint.{0}A witness must scan their ID and enter their password.</value>
+  </data>
+</root>

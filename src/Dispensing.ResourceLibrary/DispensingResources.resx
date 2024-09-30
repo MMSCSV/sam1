@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AreaSearchFields_Facility" xml:space="preserve">
+    <value>Facility</value>
+  </data>
+  <data name="AreaSearchFields_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Argument_Enumeration_Value_Invalid" xml:space="preserve">
+    <value>The value of the argument {0} provided for the enumeration {1} is invalid.</value>
+  </data>
+  <data name="Argument_Must_Not_Be_Empty" xml:space="preserve">
+    <value>The provided String argument {0} must not be empty.</value>
+  </data>
+  <data name="ClinicalDataSubjectSearchFields_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ClinicalDataSubjectSearchFields_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ClinicalDataSubjectSearchFields_DisplayText" xml:space="preserve">
+    <value>Display Text</value>
+  </data>
+  <data name="ClinicalDataSubjectSearchFields_ResponseType" xml:space="preserve">
+    <value>Response Type</value>
+  </data>
+  <data name="ClinicalDataSubjectSearchFields_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="DefaultMultipleFacilitySortByValue" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="DeviceSearchFields_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="DeviceSearchFields_CriticalOverride" xml:space="preserve">
+    <value>Critical Override</value>
+  </data>
+  <data name="DeviceSearchFields_ScheduledCriticalOverride" xml:space="preserve">
+    <value>Scheduled Critical Override</value>
+  </data>
+  <data name="DeviceSearchFields_DeviceName" xml:space="preserve">
+    <value>Device Name</value>
+  </data>
+  <data name="DeviceSearchFields_ScheduledCriticalOverrideName" xml:space="preserve">
+    <value>Scheduled Critical Override Name</value>
+  </data>
+  <data name="DeviceSearchFields_ScheduledCriticalOverrideCreatedDate" xml:space="preserve">
+    <value>Scheduled Critical Override Created Date</value>
+  </data>
+  <data name="DeviceSearchFields_OutOfService" xml:space="preserve">
+    <value>Out of Service</value>
+  </data>
+  <data name="DeviceSearchFields_OverrideGroup" xml:space="preserve">
+    <value>Override Group</value>
+  </data>
+  <data name="DeviceSearchFields_Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="DeviceSearchFields_Unassigned" xml:space="preserve">
+    <value>Unassigned Station</value>
+  </data>
+  <data name="DisplayPatientIdentifier_AccountId" xml:space="preserve">
+    <value>Account ID</value>
+  </data>
+  <data name="DisplayPatientIdentifier_AlternateEncounterId" xml:space="preserve">
+    <value>Alternate encounter ID</value>
+  </data>
+  <data name="DisplayPatientIdentifier_EncounterId" xml:space="preserve">
+    <value>Encounter ID</value>
+  </data>
+  <data name="FacilityKitSearchFields_AssociatedToDevice" xml:space="preserve">
+    <value>Associated To Device</value>
+  </data>
+  <data name="FacilityKitSearchFields_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FacilityKitSearchFields_ItemBrandName" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="FacilityKitSearchFields_ItemGenericName" xml:space="preserve">
+    <value>Generic Name</value>
+  </data>
+  <data name="FacilityKitSearchFields_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FacilitySearchFields_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="FacilitySearchFields_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="FacilitySearchFields_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FacilitySearchFields_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FacilitySearchFields_SiteID" xml:space="preserve">
+    <value>Site ID</value>
+  </data>
+  <data name="InternalCode_NotFoundFormat" xml:space="preserve">
+    <value>Requested enum value of type '{0}' for internal code '{1}' was not found</value>
+  </data>
+  <data name="InvalidMessageReason" xml:space="preserve">
+    <value>The message is not valid and cannot be processed.</value>
+  </data>
+  <data name="ItemSearchFields_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ItemSearchFields_ApprovedDate" xml:space="preserve">
+    <value>Approved Date</value>
+  </data>
+  <data name="ItemSearchFields_BrandName" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="ItemSearchFields_Controlled" xml:space="preserve">
+    <value>Controlled</value>
+  </data>
+  <data name="ItemSearchFields_DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="ItemSearchFields_DosageForm" xml:space="preserve">
+    <value>Dosage Form</value>
+  </data>
+  <data name="ItemSearchFields_GenericName" xml:space="preserve">
+    <value>Generic Name</value>
+  </data>
+  <data name="ItemSearchFields_HasEquivalencies" xml:space="preserve">
+    <value>Has Equivalencies</value>
+  </data>
+  <data name="ItemSearchFields_HighRisk" xml:space="preserve">
+    <value>High Risk</value>
+  </data>
+  <data name="ItemSearchFields_MedicationClass" xml:space="preserve">
+    <value>Medication Class</value>
+  </data>
+  <data name="ItemSearchFields_NonMedication" xml:space="preserve">
+    <value>Non-Medication</value>
+  </data>
+  <data name="ItemSearchFields_OverrideGroup" xml:space="preserve">
+    <value>Override Group</value>
+  </data>
+  <data name="ItemSearchFields_PickArea" xml:space="preserve">
+    <value>Pick Area</value>
+  </data>
+  <data name="ItemSearchFields_SecurityGroup" xml:space="preserve">
+    <value>Security Group</value>
+  </data>
+  <data name="ItemSearchFields_TherapeuticClass" xml:space="preserve">
+    <value>Therapeutic Class</value>
+  </data>
+  <data name="ItemSearchFields_VerifyCountMode" xml:space="preserve">
+    <value>Verify Count Mode</value>
+  </data>
+  <data name="MedItemSearchFields_BrandName" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="MedItemSearchFields_Controlled" xml:space="preserve">
+    <value>Controlled</value>
+  </data>
+  <data name="MedItemSearchFields_DosageForm" xml:space="preserve">
+    <value>Dosage Form</value>
+  </data>
+  <data name="MedItemSearchFields_GenericName" xml:space="preserve">
+    <value>Generic Name</value>
+  </data>
+  <data name="MedItemSearchFields_MedicationClass" xml:space="preserve">
+    <value>Medication Class</value>
+  </data>
+  <data name="MedItemSearchFields_NonMedication" xml:space="preserve">
+    <value>Non-Medication</value>
+  </data>
+  <data name="MedItemSearchFields_TherapeuticClass" xml:space="preserve">
+    <value>Therapeutic Class</value>
+  </data>
+  <data name="NoticeDetailSearchFields_Device" xml:space="preserve">
+    <value>Device Name</value>
+  </data>
+  <data name="NoticeDetailSearchFields_EventTime" xml:space="preserve">
+    <value>Event Date/Time</value>
+  </data>
+  <data name="NoticeDetailSearchFields_Facility" xml:space="preserve">
+    <value>Facility Name</value>
+  </data>
+  <data name="NoticeDetailSearchFields_ItemDesc" xml:space="preserve">
+    <value>Item Description</value>
+  </data>
+  <data name="RequiredStringValidatorNegatedDefaultMessageTemplate" xml:space="preserve">
+    <value>{1} cannot have a value.</value>
+  </data>
+  <data name="RequiredStringValidatorNonNegatedDefaultMessageTemplate" xml:space="preserve">
+    <value>{1} is required.</value>
+  </data>
+  <data name="RoleSearchFields_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="RoleSearchFields_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="RoleSearchFields_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SearchFields_ActiveOrders" xml:space="preserve">
+    <value>Active Orders</value>
+  </data>
+  <data name="SearchFields_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="SearchFields_Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="SearchFields_Loaded" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="SearchFields_Pended" xml:space="preserve">
+    <value>Pended</value>
+  </data>
+  <data name="SearchFields_StandardStock" xml:space="preserve">
+    <value>Standard Stock</value>
+  </data>
+  <data name="SearchOperator_Contains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="SearchOperator_EndsWith" xml:space="preserve">
+    <value>Ends With</value>
+  </data>
+  <data name="SearchOperator_Equals" xml:space="preserve">
+    <value>Is</value>
+  </data>
+  <data name="SearchOperator_GreaterThan" xml:space="preserve">
+    <value>Greater Than</value>
+  </data>
+  <data name="SearchOperator_LessThan" xml:space="preserve">
+    <value>Less Than</value>
+  </data>
+  <data name="SearchOperator_NotContains" xml:space="preserve">
+    <value>Does Not Contain</value>
+  </data>
+  <data name="SearchOperator_NotEquals" xml:space="preserve">
+    <value>Is Not</value>
+  </data>
+  <data name="SearchOperator_StartsWith" xml:space="preserve">
+    <value>Starts With</value>
+  </data>
+  <data name="StorageSpaceSummarySearchFields_Blocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="StorageSpaceSummarySearchFields_DaysRemoved" xml:space="preserve">
+    <value>Days Removed</value>
+  </data>
+  <data name="StorageSpaceSummarySearchFields_MiniDrawerTrayMode" xml:space="preserve">
+    <value>Mini Drawer Tray Mode</value>
+  </data>
+  <data name="StorageSpaceSummarySearchFields_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="StorageSpaceSummarySearchFields_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="StringLengthValidatorNegatedDefaultMessageTemplate" xml:space="preserve">
+    <value>The length of '{1}' must not fall within the range "{3}" - "{5}".</value>
+  </data>
+  <data name="StringLengthValidatorNonNegatedDefaultMessageTemplate" xml:space="preserve">
+    <value>The length of '{1}' must fall within the range "{3}" - "{5}".</value>
+  </data>
+  <data name="Type_Not_Enum" xml:space="preserve">
+    <value>Type '{0}' is not enum.</value>
+  </data>
+  <data name="Type_Not_Enum1" xml:space="preserve">
+    <value>Type '{0}' is not enum.</value>
+  </data>
+  <data name="UnexpectedErrorReason" xml:space="preserve">
+    <value>An unexpected service error occurred on the service. See the error log for more details.</value>
+  </data>
+  <data name="UnitSearchFields_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="UnitSearchFields_Facility" xml:space="preserve">
+    <value>Facility</value>
+  </data>
+  <data name="UnitSearchFields_JobTitle" xml:space="preserve">
+    <value>Job Title</value>
+  </data>
+  <data name="UnitSearchFields_Name" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="UnitSearchFields_UserId" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="UserSearchFields_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="UserSearchFields_ActiveDirectoryDomain" xml:space="preserve">
+    <value>Domain Name</value>
+  </data>
+  <data name="UserSearchFields_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="UserSearchFields_Expired" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="UserSearchFields_Facility" xml:space="preserve">
+    <value>Facility</value>
+  </data>
+  <data name="UserSearchFields_FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="UserSearchFields_JobTitle" xml:space="preserve">
+    <value>Job Title</value>
+  </data>
+  <data name="UserSearchFields_LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="UserSearchFields_Locked" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="UserSearchFields_Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="UserSearchFields_SupportUser" xml:space="preserve">
+    <value>Support User</value>
+  </data>
+  <data name="UserSearchFields_Temporary" xml:space="preserve">
+    <value>Temporary</value>
+  </data>
+  <data name="UserSearchFields_UserId" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="ValidationErrorToString" xml:space="preserve">
+    <value>Target: '{0}' Key: '{1}' Message: "{2}"</value>
+  </data>
+  <data name="ValidationFailedFaultToString" xml:space="preserve">
+    <value>Validation Errors: {0}</value>
+  </data>
+  <data name="ItemSearchFields_HazardousWasteClass" xml:space="preserve">
+    <value>Hazardous Waste Class</value>
+  </data>
+  <data name="DosageFormSearchFields_EquivalencyDosageFormGroup" xml:space="preserve">
+    <value>Dosage Form Group</value>
+    <comment>spec 89361</comment>
+  </data>
+  <data name="EncounterSearchFields_LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="EncounterSearchFields_FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="EncounterSearchFields_AdmissionStatus" xml:space="preserve">
+    <value>Admission Status</value>
+  </data>
+  <data name="EncounterSearchFields_PatientPrimaryID" xml:space="preserve">
+    <value>Patient Primary ID</value>
+  </data>
+  <data name="EncounterSearchFields_EncounterID" xml:space="preserve">
+    <value>Visit ID</value>
+  </data>
+  <data name="EncounterSearchFields_AccountID" xml:space="preserve">
+    <value>Account Number</value>
+  </data>
+  <data name="EncounterSearchFields_PreadmitID" xml:space="preserve">
+    <value>Preadmit ID</value>
+  </data>
+  <data name="EncounterSearchFields_OrderID" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="EncounterSearchFields_AssignedUnit" xml:space="preserve">
+    <value>Assigned Unit</value>
+  </data>
+  <data name="EncounterSearchFields_FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="EncounterSearchFields_ADT" xml:space="preserve">
+    <value>ADT</value>
+  </data>
+  <data name="EncounterSearchFields_Discharged" xml:space="preserve">
+    <value>Discharged</value>
+  </data>
+  <data name="FacilityKitSearchFields_MedID" xml:space="preserve">
+    <value>Med ID</value>
+  </data>
+  <data name="Specified_Mixed" xml:space="preserve">
+    <value>-- Mixed</value>
+  </data>
+  <data name="ItemSearchFields_VariableDoseGroup" xml:space="preserve">
+    <value>Variable Dose Group</value>
+  </data>
+  <data name="ItemSearchFields_DosageFormGroup" xml:space="preserve">
+    <value>Dosage Form Group</value>
+  </data>
+  <data name="ItemSearchFields_ItemId" xml:space="preserve">
+    <value>Med ID</value>
+  </data>
+  <data name="ItemSearchFields_HighCost" xml:space="preserve">
+    <value>High Cost</value>
+  </data>
+  <data name="SrmSearchFields_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="SrmSearchFields_EventStartDate" xml:space="preserve">
+    <value>Event Start Date</value>
+  </data>
+  <data name="SrmSearchFields_NotResolvable" xml:space="preserve">
+    <value>Not Resolvable</value>
+  </data>
+  <data name="SrmSearchFields_Resolved" xml:space="preserve">
+    <value>Resolved</value>
+  </data>
+  <data name="SrmSearchFields_ResolvedDate" xml:space="preserve">
+    <value>Resolved Date</value>
+  </data>
+  <data name="StorageSpaceSearchFields_ActiveOrders" xml:space="preserve">
+    <value>Active Orders</value>
+  </data>
+  <data name="StorageSpaceSearchFields_DaysUnused" xml:space="preserve">
+    <value>Days Unused</value>
+  </data>
+  <data name="StorageSpaceSearchFields_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="StorageSpaceSearchFields_Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="StorageSpaceSearchFields_Loaded" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="StorageSpaceSearchFields_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="StorageSpaceSearchFields_StandardStock" xml:space="preserve">
+    <value>Standard Stock</value>
+  </data>
+  <data name="DeviceSearchFields_DeviceType" xml:space="preserve">
+    <value>Device Type</value>
+  </data>
+  <data name="UserSearchFields_UserType" xml:space="preserve">
+    <value>User Type</value>
+  </data>
+  <data name="EncounterSearchFields_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EncounterSearchFields_AdmissionDate" xml:space="preserve">
+    <value>Admission Date</value>
+  </data>
+  <data name="EncounterSearchFields_BirthDate" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+  <data name="EncounterSearchFields_PreadmitFlag" xml:space="preserve">
+    <value>Preadmit</value>
+  </data>
+  <data name="EncounterSearchFields_Reconciled" xml:space="preserve">
+    <value>Reconciled</value>
+  </data>
+  <data name="EncounterSearchFields_VisitType" xml:space="preserve">
+    <value>Visit Type</value>
+  </data>
+  <data name="EncounterSearchFields_TemporaryPatientFlag" xml:space="preserve">
+    <value>Is Temporary Patient</value>
+  </data>
+  <data name="ItemSearchFields_DoNotLoad" xml:space="preserve">
+    <value>Do Not Load</value>
+  </data>
+  <data name="EncounterSearchFields_DischargeDate" xml:space="preserve">
+    <value>Discharge Date</value>
+  </data>
+  <data name="EncounterSearchFields_StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="EncounterSearchFields_TemporaryVisitExpiredStatus" xml:space="preserve">
+    <value>Temporary Visit Expired</value>
+  </data>
+  <data name="ItemSearchFields_Distributor" xml:space="preserve">
+    <value>Distributor</value>
+  </data>
+  <data name="ItemSearchFields_IsComboMed" xml:space="preserve">
+    <value>Combo Med</value>
+  </data>
+  <data name="ItemDeliverySearchFields_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="ItemDeliverySearchFields_DeliveryStatus" xml:space="preserve">
+    <value>Delivery Status</value>
+  </data>
+  <data name="ItemDeliverySearchFields_Duration" xml:space="preserve">
+    <value>Duration (hours)</value>
+  </data>
+  <data name="ItemDeliverySearchFields_ItemName" xml:space="preserve">
+    <value>Ordered Medication Generic Name</value>
+  </data>
+  <data name="ItemDeliverySearchFields_OrderID" xml:space="preserve">
+    <value>Patient Order ID</value>
+  </data>
+  <data name="ItemDeliverySearchFields_PatientID" xml:space="preserve">
+    <value>Patient ID</value>
+  </data>
+  <data name="ItemDeliverySearchFields_PatientLastName" xml:space="preserve">
+    <value>Patient Last Name</value>
+  </data>
+  <data name="ItemSearchFields_ResolveUndocumentedWaste" xml:space="preserve">
+    <value>Resolve Undocumented Waste</value>
+  </data>
+  <data name="ItemSearchFields_Backordered" xml:space="preserve">
+    <value>Backordered</value>
+  </data>
+  <data name="ItemSearchFields_WitnessDestock" xml:space="preserve">
+    <value>Witness on Destock</value>
+  </data>
+  <data name="ItemSearchFields_WitnessEmptyReturnBin" xml:space="preserve">
+    <value>Witness on Empty Return Bin</value>
+  </data>
+  <data name="ItemSearchFields_WitnessInventory" xml:space="preserve">
+    <value>Witness on Inventory</value>
+  </data>
+  <data name="ItemSearchFields_WitnessLoadRefill" xml:space="preserve">
+    <value>Witness on Load/Refill</value>
+  </data>
+  <data name="ItemSearchFields_WitnessOutdate" xml:space="preserve">
+    <value>Witness on Outdate</value>
+  </data>
+  <data name="ItemSearchFields_WitnessOverride" xml:space="preserve">
+    <value>Witness on Override</value>
+  </data>
+  <data name="ItemSearchFields_WitnessRemove" xml:space="preserve">
+    <value>Witness on Remove</value>
+  </data>
+  <data name="ItemSearchFields_WitnessReturn" xml:space="preserve">
+    <value>Witness on Return</value>
+  </data>
+  <data name="ItemSearchFields_WitnessRxcheck" xml:space="preserve">
+    <value>Witness on RxCheck</value>
+  </data>
+  <data name="ItemSearchFields_WitnessUnload" xml:space="preserve">
+    <value>Witness on Unload</value>
+  </data>
+  <data name="ItemSearchFields_WitnessWaste" xml:space="preserve">
+    <value>Witness on Waste</value>
+  </data>
+  <data name="HostConversionSearchFields_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="HostConversionSearchFields_PlannedConversionDateTime" xml:space="preserve">
+    <value>Planned Conversion Date/Time</value>
+  </data>
+  <data name="DisplayPatientIdentifier_UseFacilityPatientID" xml:space="preserve">
+    <value>Use facility display patient ID</value>
+  </data>
+  <data name="DeviceSearchFields_SyncServer" xml:space="preserve">
+    <value>Sync Server</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_DispensingDeviceName" xml:space="preserve">
+    <value>Dispensing Device Name</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_EncounterId" xml:space="preserve">
+    <value>Encounter ID</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_GenericOrBrandName" xml:space="preserve">
+    <value>Generic Or Brand Name</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_PatientLastName" xml:space="preserve">
+    <value>Patient Last Name</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_PrimaryPatientId" xml:space="preserve">
+    <value>Primary Patient ID</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_TransactionSessionType" xml:space="preserve">
+    <value>Transaction Session Type</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_UserId" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_UserLastName" xml:space="preserve">
+    <value>User Last Name</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_WorkflowStep" xml:space="preserve">
+    <value>Workflow Step</value>
+  </data>
+  <data name="ItemSearchFields_CountOnCubieEject" xml:space="preserve">
+    <value>Count on CUBIE Eject</value>
+  </data>
+  <data name="OrderSearchFields_BrandName" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="OrderSearchFields_Components" xml:space="preserve">
+    <value>Components</value>
+  </data>
+  <data name="OrderSearchFields_DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="OrderSearchFields_End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="OrderSearchFields_GenericName" xml:space="preserve">
+    <value>Generic Name</value>
+  </data>
+  <data name="OrderSearchFields_GiveId" xml:space="preserve">
+    <value>Give ID</value>
+  </data>
+  <data name="OrderSearchFields_MedId" xml:space="preserve">
+    <value>Med ID</value>
+  </data>
+  <data name="OrderSearchFields_OrderId" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="OrderSearchFields_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="OrderSearchFields_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="OrderSearchFields_GiveDescription" xml:space="preserve">
+    <value>Give description</value>
+  </data>
+  <data name="ItemSearchFields_SearchBrandName" xml:space="preserve">
+    <value>Brand Name Alternate Search</value>
+  </data>
+  <data name="ItemSearchFields_SearchGenericName" xml:space="preserve">
+    <value>Generic Name Alternate Search</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_SearchBrandName" xml:space="preserve">
+    <value>Brand Name alternate search</value>
+  </data>
+  <data name="MissingTransactionSessionSearchFields_SearchGenericName" xml:space="preserve">
+    <value>Generic Name alternate search</value>
+  </data>
+  <data name="OrderSearchFields_SearchBrandName" xml:space="preserve">
+    <value>Brand Name alternate search</value>
+  </data>
+  <data name="OrderSearchFields_SearchGenericName" xml:space="preserve">
+    <value>Generic Name alternate search</value>
+  </data>
+  <data name="EncounterSearchFields_BrandName" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="EncounterSearchFields_DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="EncounterSearchFields_GenericName" xml:space="preserve">
+    <value>Generic Name</value>
+  </data>
+  <data name="EncounterSearchFields_GiveId" xml:space="preserve">
+    <value>Give ID</value>
+  </data>
+  <data name="EncounterSearchFields_MedId" xml:space="preserve">
+    <value>Med ID</value>
+  </data>
+  <data name="EncounterSearchFields_SearchBrandName" xml:space="preserve">
+    <value>Brand Name Alternate Search</value>
+  </data>
+  <data name="EncounterSearchFields_SearchGenericName" xml:space="preserve">
+    <value>Generic Name Alternate Search</value>
+  </data>
+  <data name="EncounterSearchFields_SystemOrder" xml:space="preserve">
+    <value>System Order</value>
+  </data>
+  <data name="EncounterSearchFields_SystemOrderCreatedDate" xml:space="preserve">
+    <value>System Order Created Date</value>
+  </data>
+  <data name="OrderSearchFields_Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="OrderSearchFields_Route" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="OrderSearchFields_SystemOrder" xml:space="preserve">
+    <value>System Order</value>
+  </data>
+  <data name="OrderSearchFields_SystemOrderCreated" xml:space="preserve">
+    <value>System Order Created Date</value>
+  </data>
+  <data name="DispensingSystemDefaultManualPharmacyOrderIdPrefix" xml:space="preserve">
+    <value>ES</value>
+  </data>
+  <data name="LocationDescriptionPocketCount" xml:space="preserve">
+    <value>{0}, {1} pocket</value>
+  </data>
+  <data name="PocketCountMiniTraySingleWide" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="PocketCountMiniTrayTripleWide" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="DeviceLicenseNameFormat" xml:space="preserve">
+    <value>{0} ({1} - {2})</value>
+  </data>
+  <data name="MultipleRestock" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+</root>

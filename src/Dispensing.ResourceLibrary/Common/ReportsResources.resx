@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllBelowMaxTitle" xml:space="preserve">
+    <value>All below max</value>
+  </data>
+  <data name="AllStationEvents" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="AtOrBelowMinTitle" xml:space="preserve">
+    <value>At or below min</value>
+  </data>
+  <data name="CancelTitle" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DeliveryPickReportTitle" xml:space="preserve">
+    <value>Refill Delivery Report</value>
+  </data>
+  <data name="GroupedBy" xml:space="preserve">
+    <value>Group by: </value>
+  </data>
+  <data name="IncludeInReportTitle" xml:space="preserve">
+    <value>Include in report:</value>
+  </data>
+  <data name="InventoryByStation" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="InventoryReportTitle" xml:space="preserve">
+    <value>Inventory Report</value>
+  </data>
+  <data name="MedTitle" xml:space="preserve">
+    <value>Med</value>
+  </data>
+  <data name="NameHeaderTitle" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="OutdatedMedsOnly" xml:space="preserve">
+    <value>Device Outdated Meds</value>
+  </data>
+  <data name="PatientsTitle" xml:space="preserve">
+    <value>Patients</value>
+  </data>
+  <data name="PatientTitle" xml:space="preserve">
+    <value>Patient</value>
+  </data>
+  <data name="PickDelivery" xml:space="preserve">
+    <value>Refill Delivery</value>
+  </data>
+  <data name="RefillDelivery" xml:space="preserve">
+    <value>Refill Pick</value>
+  </data>
+  <data name="RefillPickReportTitle" xml:space="preserve">
+    <value>Refill Pick Report</value>
+  </data>
+  <data name="ReportsTitle" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="RunReportTitle" xml:space="preserve">
+    <value>Run Report</value>
+  </data>
+  <data name="StationEventsReportTitle" xml:space="preserve">
+    <value>Device Events Report</value>
+  </data>
+  <data name="StationTitle" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="TabNameArea" xml:space="preserve">
+    <value>Pick Area</value>
+  </data>
+  <data name="TabNameDrawer" xml:space="preserve">
+    <value>Drawer</value>
+  </data>
+  <data name="TabNameMedClass" xml:space="preserve">
+    <value>Med Class</value>
+  </data>
+  <data name="TabNameMeds" xml:space="preserve">
+    <value>Meds</value>
+  </data>
+  <data name="UsersTitle" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="ZoneTitle" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="EndDateLable" xml:space="preserve">
+    <value>End Date:</value>
+  </data>
+  <data name="EndDateTitle" xml:space="preserve">
+    <value>Select End Date</value>
+    <comment>Obsolete</comment>
+  </data>
+  <data name="StartDateLable" xml:space="preserve">
+    <value>Start Date:</value>
+  </data>
+  <data name="StartDateTitle" xml:space="preserve">
+    <value>Select Start Date</value>
+    <comment>Obsolete</comment>
+  </data>
+  <data name="PageDown" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="PageUp" xml:space="preserve">
+    <value>Page Up</value>
+  </data>
+  <data name="ReportEndDateCannotBeEmpty" xml:space="preserve">
+    <value>Report end date cannot be empty</value>
+  </data>
+  <data name="ReportEndDateCannotBeGreaterThanStartDateBy31" xml:space="preserve">
+    <value>Report end date cannot be {0} days greater than report start date</value>
+  </data>
+  <data name="ReportEndDateIsnotValidDate" xml:space="preserve">
+    <value>Report end date is not a valid date</value>
+  </data>
+  <data name="ReportStartDateCannotBeEmpty" xml:space="preserve">
+    <value>Report start date cannot be empty</value>
+  </data>
+  <data name="ReportStartDateCannotBeGreaterThanEndDate" xml:space="preserve">
+    <value>Report start date cannot be greater than report end date</value>
+  </data>
+  <data name="ReportStartDateIsnotValidDate" xml:space="preserve">
+    <value>Report start date is not a valid date</value>
+  </data>
+  <data name="IDMedTitleFormat" xml:space="preserve">
+    <value>{0} [{1}]</value>
+  </data>
+  <data name="IDTitleFormat" xml:space="preserve">
+    <value>{0}, {1} ({2})</value>
+  </data>
+  <data name="NoItemSelected" xml:space="preserve">
+    <value>No item(s) selected</value>
+  </data>
+  <data name="ReportStartDateCannotBeEarlierThanTodayBy31Days" xml:space="preserve">
+    <value>Report start date cannot be {0} days earlier than today</value>
+  </data>
+  <data name="ReportPreview" xml:space="preserve">
+    <value>Report Preview</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Beginning" xml:space="preserve">
+    <value>Beginning</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="Discrepancy" xml:space="preserve">
+    <value>Discrepancy</value>
+  </data>
+  <data name="DiscrepancyTransactionReport" xml:space="preserve">
+    <value>Discrepancy Transaction Report</value>
+  </data>
+  <data name="Documented" xml:space="preserve">
+    <value>Documented</value>
+  </data>
+  <data name="Ending" xml:space="preserve">
+    <value>Ending</value>
+  </data>
+  <data name="FollowingTransactions" xml:space="preserve">
+    <value>Following Transactions</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Medication" xml:space="preserve">
+    <value>Medication</value>
+  </data>
+  <data name="Printed" xml:space="preserve">
+    <value>Printed</value>
+  </data>
+  <data name="PriorTransactions" xml:space="preserve">
+    <value>Prior Transactions</value>
+  </data>
+  <data name="Transaction" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="TxType" xml:space="preserve">
+    <value>Tx Type</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="CarrentPageFormat" xml:space="preserve">
+    <value>Page {0} of {1}</value>
+  </data>
+  <data name="DiscrepancyCreated" xml:space="preserve">
+    <value>Discrepancy Created</value>
+  </data>
+  <data name="ResolvedDiscrepancy" xml:space="preserve">
+    <value>Resolved Discrepancy</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="DiscrepancyResolved" xml:space="preserve">
+    <value>Discrepancy Resolved</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="PatientTitleFormat" xml:space="preserve">
+    <value>{0}, {1} {2} (DOB:{3}) {4} (ID: {5})</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>Canceled</value>
+  </data>
+  <data name="Witness" xml:space="preserve">
+    <value>Witness</value>
+  </data>
+  <data name="IDTitleShortFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="TemporaryID" xml:space="preserve">
+    <value>temporary</value>
+  </data>
+  <data name="Resolved" xml:space="preserve">
+    <value>Resolved</value>
+  </data>
+  <data name="ReportEndDateCannotBeGreaterThanToday" xml:space="preserve">
+    <value>Report end date can not be greater than today's date</value>
+  </data>
+  <data name="DeviceTitle" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="DateRangeFormat" xml:space="preserve">
+    <value>Last {0} days</value>
+  </data>
+  <data name="TodayLabel" xml:space="preserve">
+    <value>Today only</value>
+  </data>
+  <data name="PatientCase" xml:space="preserve">
+    <value>Patient Case</value>
+  </data>
+  <data name="AllDeviceTitle" xml:space="preserve">
+    <value>All Devices</value>
+  </data>
+  <data name="ThisDeviceTitle" xml:space="preserve">
+    <value>This Device</value>
+  </data>
+  <data name="PatientCaseEvents" xml:space="preserve">
+    <value>Patient Case Events</value>
+  </data>
+  <data name="StorageTitle" xml:space="preserve">
+    <value>Storage location</value>
+  </data>
+  <data name="CompareReport" xml:space="preserve">
+    <value>Compare Report</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="NoneSelectedLabel" xml:space="preserve">
+    <value>None selected</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ZoomIn" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="ZoomOut" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+</root>

@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSServerOLTP" Class="RxDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSServerOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="Rx.vw_ControlledSubstanceLicenseCurrent" Member="ControlledSubstanceLicenseEntities">
+    <Type Name="ControlledSubstanceLicenseEntity">
+      <Column Name="ControlledSubstanceLicenseSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ControlledSubstanceLicenseKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="LicenseID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LicenseName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="StreetAddressText" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubdivisionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_CompoundTemplateCurrent" Member="CompoundTemplateEntities">
+    <Type Name="CompoundTemplateEntity">
+      <Column Name="CompoundTemplateSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CompoundTemplateKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CompoundName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CompoundDescription" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StandardCompoundTemplateModeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_CompoundIngredientSetCurrent" Member="CompoundIngredientSetEntities">
+    <Type Name="CompoundIngredientSetEntity">
+      <Column Name="CompoundTemplateKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CompoundIngredientSetKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="CreatedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EndedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_MedClassGroupCurrent" Member="MedClassGroupEntities">
+    <Type Name="MedClassGroupEntity">
+      <Column Name="MedClassGroupSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedClassGroupCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_NonADMLocationCurrent" Member="NonADMLocationEntities">
+    <Type Name="NonADMLocationEntity">
+      <Column Name="NonADMLocationSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="NonADMLocationName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_PaperworkConfigCurrent" Member="PaperworkConfigEntities">
+    <Type Name="PaperworkConfigEntity">
+      <Column Name="PaperworkConfigSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PaperworkConfigKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="SheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="false" />
+      <Column Name="LoadedPrintDeliverySignatureFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LoadedPrintSendLabelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LoadedApplyFormularyPaperworkFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PrintMaximumRowsFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstGroupPrintQuantity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SecondGroupPrintQuantity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="SendLabelOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeliverySignatureReceiptOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PrintSendLabelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PrintDeliverySignatureReceiptFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PrintDuplicateDeliverySignatureFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_ReceivedItemCurrent" Member="ReceivedItemEntities">
+    <Type Name="ReceivedItemEntity">
+      <Column Name="ReceivedItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReceivedItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RemainingQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="ReceivedItemListKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemDescriptionText" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemReconciledFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActualItemQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceItemQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostPerUnitAmount" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="PurchaseOrderItemQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DistributorItemCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LogisticsReceivedItemQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FinishDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_ReceivedItemStorageSpaceCurrent" Member="ReceivedItemStorageSpaceEntities">
+    <Type Name="ReceivedItemStorageSpaceEntity">
+      <Column Name="ReceivedItemStorageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReceivedItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StorageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="DisassociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DisassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="IntendedPutawayQuantity" Type="System.Decimal" DbType="Decimal(28,18) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_SheetConfigCurrent" Member="SheetConfigEntities">
+    <Type Name="SheetConfigEntity">
+      <Column Name="SheetConfigSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SheetTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SheetStyleKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReconcileFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeliverySignatureReceiptPrintQuantity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="NoPageBreakFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PageBreakByMedClassFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PageBreakByInjectableFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NoInPageBreakFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InPageBreakByMedClassFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InPageBreakByInjectableFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BlankSpaceQuantity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EmptyQPSFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vwMedClassGroupMemberCurrent" Member="MedClassGroupMemberEntities">
+    <Type Name="MedClassGroupMemberEntity">
+      <Column Name="MedClassGroupMemberKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MedClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedClassKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="DisassociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DisassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_SheetConfigMedClassGroupCurrent" Member="SheetConfigMedClassGroupEntities">
+    <Type Name="SheetConfigMedClassGroupEntity">
+      <Column Name="SheetConfigMedClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="DisassociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DisassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Rx.vw_ReceivedItemListCurrent" Member="ReceivedItemListEntities">
+    <Type Name="ReceivedItemListEntity">
+      <Column Name="ReceivedItemListSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReceivedItemListKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="TargetDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreatedUnderPharmacyInformationSystemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ActedUnderPharmacyInformationSystemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StartDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="ReceivedItemListTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="FinishDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="InvoiceID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InvoiceTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PurchaseOrderID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PurchaseOrderDescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PurchaseOrderDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SellFormID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BuyerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DistributorName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LogisticsUserID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LogisticsUserFullName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Function Name="Rx.usp_SheetConfigUpdate" Method="usp_SheetConfigUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SheetTypeInternalCode" Parameter="sheetTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="SheetStyleKey" Parameter="sheetStyleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ReconcileFlag" Parameter="reconcileFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DeliverySignatureReceiptPrintQuantity" Parameter="deliverySignatureReceiptPrintQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="NoPageBreakFlag" Parameter="noPageBreakFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageBreakByMedClassFlag" Parameter="pageBreakByMedClassFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageBreakByInjectableFlag" Parameter="pageBreakByInjectableFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NoInPageBreakFlag" Parameter="noInPageBreakFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InPageBreakByMedClassFlag" Parameter="inPageBreakByMedClassFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InPageBreakByInjectableFlag" Parameter="inPageBreakByInjectableFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BlankSpaceQuantity" Parameter="blankSpaceQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="EmptyQPSFlag" Parameter="emptyQPSFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_SheetConfigUpdateResult">
+      <Column Name="SheetConfigSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_SheetConfigMedClassGroupInsert" Method="usp_SheetConfigMedClassGroupInsert">
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassGroupKey" Parameter="medClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationDateTime" Parameter="associationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SheetConfigMedClassGroupKey" Parameter="sheetConfigMedClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_SheetConfigMedClassGroupDelete" Method="usp_SheetConfigMedClassGroupDelete">
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassGroupKey" Parameter="medClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationDateTime" Parameter="disassociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_SheetConfigInsert" Method="usp_SheetConfigInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SheetTypeInternalCode" Parameter="sheetTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="SheetStyleKey" Parameter="sheetStyleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ReconcileFlag" Parameter="reconcileFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DeliverySignatureReceiptPrintQuantity" Parameter="deliverySignatureReceiptPrintQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="NoPageBreakFlag" Parameter="noPageBreakFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageBreakByMedClassFlag" Parameter="pageBreakByMedClassFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PageBreakByInjectableFlag" Parameter="pageBreakByInjectableFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NoInPageBreakFlag" Parameter="noInPageBreakFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InPageBreakByMedClassFlag" Parameter="inPageBreakByMedClassFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InPageBreakByInjectableFlag" Parameter="inPageBreakByInjectableFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BlankSpaceQuantity" Parameter="blankSpaceQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="EmptyQPSFlag" Parameter="emptyQPSFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_SheetConfigDelete" Method="usp_SheetConfigDelete">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_SheetConfigDeleteResult">
+      <Column Name="SheetConfigSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemUpdate" Method="usp_ReceivedItemUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="ReceivedItemListKey" Parameter="receivedItemListKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemKey" Parameter="itemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemID" Parameter="itemID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ItemDescription" Parameter="itemDescription" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ItemReconciledFlag" Parameter="itemReconciledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActualItemQuantity" Parameter="actualItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="InvoiceItemQuantity" Parameter="invoiceItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CostPerUnitAmount" Parameter="costPerUnitAmount" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="PurchaseOrderItemQuantity" Parameter="purchaseOrderItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RemainingQuantity" Parameter="remainingQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReferenceID" Parameter="referenceID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DistributorItemCode" Parameter="distributorItemCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ReceivedItemKey" Parameter="receivedItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemStorageSpaceUpdate" Method="usp_ReceivedItemStorageSpaceUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="IntendedPutawayQuantity" Parameter="intendedPutawayQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ReceivedItemStorageSpaceKey" Parameter="receivedItemStorageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_ReceivedItemStorageSpaceUpdateResult">
+      <Column Name="ReceivedItemStorageSpaceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemStorageSpaceInsert" Method="usp_ReceivedItemStorageSpaceInsert">
+    <Parameter Name="ReceivedItemKey" Parameter="receivedItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageSpaceKey" Parameter="storageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="IntendedPutawayQuantity" Parameter="intendedPutawayQuantity" Type="System.Decimal" DbType="Decimal(28,14)" />
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ReceivedItemStorageSpaceKey" Parameter="receivedItemStorageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemStorageSpaceDelete" Method="usp_ReceivedItemStorageSpaceDelete">
+    <Parameter Name="ReceivedItemKey" Parameter="receivedItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageSpaceKey" Parameter="storageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationDateTime" Parameter="disassociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemInsert" Method="usp_ReceivedItemInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="ReceivedItemListKey" Parameter="receivedItemListKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemKey" Parameter="itemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemID" Parameter="itemID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ItemDescriptionText" Parameter="itemDescriptionText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ItemReconciledFlag" Parameter="itemReconciledFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActualItemQuantity" Parameter="actualItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="InvoiceItemQuantity" Parameter="invoiceItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CostPerUnitAmount" Parameter="costPerUnitAmount" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="PurchaseOrderItemQuantity" Parameter="purchaseOrderItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RemainingQuantity" Parameter="remainingQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DistributorItemCode" Parameter="distributorItemCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FinishDateTime" Parameter="finishDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="LogisticsReceivedItemQuantity" Parameter="logisticsReceivedItemQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CompositeReceivedItemKey" Parameter="compositeReceivedItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompositeFlag" Parameter="compositeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ReceivedItemKey" Parameter="receivedItemKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_PaperworkConfigUpdate" Method="usp_PaperworkConfigUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NonADMLocationKey" Parameter="nonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LoadedPrintDeliverySignatureFlag" Parameter="loadedPrintDeliverySignatureFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LoadedPrintSendLabelFlag" Parameter="loadedPrintSendLabelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LoadedApplyFormularyPaperworkFlag" Parameter="loadedApplyFormularyPaperworkFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintMaximumRowsFlag" Parameter="printMaximumRowsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FirstGroupPrintQuantity" Parameter="firstGroupPrintQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SecondGroupPrintQuantity" Parameter="secondGroupPrintQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SendLabelOnlyFlag" Parameter="sendLabelOnlyFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DeliverySignatureReceiptOnlyFlag" Parameter="deliverySignatureReceiptOnlyFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintSendLabelFlag" Parameter="printSendLabelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintDeliverySignatureReceiptFlag" Parameter="printDeliverySignatureReceiptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintDuplicateDeliverySignatureFlag" Parameter="printDuplicateDeliverySignatureFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PaperworkConfigKey" Parameter="paperworkConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_PaperworkConfigUpdateResult">
+      <Column Name="PaperworkConfigSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_PaperworkConfigInsert" Method="usp_PaperworkConfigInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="SheetConfigKey" Parameter="sheetConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NonADMLocationKey" Parameter="nonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LoadedPrintDeliverySignatureFlag" Parameter="loadedPrintDeliverySignatureFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LoadedPrintSendLabelFlag" Parameter="loadedPrintSendLabelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LoadedApplyFormularyPaperworkFlag" Parameter="loadedApplyFormularyPaperworkFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintMaximumRowsFlag" Parameter="printMaximumRowsFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FirstGroupPrintQuantity" Parameter="firstGroupPrintQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SecondGroupPrintQuantity" Parameter="secondGroupPrintQuantity" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="SendLabelOnlyFlag" Parameter="sendLabelOnlyFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DeliverySignatureReceiptOnlyFlag" Parameter="deliverySignatureReceiptOnlyFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintSendLabelFlag" Parameter="printSendLabelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintDeliverySignatureReceiptFlag" Parameter="printDeliverySignatureReceiptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PrintDuplicateDeliverySignatureFlag" Parameter="printDuplicateDeliverySignatureFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PaperworkConfigKey" Parameter="paperworkConfigKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_PaperworkConfigDelete" Method="usp_PaperworkConfigDelete">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PaperworkConfigKey" Parameter="paperworkConfigKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_PaperworkConfigDeleteResult">
+      <Column Name="PaperworkConfigSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_NonADMLocationUpdate" Method="usp_NonADMLocationUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="NonADMLocationName" Parameter="nonADMLocationName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NonADMLocationKey" Parameter="nonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_NonADMLocationUpdateResult">
+      <Column Name="NonADMLocationSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_NonADMLocationInsert" Method="usp_NonADMLocationInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="NonADMLocationName" Parameter="nonADMLocationName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NonADMLocationKey" Parameter="nonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_NonADMLocationDelete" Method="usp_NonADMLocationDelete">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NonADMLocationKey" Parameter="nonADMLocationKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_NonADMLocationDeleteResult">
+      <Column Name="NonADMLocationSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_MedClassGroupMemberInsert" Method="usp_MedClassGroupMemberInsert">
+    <Parameter Name="MedClassGroupKey" Parameter="medClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassKey" Parameter="medClassKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationDateTime" Parameter="associationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassGroupMemberKey" Parameter="medClassGroupMemberKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_MedClassGroupMemberDelete" Method="usp_MedClassGroupMemberDelete">
+    <Parameter Name="MedClassGroupKey" Parameter="medClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassKey" Parameter="medClassKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationDateTime" Parameter="disassociationDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_CompoundTemplateUpdate" Method="usp_CompoundTemplateUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemKey" Parameter="itemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompoundName" Parameter="compoundName" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="CompoundDescription" Parameter="compoundDescription" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="StandardCompoundTemplateModeInternalCode" Parameter="standardCompoundTemplateModeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CompoundTemplateKey" Parameter="compoundTemplateKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_CompoundTemplateUpdateResult">
+      <Column Name="CompoundTemplateSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_CompoundTemplateInsert" Method="usp_CompoundTemplateInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemKey" Parameter="itemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompoundName" Parameter="compoundName" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="CompoundDescription" Parameter="compoundDescription" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="StandardCompoundTemplateModeInternalCode" Parameter="standardCompoundTemplateModeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompoundTemplateKey" Parameter="compoundTemplateKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_CompoundTemplateDelete" Method="usp_CompoundTemplateDelete">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompoundTemplateKey" Parameter="compoundTemplateKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_CompoundTemplateDeleteResult">
+      <Column Name="CompoundTemplateSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_CompoundIngredientSetDelete" Method="usp_CompoundIngredientSetDelete">
+    <Parameter Name="EndUTCDateTime" Parameter="endUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndLocalDateTime" Parameter="endLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndedActorKey" Parameter="endedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompoundTemplateKey" Parameter="compoundTemplateKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_ControlledSubstanceLicenseInsert" Method="usp_ControlledSubstanceLicenseInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="LicenseID" Parameter="licenseID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LicenseName" Parameter="licenseName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="StreetAddressText" Parameter="streetAddressText" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CityName" Parameter="cityName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SubdivisionName" Parameter="subdivisionName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="CountryName" Parameter="countryName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ControlledSubstanceLicenseKey" Parameter="controlledSubstanceLicenseKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_ControlledSubstanceLicenseUpdate" Method="usp_ControlledSubstanceLicenseUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="LicenseID" Parameter="licenseID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LicenseName" Parameter="licenseName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="StreetAddressText" Parameter="streetAddressText" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CityName" Parameter="cityName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SubdivisionName" Parameter="subdivisionName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="CountryName" Parameter="countryName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ControlledSubstanceLicenseKey" Parameter="controlledSubstanceLicenseKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_ControlledSubstanceLicenseUpdateResult">
+      <Column Name="ControlledSubstanceLicenseSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_ControlledSubstanceLicenseDelete" Method="usp_ControlledSubstanceLicenseDelete">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ControlledSubstanceLicenseKey" Parameter="controlledSubstanceLicenseKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_InvoiceTypeDelete" Method="usp_InvoiceTypeDelete">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="InvoiceTypeKey" Parameter="invoiceTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_InvoiceTypeDeleteResult">
+      <Column Name="InvoiceTypeSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_InvoiceTypeInsert" Method="usp_InvoiceTypeInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="InvoiceTypeName" Parameter="invoiceTypeName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="InvoiceTypeKey" Parameter="invoiceTypeKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_InvoiceTypeUpdate" Method="usp_InvoiceTypeUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="InvoiceTypeName" Parameter="invoiceTypeName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InvoiceTypeKey" Parameter="invoiceTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_InvoiceTypeUpdateResult">
+      <Column Name="InvoiceTypeSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_MedClassGroupInsert" Method="usp_MedClassGroupInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassGroupCode" Parameter="medClassGroupCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassGroupKey" Parameter="medClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_MedClassGroupUpdate" Method="usp_MedClassGroupUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedClassGroupCode" Parameter="medClassGroupCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MedClassGroupKey" Parameter="medClassGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_MedClassGroupUpdateResult">
+      <Column Name="MedClassGroupSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemListInsert" Method="usp_ReceivedItemListInsert">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="ReceivedItemListTypeInternalCode" Parameter="receivedItemListTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="FinishDateTime" Parameter="finishDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="InvoiceID" Parameter="invoiceID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="InvoiceDate" Parameter="invoiceDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="InvoiceTypeName" Parameter="invoiceTypeName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PurchaseOrderID" Parameter="purchaseOrderID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PurchaseOrderDescriptionText" Parameter="purchaseOrderDescriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="PurchaseOrderDate" Parameter="purchaseOrderDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SellFormID" Parameter="sellFormID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BuyerName" Parameter="buyerName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DistributorName" Parameter="distributorName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LogisticsUserID" Parameter="logisticsUserID" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="LogisticsUserFullName" Parameter="logisticsUserFullName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="TargetDispensingDeviceKey" Parameter="targetDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CreatedAtDispensingDeviceKey" Parameter="createdAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CreatedUnderPharmacyInformationSystemKey" Parameter="createdUnderPharmacyInformationSystemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ActedUnderPharmacyInformationSystemKey" Parameter="actedUnderPharmacyInformationSystemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ReceivedItemListKey" Parameter="receivedItemListKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Rx.usp_ReceivedItemListUpdate" Method="usp_ReceivedItemListUpdate">
+    <Parameter Name="StartDateTime" Parameter="startDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="ReceivedItemListTypeInternalCode" Parameter="receivedItemListTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="FinishDateTime" Parameter="finishDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" />
+    <Parameter Name="InvoiceID" Parameter="invoiceID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="InvoiceDate" Parameter="invoiceDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="InvoiceTypeName" Parameter="invoiceTypeName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PurchaseOrderID" Parameter="purchaseOrderID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PurchaseOrderDescriptionText" Parameter="purchaseOrderDescriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="PurchaseOrderDate" Parameter="purchaseOrderDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SellFormID" Parameter="sellFormID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BuyerName" Parameter="buyerName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DistributorName" Parameter="distributorName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LogisticsUserID" Parameter="logisticsUserID" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="LogisticsUserFullName" Parameter="logisticsUserFullName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ReceivedItemListKey" Parameter="receivedItemListKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="usp_ReceivedItemListUpdateResult">
+        <Column Name="ReceivedItemListSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

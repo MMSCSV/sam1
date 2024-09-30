@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>CareFusion.Dispensing.Services</RootNamespace>
+    <AssemblyName>CareFusion.Dispensing.Services</AssemblyName>
+    <PackageId>Dispensing.Services</PackageId>    
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dispensing.Data\Dispensing.Data.csproj" />
+    <ProjectReference Include="..\Dispensing.Encryption\Dispensing.Encryption.csproj" />
+    <ProjectReference Include="..\Dispensing.ResourceLibrary\Dispensing.ResourceLibrary.csproj" />
+    <ProjectReference Include="..\Dispensing\Dispensing.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dispensing.UserDirectoryManagement" />
+    <PackageReference Include="IdentityModel" />
+    <PackageReference Include="LinqKit" />
+    <PackageReference Include="Nito.AsyncEx" />
+    <PackageReference Include="Pyxis.Core.Data" />
+    <PackageReference Include="Pyxis.IdentityServer.Middleware" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllMeds" xml:space="preserve">
+    <value>All Meds</value>
+  </data>
+  <data name="ControlledMeds" xml:space="preserve">
+    <value>Controlled Meds</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="Dispensed" xml:space="preserve">
+    <value>Dispensed: </value>
+  </data>
+  <data name="Dispenses" xml:space="preserve">
+    <value>Dispenses</value>
+  </data>
+  <data name="Kits" xml:space="preserve">
+    <value>Kits</value>
+  </data>
+  <data name="MyControlledMeds" xml:space="preserve">
+    <value>My Controlled Meds</value>
+  </data>
+  <data name="MyDispenses" xml:space="preserve">
+    <value>My Dispenses</value>
+  </data>
+  <data name="NoItemsAvaialble" xml:space="preserve">
+    <value>No items available</value>
+  </data>
+  <data name="PatientCaseDisplayTitle" xml:space="preserve">
+    <value>Patient Case</value>
+  </data>
+  <data name="RecentPatientsLblFormat" xml:space="preserve">
+    <value>Recent Patients ({0})</value>
+  </data>
+  <data name="Remaining" xml:space="preserve">
+    <value>Remaining</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Returns" xml:space="preserve">
+    <value>Returns</value>
+  </data>
+  <data name="SecuredMeds" xml:space="preserve">
+    <value>Secured Meds</value>
+  </data>
+  <data name="SomeItemsNotAvailable" xml:space="preserve">
+    <value>Some items not available</value>
+  </data>
+  <data name="SomeItemsWithInsufficientandNotAvailable" xml:space="preserve">
+    <value>Some items with insufficient quantity and not available</value>
+  </data>
+  <data name="SomeItemsWithInsufficientQuantity" xml:space="preserve">
+    <value>Some items with insufficient quantity</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="UserStringFormat" xml:space="preserve">
+    <value>by {0}, {1}</value>
+  </data>
+  <data name="Waste" xml:space="preserve">
+    <value>Waste</value>
+  </data>
+  <data name="Wastes" xml:space="preserve">
+    <value>Wastes</value>
+  </data>
+  <data name="FailedToUnlock" xml:space="preserve">
+    <value>The following storage spaces failed to unlock:</value>
+  </data>
+  <data name="CurrentTransactions" xml:space="preserve">
+    <value>Current Transactions</value>
+  </data>
+  <data name="PatientSelect" xml:space="preserve">
+    <value>Please select a patient</value>
+  </data>
+  <data name="DispenseCannotDecreaseAmount" xml:space="preserve">
+    <value>Quantity must be greater than zero</value>
+  </data>
+  <data name="DispenseCannotIncreaseAmount" xml:space="preserve">
+    <value>Quantity must not be greater than the available quantity</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PatientCaseZeroAmountError" xml:space="preserve">
+    <value>Item can not be wasted or returned</value>
+  </data>
+  <data name="WasteAmount" xml:space="preserve">
+    <value>Waste Amount</value>
+  </data>
+  <data name="WasteDosageFormEmptyError" xml:space="preserve">
+    <value>Dosage form cannot be empty</value>
+  </data>
+  <data name="WasteGreaterThanZeroError" xml:space="preserve">
+    <value>Enter a value greater than 0</value>
+  </data>
+  <data name="WasteMoreRemoveAmountError" xml:space="preserve">
+    <value>{0} cannot be wasted, unable to waste more than the remaining amount</value>
+  </data>
+  <data name="WasteNoPermissionError" xml:space="preserve">
+    <value>{0} cannot be wasted, you do not have permission</value>
+  </data>
+  <data name="StrengthEmptyError" xml:space="preserve">
+    <value>Strength cannot be empty</value>
+  </data>
+  <data name="VolumeEmptyError" xml:space="preserve">
+    <value>Volume cannot be empty</value>
+  </data>
+  <data name="Witness" xml:space="preserve">
+    <value>Witness</value>
+  </data>
+  <data name="DispenseCannotCancelStorageSpaceTransaction" xml:space="preserve">
+    <value>Cannot cancel from this drawer</value>
+  </data>
+  <data name="AmountFormat" xml:space="preserve">
+    <value>{0:0.####}</value>
+  </data>
+  <data name="AmountStringFormat" xml:space="preserve">
+    <value>= {0} {1}</value>
+  </data>
+  <data name="WasteInsufficientAmountError" xml:space="preserve">
+    <value>{0} cannot be wasted, insufficient remaining quantity</value>
+  </data>
+  <data name="LocationTextSeperator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="Returned" xml:space="preserve">
+    <value>Returned</value>
+  </data>
+  <data name="Wasted" xml:space="preserve">
+    <value>Wasted</value>
+  </data>
+  <data name="RequestedAmountNotAvailable" xml:space="preserve">
+    <value>Full requested amount not available.</value>
+  </data>
+  <data name="ReturnInsufficientAmountError" xml:space="preserve">
+    <value>{0}: Cannot be returned, remaining amount not sufficient</value>
+  </data>
+  <data name="ReturnNoPermissionError" xml:space="preserve">
+    <value>{0}: Cannot be returned, you do not have permission</value>
+  </data>
+  <data name="ReturnNotReturnableError" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="TransactionZeroAmountError" xml:space="preserve">
+    <value>Item has been returned/ wasted/ transferred in full</value>
+  </data>
+  <data name="ReverificationDisplayTitle" xml:space="preserve">
+    <value>Re-Verification</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="NowDipensingTitle" xml:space="preserve">
+    <value>Now Dispensing</value>
+  </data>
+  <data name="CancelMeds" xml:space="preserve">
+    <value>Cancel Meds</value>
+  </data>
+  <data name="CancelReverificationWarning" xml:space="preserve">
+    <value>The meds will not be dispensed. Press OK to proceed.</value>
+  </data>
+  <data name="AccountLocked" xml:space="preserve">
+    <value>Account Locked</value>
+  </data>
+  <data name="ReverificationLockoutError" xml:space="preserve">
+    <value>You have been locked out. The meds cannot be dispensed. Press OK to proceed.</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="WasteWitnessTitle" xml:space="preserve">
+    <value>Waste with Witness Verification</value>
+  </data>
+  <data name="ReturnWitnessTitle" xml:space="preserve">
+    <value>Return with Witness Verification</value>
+  </data>
+  <data name="SelectPatient" xml:space="preserve">
+    <value>Select Patient</value>
+  </data>
+  <data name="TransferAmountColumnHeader" xml:space="preserve">
+    <value>Transfer Amount</value>
+  </data>
+  <data name="TransferDosageFormEmptyError" xml:space="preserve">
+    <value>{0} : Dosage form cannot be empty</value>
+  </data>
+  <data name="TransferGreaterThanZeroError" xml:space="preserve">
+    <value>{0} : Enter a value greater than 0</value>
+  </data>
+  <data name="TransferMoreRemoveAmountError" xml:space="preserve">
+    <value>{0} : Unable to transfer more than the Removed amount</value>
+  </data>
+  <data name="TransferMeds" xml:space="preserve">
+    <value>Transfer Meds</value>
+  </data>
+  <data name="SelectPatientErrorMessage" xml:space="preserve">
+    <value>Select a Patient</value>
+  </data>
+  <data name="TransferNoPermissionError" xml:space="preserve">
+    <value>{0} cannot be transferred, you do not have permission</value>
+  </data>
+  <data name="Transferred" xml:space="preserve">
+    <value>Transferred</value>
+  </data>
+  <data name="TransferredFrom" xml:space="preserve">
+    <value>Transferred from:</value>
+  </data>
+  <data name="TransferredTo" xml:space="preserve">
+    <value>Transferred to:</value>
+  </data>
+  <data name="MyKits" xml:space="preserve">
+    <value>My Kits</value>
+  </data>
+  <data name="TransferInsufficientAmountError" xml:space="preserve">
+    <value>{0} cannot be transferred, insufficient remaining quantity</value>
+  </data>
+  <data name="TransferDosageFormCannotBeFractional" xml:space="preserve">
+    <value>{0} : Transfer dosage form cannot be fractional</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Transfer to Patient</value>
+  </data>
+  <data name="Issued" xml:space="preserve">
+    <value>Issued</value>
+  </data>
+  <data name="IssuedTo" xml:space="preserve">
+    <value>Issued to:</value>
+  </data>
+  <data name="IssuedBy" xml:space="preserve">
+    <value>Issued by:</value>
+  </data>
+  <data name="SelectMedAmountInsufficientQuantity" xml:space="preserve">
+    <value>Insufficient quantity</value>
+  </data>
+  <data name="SelectMedAmountInvalidValue" xml:space="preserve">
+    <value>Please enter a valid value</value>
+  </data>
+  <data name="TransferredBy" xml:space="preserve">
+    <value>Transferred by:</value>
+  </data>
+  <data name="WaitForLoadToComplete" xml:space="preserve">
+    <value>The system cannot respond to your request until it finishes loading the list. Please try again after the progress indicator disappears</value>
+  </data>
+</root>

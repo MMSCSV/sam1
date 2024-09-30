@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="f" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All Orders</value>
+  </data>
+  <data name="DueNow" xml:space="preserve">
+    <value>Due Now</value>
+  </data>
+  <data name="Discontinued" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>End: </value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="Future" xml:space="preserve">
+    <value>Future</value>
+  </data>
+  <data name="Last24Hours" xml:space="preserve">
+    <value>Last 24 Hours</value>
+  </data>
+  <data name="MedProfileTimeRangeFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="MedProfileViewTitle" xml:space="preserve">
+    <value>Med Profile</value>
+  </data>
+  <data name="NEW" xml:space="preserve">
+    <value>NEW</value>
+  </data>
+  <data name="OnHold" xml:space="preserve">
+    <value>Order is on hold</value>
+  </data>
+  <data name="PrnHeaderFormat" xml:space="preserve">
+    <value>PRN ({0}) / Continuous Infusions ({1}) / On Call ({2})</value>
+  </data>
+  <data name="RemoveViewTitle" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="SelectedMeds" xml:space="preserve">
+    <value>Selected Meds</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start: </value>
+  </data>
+  <data name="StartEndDateTimeFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="STAT" xml:space="preserve">
+    <value>STAT</value>
+  </data>
+  <data name="Due" xml:space="preserve">
+    <value>Due</value>
+  </data>
+  <data name="Continuous" xml:space="preserve">
+    <value>Continuous</value>
+  </data>
+  <data name="PrnOncall" xml:space="preserve">
+    <value>PRN</value>
+  </data>
+  <data name="RemoveMed" xml:space="preserve">
+    <value>Remove Med</value>
+  </data>
+  <data name="MedRemoveInstruction" xml:space="preserve">
+    <value>Remove {0}</value>
+  </data>
+  <data name="WasteInstruction" xml:space="preserve">
+    <value>Remainder:  {0}</value>
+  </data>
+  <data name="AdministerInstruction" xml:space="preserve">
+    <value>Administer {0}</value>
+  </data>
+  <data name="WasteAlertText" xml:space="preserve">
+    <value>Remove amount greater than ordered amount</value>
+  </data>
+  <data name="MedInfoFormat" xml:space="preserve">
+    <value>{0} {1} {2} {3}</value>
+  </data>
+  <data name="AlreadySelectedOrderWarning" xml:space="preserve">
+    <value>Order already selected for removing</value>
+  </data>
+  <data name="BeginningCount" xml:space="preserve">
+    <value>Beginning Count</value>
+  </data>
+  <data name="BlindCountSubTitle" xml:space="preserve">
+    <value>Enter the Beginning Count</value>
+  </data>
+  <data name="BlindCountTitle" xml:space="preserve">
+    <value>Blind Count</value>
+  </data>
+  <data name="BlindCountVerifyCount" xml:space="preserve">
+    <value>This count differs from the expected inventory count.  Please count again</value>
+  </data>
+  <data name="AvailableMeds" xml:space="preserve">
+    <value>Available Meds</value>
+  </data>
+  <data name="MedsPastRemovedForPatient" xml:space="preserve">
+    <value>Medications Removed</value>
+  </data>
+  <data name="PastRemovedViewTitle" xml:space="preserve">
+    <value>Past Removed</value>
+  </data>
+  <data name="HowMuchDoYouWantToGive" xml:space="preserve">
+    <value>How much do you need?</value>
+  </data>
+  <data name="InsufficientQuantity" xml:space="preserve">
+    <value>Insufficient quantity</value>
+  </data>
+  <data name="CannotGoHomeWarning" xml:space="preserve">
+    <value>Cannot Exit to Home while removing!</value>
+  </data>
+  <data name="CannotSignoutWarning" xml:space="preserve">
+    <value>Cannot Signout while removing!</value>
+  </data>
+  <data name="SignoutWarningHeader" xml:space="preserve">
+    <value>SignOut Disabled</value>
+  </data>
+  <data name="CountDiscrepancyWarning" xml:space="preserve">
+    <value>Count entered does not match expected inventory.  A discrepancy has been recorded.</value>
+  </data>
+  <data name="CountDiscrepancyWarningHeader" xml:space="preserve">
+    <value>Discrepancy</value>
+  </data>
+  <data name="TooCloseWarningHeader" xml:space="preserve">
+    <value>Too Close Warning</value>
+  </data>
+  <data name="DosageEqualStrengthString" xml:space="preserve">
+    <value>{0} = {1} {2}</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>NA</value>
+  </data>
+  <data name="MustEnterAWholeNumber" xml:space="preserve">
+    <value>Must enter a whole number</value>
+  </data>
+  <data name="NeverRemoved" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="EnterAWholeNumber" xml:space="preserve">
+    <value>Enter a whole number.</value>
+  </data>
+  <data name="CannotRemoveAFractionalQuantity" xml:space="preserve">
+    <value>Cannot remove a fractional quantity</value>
+  </data>
+  <data name="EnterAQuantityGreaterThanZero" xml:space="preserve">
+    <value>Enter a value greater than zero</value>
+  </data>
+  <data name="CannotRemoveReasonlbl" xml:space="preserve">
+    <value>Cannot Remove Reason:</value>
+  </data>
+  <data name="NotLoaded" xml:space="preserve">
+    <value>Not loaded</value>
+  </data>
+  <data name="InFailedStorageUnit" xml:space="preserve">
+    <value>Med in failed unit</value>
+  </data>
+  <data name="OutOfStock" xml:space="preserve">
+    <value>Out of stock</value>
+  </data>
+  <data name="MedListSearchInstruction" xml:space="preserve">
+    <value>Enter at least 3 letters in the search box to retrieve available meds.</value>
+  </data>
+  <data name="WasteAmountError" xml:space="preserve">
+    <value>Unable to Waste more than the remaining amount.  Please Re-enter Waste value.</value>
+  </data>
+  <data name="ReturnAmountError" xml:space="preserve">
+    <value>Unable to Return more than the Removed amount.  Please Re-enter Return value.</value>
+  </data>
+  <data name="CountTitle" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="VerifyCountSubTitle" xml:space="preserve">
+    <value>Verify the Beginning Count</value>
+  </data>
+  <data name="VerifyCountTitle" xml:space="preserve">
+    <value>Verify Count</value>
+  </data>
+  <data name="CountCannotBeEmtpyError" xml:space="preserve">
+    <value>{0} cannot be empty.</value>
+  </data>
+  <data name="CountCannotBeLessThanZero" xml:space="preserve">
+    <value>{0} cannot be less than 0.</value>
+  </data>
+  <data name="CountMustBeNumericError" xml:space="preserve">
+    <value>{0} must be numeric.</value>
+  </data>
+  <data name="EqualSign" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="InsufficientQtyError" xml:space="preserve">
+    <value>Insufficient quantity to fulfill remove amount.</value>
+  </data>
+  <data name="InsufficientQtyErrorHeader" xml:space="preserve">
+    <value>Insufficient Quantity</value>
+  </data>
+  <data name="AvailableAmountForRemoval" xml:space="preserve">
+    <value>Only {0} is/are available for removal.</value>
+  </data>
+  <data name="CountCannotBeGreaterThanPhysicalMax" xml:space="preserve">
+    <value>{0} cannot be greater than the physical maximum ({1:F0}).</value>
+  </data>
+  <data name="CannotWasteAFractionalQuantity" xml:space="preserve">
+    <value>Cannot waste a fractional quantity</value>
+  </data>
+  <data name="CannotReturnAFractionalQuantity" xml:space="preserve">
+    <value>Cannot return a fractional quantity</value>
+  </data>
+  <data name="InvalidNumber" xml:space="preserve">
+    <value>Please enter a valid number.</value>
+  </data>
+  <data name="TooCloseReasonPrompt" xml:space="preserve">
+    <value>Select a Reason...</value>
+  </data>
+  <data name="CancelRemoveWitnessWarning" xml:space="preserve">
+    <value>Canceling the Remove witness action will skip medications that require a witness.</value>
+  </data>
+  <data name="OverrideMedsSubTitle" xml:space="preserve">
+    <value>Override Medications </value>
+  </data>
+  <data name="SelectOverrideReason" xml:space="preserve">
+    <value>Select or enter a Override Reason for the selected med or Cancel</value>
+  </data>
+  <data name="OverrideReasonPrompt" xml:space="preserve">
+    <value>Select a Reason...</value>
+  </data>
+  <data name="ReasonOrTextRequired" xml:space="preserve">
+    <value>Please select a reason or enter a free text reason.</value>
+  </data>
+  <data name="OverrideWarningHeader" xml:space="preserve">
+    <value>Override Warning</value>
+  </data>
+  <data name="OverrideEnterFreeText" xml:space="preserve">
+    <value>Enter Free Text Reason:</value>
+  </data>
+  <data name="SelectReasonText" xml:space="preserve">
+    <value>Select Reason:</value>
+  </data>
+  <data name="TooCloseEnterFreeText" xml:space="preserve">
+    <value>Enter Free Text Reason:</value>
+  </data>
+  <data name="CDCMultiMedText" xml:space="preserve">
+    <value>{0} Meds</value>
+  </data>
+  <data name="CDCSingleMedText" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="CDCSkipWarning" xml:space="preserve">
+    <value>Skipping the CDC will skip the following medication(s): {0}</value>
+  </data>
+  <data name="CDCSkipWarningHeader" xml:space="preserve">
+    <value>CDC Skip Warning</value>
+  </data>
+  <data name="OrderTaskAlreadySelected" xml:space="preserve">
+    <value>Task for the same order has already been selected</value>
+  </data>
+  <data name="CDCAccept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="CDCfor" xml:space="preserve">
+    <value>Clinical Data</value>
+  </data>
+  <data name="CDCFreeTextResponseRequiredError" xml:space="preserve">
+    <value>Enter a free text response</value>
+  </data>
+  <data name="CDCInvalidValuesError" xml:space="preserve">
+    <value>Invalid values</value>
+  </data>
+  <data name="CDCna" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="CDCno" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="CDCnotice" xml:space="preserve">
+    <value>NOTICE:</value>
+  </data>
+  <data name="CDCSelectResponseRequiredError" xml:space="preserve">
+    <value>Select a response or enter a free text response</value>
+  </data>
+  <data name="CDCSkip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="CDCyes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CDCYNNAResponseRequiredError" xml:space="preserve">
+    <value>Select Yes or No or N/A response</value>
+  </data>
+  <data name="MedAlreadySelectedWarning" xml:space="preserve">
+    <value>Med already selected for remove.</value>
+  </data>
+  <data name="OrderAlreadyExists" xml:space="preserve">
+    <value>Order for this med already exists.</value>
+  </data>
+  <data name="CancelMed" xml:space="preserve">
+    <value>Cancel Med</value>
+  </data>
+  <data name="WasteLater" xml:space="preserve">
+    <value>Waste Later</value>
+  </data>
+  <data name="WasteNow" xml:space="preserve">
+    <value>Waste Now</value>
+  </data>
+  <data name="CDCEnterFreeText" xml:space="preserve">
+    <value>Enter free text</value>
+  </data>
+  <data name="CDCSelectResponse" xml:space="preserve">
+    <value>Select a Response...</value>
+  </data>
+  <data name="CancelOverride" xml:space="preserve">
+    <value>Cancel Override</value>
+  </data>
+  <data name="ContinueOverride" xml:space="preserve">
+    <value>Continue Override</value>
+  </data>
+  <data name="OrderExistsHeader" xml:space="preserve">
+    <value>Order Exists</value>
+  </data>
+  <data name="OrderExistslbl" xml:space="preserve">
+    <value>Order Exists for the following Med:</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From </value>
+  </data>
+  <data name="HeldOrderExistslbl" xml:space="preserve">
+    <value>Held Order for this med already exists</value>
+  </data>
+  <data name="RestrictedAccess" xml:space="preserve">
+    <value>No Access</value>
+  </data>
+  <data name="GreaterThanMaxGiveAmount" xml:space="preserve">
+    <value>Entered amount exceeds maximum dosage amount</value>
+  </data>
+  <data name="ExpiredMedAlertText" xml:space="preserve">
+    <value>Pocket has some expired Meds</value>
+  </data>
+  <data name="CountGreaterThanMax" xml:space="preserve">
+    <value>{0} cannot be greater than 99999</value>
+  </data>
+  <data name="InactiveMedication" xml:space="preserve">
+    <value>One or more of the ordered items are inactive</value>
+  </data>
+  <data name="InvalidOrder" xml:space="preserve">
+    <value>Problem with the ordered amount or amount units</value>
+  </data>
+  <data name="OrderNotInFormulary" xml:space="preserve">
+    <value>One or more items not in formulary, cannot remove</value>
+  </data>
+  <data name="NoDescription" xml:space="preserve">
+    <value>- No Description</value>
+  </data>
+  <data name="SeeDetail" xml:space="preserve">
+    <value>See Detail</value>
+  </data>
+  <data name="ChooseDueNow" xml:space="preserve">
+    <value>Select med from Due Now window</value>
+  </data>
+  <data name="TaskDueMoreThan4hoursAfter" xml:space="preserve">
+    <value>The order is not due until {0} on {1}.</value>
+  </data>
+  <data name="FutureTask" xml:space="preserve">
+    <value>Future Task</value>
+  </data>
+  <data name="LessThanGiveAmount" xml:space="preserve">
+    <value>Entered amount less than ordered amount</value>
+  </data>
+  <data name="CancelComponentWarning" xml:space="preserve">
+    <value>This item is part of a Multi-Component Order.  Are you sure you want to cancel the removal?</value>
+  </data>
+  <data name="MultiComponentOrder" xml:space="preserve">
+    <value>Multi-component order</value>
+  </data>
+  <data name="ReasonRequired" xml:space="preserve">
+    <value>Please select a reason</value>
+  </data>
+  <data name="NoOrders" xml:space="preserve">
+    <value>No orders available.</value>
+  </data>
+  <data name="TextReasonRequired" xml:space="preserve">
+    <value>Please enter a free text reason</value>
+  </data>
+  <data name="AlternateText" xml:space="preserve">
+    <value>Area Location(s):</value>
+  </data>
+  <data name="Backordered" xml:space="preserve">
+    <value>BackOrdered</value>
+  </data>
+  <data name="EnterAQuantityGreaterThanZero01" xml:space="preserve">
+    <value>Enter a value greater than or equal to 0.001</value>
+  </data>
+  <data name="CancelMeds" xml:space="preserve">
+    <value>Cancel Meds</value>
+  </data>
+  <data name="ChangeOrderAmount" xml:space="preserve">
+    <value>Change Order Amount</value>
+  </data>
+  <data name="InDefrostingStorageUnit" xml:space="preserve">
+    <value>Med in defrosting unit</value>
+  </data>
+  <data name="SomeKitsNotAvailable" xml:space="preserve">
+    <value>Some kits not available</value>
+  </data>
+  <data name="KitItemAlreadySelected" xml:space="preserve">
+    <value>Kit item already selected</value>
+  </data>
+  <data name="SomeKitItemsNotAvaliable" xml:space="preserve">
+    <value>Some kit items are not available</value>
+  </data>
+  <data name="FacilityKits" xml:space="preserve">
+    <value>System Kits</value>
+  </data>
+  <data name="InvalidMultiComponentOrder" xml:space="preserve">
+    <value>Invalid multi-component order</value>
+  </data>
+  <data name="RemoveMeds" xml:space="preserve">
+    <value>Remove Meds</value>
+  </data>
+  <data name="KitItemNotDispensibleReason" xml:space="preserve">
+    <value>Kit items already selected or not dispensible</value>
+  </data>
+  <data name="Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="SelectTooCloseReason" xml:space="preserve">
+    <value>Select or enter a Too Close Warning Reason for the selected med or Cancel</value>
+  </data>
+  <data name="FutureTaskWarning" xml:space="preserve">
+    <value>Future Task Warning</value>
+  </data>
+  <data name="QuestionWantAdditionDose" xml:space="preserve">
+    <value>Do you want to remove an additional dose ?</value>
+  </data>
+  <data name="DeleteQueueTitle" xml:space="preserve">
+    <value>Delete queue</value>
+  </data>
+  <data name="DeleteQueueWarning" xml:space="preserve">
+    <value>Do you want to delete the queued items? </value>
+  </data>
+  <data name="QueuedOrderHasChanged" xml:space="preserve">
+    <value>Queued order has changed</value>
+  </data>
+  <data name="QueuedTaskNotAvailable" xml:space="preserve">
+    <value>Queued task is not available</value>
+  </data>
+  <data name="QueuedOrderNotActive" xml:space="preserve">
+    <value>Queued order not available.</value>
+  </data>
+  <data name="ScanMedication" xml:space="preserve">
+    <value>Scan Medication</value>
+  </data>
+  <data name="ScanMedicationInstruction" xml:space="preserve">
+    <value>Please scan each medication being removed</value>
+  </data>
+  <data name="ScanMedicationsCount" xml:space="preserve">
+    <value>Scan Medication ({0})</value>
+  </data>
+  <data name="TrackMedication" xml:space="preserve">
+    <value>Track Medication</value>
+  </data>
+  <data name="UnableToScan" xml:space="preserve">
+    <value>Unable To Scan</value>
+  </data>
+  <data name="ExpirationDateEmpty" xml:space="preserve">
+    <value>Expiration date cannot be empty</value>
+  </data>
+  <data name="LotIdEmpty" xml:space="preserve">
+    <value>Lot number cannot be empty</value>
+  </data>
+  <data name="ScanToRemove" xml:space="preserve">
+    <value>Scan medication to remove</value>
+  </data>
+  <data name="SerialIdEmpty" xml:space="preserve">
+    <value>Serial number cannot be empty</value>
+  </data>
+  <data name="ScanOnRemoveBarcodeMismatch" xml:space="preserve">
+    <value>Scan does not match the current medication</value>
+  </data>
+  <data name="ScanFirstItem" xml:space="preserve">
+    <value>Scan Item 1</value>
+  </data>
+  <data name="ScanItem" xml:space="preserve">
+    <value>Scan Item</value>
+  </data>
+  <data name="ScanItemCount" xml:space="preserve">
+    <value>Scan Item {0}</value>
+  </data>
+  <data name="TrackingInformationRequired" xml:space="preserve">
+    <value>Tracking information is required</value>
+  </data>
+  <data name="DoNotReturnToStock" xml:space="preserve">
+    <value>DO NOT return to stock.</value>
+  </data>
+  <data name="ExpiredMedicationWarning" xml:space="preserve">
+    <value>Expired Medication Warning</value>
+  </data>
+  <data name="ItemConfirmation" xml:space="preserve">
+    <value>Item Confirmation</value>
+  </data>
+  <data name="ReturnToInternalBin" xml:space="preserve">
+    <value>Return scanned medications to the Internal Return Bin.</value>
+  </data>
+  <data name="UnidentifiedItemInstructions" xml:space="preserve">
+    <value>Verify this is the item you want to remove or return item to {0} when prompted.  Is the item the correct item?</value>
+  </data>
+  <data name="UnidentifiedItemWarning" xml:space="preserve">
+    <value>Item scanned cannot be identified.  </value>
+  </data>
+  <data name="WrongItemScanned" xml:space="preserve">
+    <value>You scanned an item {0} that is not the same as the medication you are removing {1}.  </value>
+  </data>
+  <data name="WrongItemWarning" xml:space="preserve">
+    <value>Wrong Item Warning</value>
+  </data>
+  <data name="ExpiredCannotReturn" xml:space="preserve">
+    <value>The item is expired but cannot be returned.  Waste the item.</value>
+  </data>
+  <data name="ExpiredMedication" xml:space="preserve">
+    <value>Expired Medication</value>
+  </data>
+  <data name="DoNotReturnToPocket" xml:space="preserve">
+    <value>DO NOT return to the pocket</value>
+  </data>
+  <data name="OverrideScanWarning" xml:space="preserve">
+    <value>Are you sure you want to override scanning of the dispensed medication?</value>
+  </data>
+  <data name="ReturnItemAsInstructed" xml:space="preserve">
+    <value>Return item as instructed</value>
+  </data>
+  <data name="MustChooseWasteBeforeScan" xml:space="preserve">
+    <value>Select {0} or {1} before scanning</value>
+  </data>
+  <data name="CancelledInsufficientQuantity" xml:space="preserve">
+    <value>The transaction is cancelled due to insufficient quantity.</value>
+  </data>
+  <data name="RemoveAdditionalItem" xml:space="preserve">
+    <value>Remove an additional item</value>
+  </data>
+  <data name="ReturnExpiredMedsInstructions" xml:space="preserve">
+    <value>Put non-expired items back in pocket</value>
+  </data>
+  <data name="ReturnExpiredItemsAsInstructed" xml:space="preserve">
+    <value>Return expired items as instructed</value>
+  </data>
+  <data name="InsufficientQuantityForRemove" xml:space="preserve">
+    <value>Insufficient quantity for remove - skipping order/med</value>
+  </data>
+  <data name="WrongMedicationWarning" xml:space="preserve">
+    <value>Wrong Medication Warning</value>
+  </data>
+  <data name="IsThisCorrectItem" xml:space="preserve">
+    <value>Is the item scanned the med you want to remove?</value>
+  </data>
+  <data name="ItemScannedNotSameAsRemoving" xml:space="preserve">
+    <value>Item scanned is not the same as the item you are removing.</value>
+  </data>
+  <data name="ReturnIncorrectItemsAsInstructed" xml:space="preserve">
+    <value>Return the incorrect items as instructed</value>
+  </data>
+  <data name="VerifyOrReturnItem" xml:space="preserve">
+    <value>Verify this is the item you want to remove or return item when prompted.</value>
+  </data>
+  <data name="InvalidComboMedOrder" xml:space="preserve">
+    <value>Invalid combo med order</value>
+  </data>
+  <data name="DateEnteredInPast" xml:space="preserve">
+    <value>The date you entered is in the past.  </value>
+  </data>
+  <data name="IsThisCorrect" xml:space="preserve">
+    <value>Is this correct?</value>
+  </data>
+  <data name="RemoveMedFractionalInstruction" xml:space="preserve">
+    <value>Put back any remaining amount before closing drawer</value>
+  </data>
+  <data name="CancelComboMedWarning" xml:space="preserve">
+    <value>This item is part of a combo med order.  Are you sure you want to cancel the removal?</value>
+  </data>
+  <data name="ComboMedOrder" xml:space="preserve">
+    <value>Combo med order</value>
+  </data>
+  <data name="CannotReturnItemsWithName" xml:space="preserve">
+    <value>{0} cannot be returned.  Call pharmacy for disposition instructions.</value>
+  </data>
+  <data name="CannotReturnTitle" xml:space="preserve">
+    <value>Cannot Return</value>
+  </data>
+  <data name="ItemCannotBeReturned" xml:space="preserve">
+    <value>Item cannot be returned.  Call pharmacy for disposition instructions.</value>
+  </data>
+  <data name="ScanningIsCompleteForCurrentItem" xml:space="preserve">
+    <value>Scanning is complete for the current item</value>
+  </data>
+  <data name="PutCorrectNonExpiredItemsInPocket" xml:space="preserve">
+    <value>Put correct non-expired items back in pocket</value>
+  </data>
+  <data name="ReturnWrongOrExpiredItemAsInstructed" xml:space="preserve">
+    <value>Return wrong or expired item as instructed</value>
+  </data>
+  <data name="ReturnWrongOrExpiredItemsAsInstructed" xml:space="preserve">
+    <value>Return wrong or expired items as instructed</value>
+  </data>
+  <data name="ExpirationDateCannotBeInThePast" xml:space="preserve">
+    <value>Expiration date cannot be in the past</value>
+  </data>
+  <data name="DoNotDispense" xml:space="preserve">
+    <value>Medication not dispensed from Pyxis</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Delivered" xml:space="preserve">
+    <value>Delivered</value>
+  </data>
+  <data name="DeliveryStatuslbl" xml:space="preserve">
+    <value>Delivery Status:</value>
+  </data>
+  <data name="InTransit" xml:space="preserve">
+    <value>In Transit</value>
+  </data>
+  <data name="Queued" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="MultipleLocationItem" xml:space="preserve">
+    <value>* Multiple Location Item ({0} of {1})</value>
+  </data>
+  <data name="StorageSpaceLocationWithPartIndex" xml:space="preserve">
+    <value>{0} ({1} of {2})</value>
+  </data>
+  <data name="StorageSpaceLocationWithPartIndexAsterisk" xml:space="preserve">
+    <value>{0} ({1} of {2})*</value>
+  </data>
+  <data name="SomeComponentsNotAvailable" xml:space="preserve">
+    <value>Some components are not available</value>
+  </data>
+  <data name="RxCheckAlertText" xml:space="preserve">
+    <value>RxCheck pending. Verify med before removal.</value>
+  </data>
+  <data name="InvalidAmount" xml:space="preserve">
+    <value>Entered Amount is not valid</value>
+  </data>
+  <data name="QuantityInsufficientForItem" xml:space="preserve">
+    <value>Quantity of {0} insufficient for some of the the remove items. Affected item/orders will be skipped.</value>
+  </data>
+  <data name="QuantityInsufficientForOrders" xml:space="preserve">
+    <value>Quantity of {0} insufficient for {1}, order(s) containing this med will be skipped.</value>
+  </data>
+  <data name="SkipOrderPrompt" xml:space="preserve">
+    <value>Entire order {0} cannot be removed.  Select 'Yes' to skip order, 'No' to remove partial order.</value>
+  </data>
+  <data name="PartialRemove" xml:space="preserve">
+    <value>Partial Remove</value>
+  </data>
+  <data name="WrongExpiredItemWarning" xml:space="preserve">
+    <value>Wrong and Expired Medication Warning</value>
+  </data>
+  <data name="GlobalFindButtonText" xml:space="preserve">
+    <value>Find more</value>
+  </data>
+  <data name="ExpirationDateLabel" xml:space="preserve">
+    <value>Expiration Date: {0}</value>
+  </data>
+  <data name="ClearSelectionWarning" xml:space="preserve">
+    <value>Searching all meds will clear the previously selected transactions.</value>
+  </data>
+  <data name="EnterAQuantityGreaterThanEqualZero" xml:space="preserve">
+    <value>Enter a value greater or equal to zero</value>
+  </data>
+  <data name="WasteLaterInstructionText" xml:space="preserve">
+    <value>Closing drawer or "Waste Later" will create Undocumented Waste</value>
+  </data>
+  <data name="InOutOfServiceStorageUnit" xml:space="preserve">
+    <value>Med in out of service unit</value>
+  </data>
+</root>

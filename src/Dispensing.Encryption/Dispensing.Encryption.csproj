@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>CareFusion.Dispensing.Encryption</RootNamespace>
+    <AssemblyTitle>Dispensing.Encryption</AssemblyTitle>
+    <PackageId>Dispensing.Encryption</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pyxis.Core.Data" />
+  </ItemGroup>
+</Project>

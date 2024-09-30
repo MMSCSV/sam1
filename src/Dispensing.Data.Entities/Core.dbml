@@ -1,0 +1,992 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSServerOLTP" Class="CoreDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSServerOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="Core.vw_UserAccountFacilityCurrent" Member="UserAccountFacilityEntities">
+    <Type Name="UserAccountFacilityEntity">
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="UserAccountEntity_UserAccountFacilityEntity" Member="UserAccountEntity" ThisKey="UserAccountKey" OtherKey="Key" Type="UserAccountEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_PasswordCredentialCurrent" Member="PasswordCredentialEntities">
+    <Type Name="PasswordCredentialEntity">
+      <Column Name="PasswordCredentialKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="EncryptionAlgorithmInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHashValue" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSaltValue" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="UserChangedOwnPasswordUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="UserChangedOwnPasswordLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserAccountEntity_PasswordCredentialEntity" Member="UserAccountEntity" ThisKey="UserAccountKey" OtherKey="Key" Type="UserAccountEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserAccountCurrent" Member="UserAccountEntities">
+    <Type Name="UserAccountEntity">
+      <Column Name="UserAccountKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LastPasswordExpirationNoticeUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LastPasswordExpirationNoticeLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LastSuccessfulPasswordAuthenticationUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LastSuccessfulPasswordAuthenticationLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LastAreaKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="UserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveDirectoryDomainKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SuffixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserAccountDisplayName" Member="DisplayName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="InitialsText" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="JobTitleText" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EmailAddressValue" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ContactInformation" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ScanCodeValue" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AccountExpirationUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AccountExpirationLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="FingerprintExemptFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TemporaryFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LockedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SuperUserFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SupportUserFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveDirectoryObjectGloballyUniqueID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DirectoryChangePasswordUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DirectoryChangePasswordLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CardPINExemptFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CardSerialID" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="RFIDCardSerialID" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Association Name="UserAccountEntity_UserAccountFacilityEntity" Member="UserAccountFacilityEntities" ThisKey="Key" OtherKey="UserAccountKey" Type="UserAccountFacilityEntity" />
+      <Association Name="UserAccountEntity_PasswordCredentialEntity" Member="PasswordCredentialEntities" ThisKey="Key" OtherKey="UserAccountKey" Type="PasswordCredentialEntity" />
+      <Association Name="UserAccountEntity_UserRoleMemberEntity" Member="UserRoleMemberEntities" ThisKey="Key" OtherKey="UserAccountKey" Type="UserRoleMemberEntity" />
+      <Association Name="UserAccountEntity_UserFingerprintEntity" Member="UserFingerprintEntities" ThisKey="Key" OtherKey="UserAccountKey" Type="UserFingerprintEntity" />
+      <Association Name="ActiveDirectoryDomainEntity_UserAccountEntity" Member="ActiveDirectoryDomainEntity" ThisKey="ActiveDirectoryDomainKey" OtherKey="Key" Type="ActiveDirectoryDomainEntity" IsForeignKey="true" />
+      <Association Name="UserTypeEntity_UserAccountEntity" Member="UserTypeEntity" ThisKey="UserTypeKey" OtherKey="Key" Type="UserTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRoleMemberCurrent" Member="UserRoleMemberEntities">
+    <Type Name="UserRoleMemberEntity">
+      <Column Name="UserRoleMemberKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserRoleKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedTemporaryAccessFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRoleMemberEntity_UserRoleMemberAreaEntity" Member="UserRoleMemberAreaEntities" ThisKey="Key" OtherKey="UserRoleMemberKey" Type="UserRoleMemberAreaEntity" />
+      <Association Name="UserRoleEntity_UserRoleMemberEntity" Member="UserRoleEntity" ThisKey="UserRoleKey" OtherKey="Key" Type="UserRoleEntity" IsForeignKey="true" />
+      <Association Name="UserAccountEntity_UserRoleMemberEntity" Member="UserAccountEntity" ThisKey="UserAccountKey" OtherKey="Key" Type="UserAccountEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRoleCurrent" Member="UserRoleEntities">
+    <Type Name="UserRoleEntity">
+      <Column Name="UserRoleKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserRoleSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AllowForTemporaryUserFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRoleEntity_UserRoleMemberEntity" Member="UserRoleMemberEntities" ThisKey="Key" OtherKey="UserRoleKey" Type="UserRoleMemberEntity" />
+      <Association Name="UserRoleEntity_UserRolePermissionEntity" Member="UserRolePermissionEntities" ThisKey="Key" OtherKey="UserRoleKey" Type="UserRolePermissionEntity" />
+      <Association Name="UserRoleEntity_UserRoleOverrideGroupEntity" Member="UserRoleOverrideGroupEntities" ThisKey="Key" OtherKey="UserRoleKey" Type="UserRoleOverrideGroupEntity" />
+      <Association Name="UserRoleEntity_UserRolePermissionRoleEntity" Member="UserRolePermissionRoleEntities" ThisKey="Key" OtherKey="UserRoleKey" Type="UserRolePermissionRoleEntity" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRolePermissionCurrent" Member="UserRolePermissionEntities">
+    <Type Name="UserRolePermissionEntity">
+      <Column Name="UserRolePermissionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserRoleKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRolePermissionEntity_UserRolePermissionSecurityGroupEntity" Member="UserRolePermissionSecurityGroupEntities" ThisKey="Key" OtherKey="UserRolePermissionKey" Type="UserRolePermissionSecurityGroupEntity" />
+      <Association Name="UserRolePermissionEntity_UserRolePermissionRoleEntity" Member="UserRolePermissionRoleEntities" ThisKey="Key" OtherKey="UserRolePermissionKey" Type="UserRolePermissionRoleEntity" />
+      <Association Name="UserRoleEntity_UserRolePermissionEntity" Member="UserRoleEntity" ThisKey="UserRoleKey" OtherKey="Key" Type="UserRoleEntity" IsForeignKey="true" />
+      <Association Name="PermissionEntity_UserRolePermissionEntity" Member="PermissionEntity" ThisKey="PermissionInternalCode" OtherKey="InternalCode" Type="PermissionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_PermissionTypeCurrent" Member="PermissionTypeEntities">
+    <Type Name="PermissionTypeEntity">
+      <Column Name="PermissionTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Association Name="PermissionTypeEntity_PermissionEntity" Member="PermissionEntities" ThisKey="InternalCode" OtherKey="PermissionTypeInternalCode" Type="PermissionEntity" />
+    </Type>
+  </Table>
+  <Table Name="Core.UOM" Member="UnitOfMeasureEntities">
+    <Type Name="UnitOfMeasureEntity">
+      <Column Name="UOMKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="UseDosageFormFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BaseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ConversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" CanBeNull="true" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UnitOfMeasureEntity_UnitOfMeasureRoleMemberEntity" Member="UnitOfMeasureRoleMemberEntities" Storage="_UOMRoleMemberEntities" ThisKey="Key" OtherKey="UOMKey" Type="UnitOfMeasureRoleMemberEntity" />
+    </Type>
+  </Table>
+  <Table Name="Core.UOMRole" Member="UnitOfMeasureRoleEntities">
+    <Type Name="UnitOfMeasureRoleEntity">
+      <Column Name="UOMRoleInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UnitOfMeasureRoleEntity_UnitOfMeasureRoleMemberEntity" Member="UnitOfMeasureRoleMemberEntities" Storage="_UOMRoleMemberEntities" ThisKey="InternalCode" OtherKey="UOMRoleInternalCode" Type="UnitOfMeasureRoleMemberEntity" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_PermissionCurrent" Member="PermissionEntities">
+    <Type Name="PermissionEntity">
+      <Column Name="PermissionInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermissionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="SupportUserOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityGroupApplicableFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HideFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VersionText" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ESSystemFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PharmogisticsFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="GCSMFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PermissionEntity_UserRolePermissionEntity" Member="UserRolePermissionEntities" ThisKey="InternalCode" OtherKey="PermissionInternalCode" Type="UserRolePermissionEntity" />
+      <Association Name="PermissionTypeEntity_PermissionEntity" Member="PermissionTypeEntity" ThisKey="PermissionTypeInternalCode" OtherKey="InternalCode" Type="PermissionTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.Actor" Member="ActorEntities">
+    <Type Name="ActorEntity">
+      <Column Name="ActorKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActorTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_ExternalSystemCurrent" Member="ExternalSystemEntities">
+    <Type Name="ExternalSystemEntity">
+      <Column Name="ExternalSystemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="EndUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="EndLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ExternalSystemName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ADTSystemFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyInformationSystemFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SubscriberFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LegacyCIISafeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DataManagerFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="PISProvidesMedClassFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PISProvidesTherapeuticClassFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PISProvidesPureGenericNameFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowPISItemEditFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IgnorePISItemDeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="IgnorePISItemUpdateFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ProvidesAllergiesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReplaceAllergiesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProvidesPatientPhysicalObservationsFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InboundDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="InboundDownDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveConnectionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowTransferDischargeOfExternalEncounterFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EditExternalScanCodeLinksFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MessageLocalDateTimeZoneID" Type="System.String" DbType="VarChar(64)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="MessageBehindCreatedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DiscontinuePharmacyOrderOnMergeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LeaveOfAbsenceActionabilityFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_ActiveDirectoryDomainCurrent" Member="ActiveDirectoryDomainEntities">
+    <Type Name="ActiveDirectoryDomainEntity">
+      <Column Name="ActiveDirectoryDomainKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActiveDirectoryDomainSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="HighestCommittedUSNValue" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LastSuccessfulPollUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastSuccessfulPollLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastPollStatusInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="WorkgroupFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FullyQualifiedDomainName" Type="System.String" DbType="NVarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortDomainName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="PollingDurationAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DomainControllerAddressValue" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="SystemAccountID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SystemAccountPasswordEncryptedValue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="InvocationID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ScheduledPasswordSignInIntervalAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SupportUserFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserDirectoryTypeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EncryptionAlgorithmInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SecuredCommunicationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ActiveDirectoryDomainEntity_UserAccountEntity" Member="UserAccountEntities" ThisKey="Key" OtherKey="ActiveDirectoryDomainKey" Type="UserAccountEntity" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRolePermissionSecurityGroupCurrent" Member="UserRolePermissionSecurityGroupEntities">
+    <Type Name="UserRolePermissionSecurityGroupEntity">
+      <Column Name="UserRolePermissionSecurityGroupKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRolePermissionEntity_UserRolePermissionSecurityGroupEntity" Member="UserRolePermissionEntity" ThisKey="UserRolePermissionKey" OtherKey="Key" Type="UserRolePermissionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRoleOverrideGroupCurrent" Member="UserRoleOverrideGroupEntities">
+    <Type Name="UserRoleOverrideGroupEntity">
+      <Column Name="UserRoleOverrideGroupKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserRoleKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OverrideGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRoleEntity_UserRoleOverrideGroupEntity" Member="UserRoleEntity" ThisKey="UserRoleKey" OtherKey="Key" Type="UserRoleEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserFingerprintCurrent" Member="UserFingerprintEntities">
+    <Type Name="UserFingerprintEntity">
+      <Column Name="UserFingerprintKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Fingerprint1Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Fingerprint1LengthQuantity" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fingerprint2Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Fingerprint2LengthQuantity" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Fingerprint3Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Fingerprint3LengthQuantity" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserAccountEntity_UserFingerprintEntity" Member="UserAccountEntity" ThisKey="UserAccountKey" OtherKey="Key" Type="UserAccountEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRoleMemberAreaCurrent" Member="UserRoleMemberAreaEntities">
+    <Type Name="UserRoleMemberAreaEntity">
+      <Column Name="UserRoleMemberAreaKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRoleMemberEntity_UserRoleMemberAreaEntity" Member="UserRoleMemberEntity" ThisKey="UserRoleMemberKey" OtherKey="Key" Type="UserRoleMemberEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UOMRoleMemberCurrent" Member="UnitOfMeasureRoleMemberEntities">
+    <Type Name="UnitOfMeasureRoleMemberEntity">
+      <Column Name="UOMRoleMemberKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UOMRoleInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UOMKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UnitOfMeasureEntity_UnitOfMeasureRoleMemberEntity" Member="UnitOfMeasureEntity" ThisKey="UOMKey" OtherKey="Key" Type="UnitOfMeasureEntity" IsForeignKey="true" />
+      <Association Name="UnitOfMeasureRoleEntity_UnitOfMeasureRoleMemberEntity" Member="UnitOfMeasureRoleEntity" ThisKey="UOMRoleInternalCode" OtherKey="InternalCode" Type="UnitOfMeasureRoleEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserSecurityGroupAuthorizationCurrent" Member="UserSecurityGroupAuthorizationEntities">
+    <Type Name="UserSecurityGroupAuthorizationEntity">
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionInternalCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SecurityGroupKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserAuthorizationCurrent" Member="UserAuthorizationEntities">
+    <Type Name="UserAuthorizationEntity">
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionInternalCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.UnitOfTemperature" Member="UnitOfTemperatureEntities">
+    <Type Name="UnitOfTemperatureEntity">
+      <Column Name="UnitOfTemperatureInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserTypeCurrent" Member="UserTypeEntities">
+    <Type Name="UserTypeEntity">
+      <Column Name="UserTypeKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StandardUserTypeInternalCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="StandardUserTypeDescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Association Name="UserTypeEntity_UserAccountEntity" Member="UserAccountEntities" ThisKey="Key" OtherKey="UserTypeKey" Type="UserAccountEntity" />
+    </Type>
+  </Table>
+  <Table Name="Core.ObservationMethod" Member="ObservationMethodEntities">
+    <Type Name="ObservationMethodEntity">
+      <Column Name="ObservationMethodInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserDeviceAuthorizationCurrent" Member="UserDeviceAuthorizationEntities">
+    <Type Name="UserDeviceAuthorizationEntity">
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PermissionInternalCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRolePermissionRoleCurrent" Member="UserRolePermissionRoleEntities">
+    <Type Name="UserRolePermissionRoleEntity">
+      <Column Name="UserRolePermissionRoleKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserRoleKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserRoleEntity_UserRolePermissionRoleEntity" Member="UserRoleEntity" ThisKey="UserRoleKey" OtherKey="Key" Type="UserRoleEntity" IsForeignKey="true" />
+      <Association Name="UserRolePermissionEntity_UserRolePermissionRoleEntity" Member="UserRolePermissionEntity" ThisKey="UserRolePermissionKey" OtherKey="Key" Type="UserRolePermissionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="VisitorUserRoleResults">
+    <Type Name="VisitorUserRoleResult">
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="false" />
+      <Column Name="UserRoleKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(50) NOT NUL" CanBeNull="false" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="false" />
+      <Column Name="AreaName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="UnitOfMeasureRoleResults">
+    <Type Name="UnitOfMeasureRoleResult">
+      <Column Name="UOMKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="UOMRoleInternalCode" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_DistributorCurrent" Member="DistributorEntities">
+    <Type Name="DistributorEntity">
+      <Column Name="DistributorKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DistributorSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="DistributorID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.UserScanMode" Member="UserScanModeEntities">
+    <Type Name="UserScanModeEntity">
+      <Column Name="UserScanModeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Function Name="Core.usp_UserAccountAreaInsert" Method="usp_UserAccountAreaInsert">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleDelete" Method="usp_UserRoleDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserAccountAreaDelete" Method="usp_UserAccountAreaDelete">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleOverrideGroupDelete" Method="usp_UserRoleOverrideGroupDelete">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="OverrideGroupKey" Parameter="overrideGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleOverrideGroupInsert" Method="usp_UserRoleOverrideGroupInsert">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="OverrideGroupKey" Parameter="overrideGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRolePermissionDelete" Method="usp_UserRolePermissionDelete">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PermissionInternalCode" Parameter="permissionInternalCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRolePermissionInsert" Method="usp_UserRolePermissionInsert">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PermissionInternalCode" Parameter="permissionInternalCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRolePermissionKey" Parameter="userRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRolePermissionSecurityGroupDelete" Method="usp_UserRolePermissionSecurityGroupDelete">
+    <Parameter Name="UserRolePermissionKey" Parameter="userRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SecurityGroupKey" Parameter="securityGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRolePermissionSecurityGroupInsert" Method="usp_UserRolePermissionSecurityGroupInsert">
+    <Parameter Name="UserRolePermissionKey" Parameter="userRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SecurityGroupKey" Parameter="securityGroupKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UOMRoleMemberInsert" Method="usp_UOMRoleMemberInsert">
+    <Parameter Name="UOMKey" Parameter="uOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UOMRoleInternalCode" Parameter="uOMRoleInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UOMRoleMemberKey" Parameter="uOMRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UOMRoleMemberDelete" Method="usp_UOMRoleMemberDelete">
+    <Parameter Name="UOMKey" Parameter="uOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UOMRoleInternalCode" Parameter="uOMRoleInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_PasswordCredentialInsert" Method="usp_PasswordCredentialInsert">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EncryptionAlgorithmInternalCode" Parameter="encryptionAlgorithmInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PasswordHashValue" Parameter="passwordHashValue" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="PasswordSaltValue" Parameter="passwordSaltValue" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="UserChangedOwnPasswordUTCDateTime" Parameter="userChangedOwnPasswordUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="UserChangedOwnPasswordLocalDateTime" Parameter="userChangedOwnPasswordLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_PasswordCredentialUpdate" Method="usp_PasswordCredentialUpdate">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EncryptionAlgorithmInternalCode" Parameter="encryptionAlgorithmInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PasswordHashValue" Parameter="passwordHashValue" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="PasswordSaltValue" Parameter="passwordSaltValue" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="UserChangedOwnPasswordUTCDateTime" Parameter="userChangedOwnPasswordUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="UserChangedOwnPasswordLocalDateTime" Parameter="userChangedOwnPasswordLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserFingerprintInsert" Method="usp_UserFingerprintInsert">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="Fingerprint1Value" Parameter="fingerprint1Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Fingerprint1LengthQuantity" Parameter="fingerprint1LengthQuantity" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Fingerprint2Value" Parameter="fingerprint2Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Fingerprint2LengthQuantity" Parameter="fingerprint2LengthQuantity" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Fingerprint3Value" Parameter="fingerprint3Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Fingerprint3LengthQuantity" Parameter="fingerprint3LengthQuantity" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserFingerprintUpdate" Method="usp_UserFingerprintUpdate">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="Fingerprint1Value" Parameter="fingerprint1Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Fingerprint1LengthQuantity" Parameter="fingerprint1LengthQuantity" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Fingerprint2Value" Parameter="fingerprint2Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Fingerprint2LengthQuantity" Parameter="fingerprint2LengthQuantity" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Fingerprint3Value" Parameter="fingerprint3Value" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Fingerprint3LengthQuantity" Parameter="fingerprint3LengthQuantity" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleMemberInsert" Method="usp_UserRoleMemberInsert">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedTemporaryAccessFlag" Parameter="medTemporaryAccessFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRoleMemberKey" Parameter="userRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleMemberAreaInsert" Method="usp_UserRoleMemberAreaInsert">
+    <Parameter Name="UserRoleMemberKey" Parameter="userRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleMemberAreaDelete" Method="usp_UserRoleMemberAreaDelete">
+    <Parameter Name="UserRoleMemberKey" Parameter="userRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleMemberDelete" Method="usp_UserRoleMemberDelete">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedTemporaryAccessFlag" Parameter="medTemporaryAccessFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UOMInsert" Method="usp_UOMInsert">
+    <Parameter Name="DisplayCode" Parameter="displayCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="SortValue" Parameter="sortValue" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BaseUOMKey" Parameter="baseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ConversionAmount" Parameter="conversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" />
+    <Parameter Name="CreatedUTCDateTime" Parameter="createdUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedLocalDateTime" Parameter="createdLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UOMKey" Parameter="uOMKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UOMUpdate" Method="usp_UOMUpdate">
+    <Parameter Name="DisplayCode" Parameter="displayCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="BaseUOMKey" Parameter="baseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ConversionAmount" Parameter="conversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" />
+    <Parameter Name="SortValue" Parameter="sortValue" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EndUTCDateTime" Parameter="endUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndLocalDateTime" Parameter="endLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UOMKey" Parameter="uOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserTypeDelete" Method="usp_UserTypeDelete">
+    <Parameter Name="EndUTCDateTime" Parameter="endUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndLocalDateTime" Parameter="endLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRolePermissionRoleDelete" Method="usp_UserRolePermissionRoleDelete">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRolePermissionKey" Parameter="userRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRolePermissionRoleInsert" Method="usp_UserRolePermissionRoleInsert">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRolePermissionKey" Parameter="userRolePermissionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRolePermissionRoleKey" Parameter="userRolePermissionRoleKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_FindVisitorUsers" Method="bsp_FindVisitorUsers">
+    <Parameter Name="ContextDispensingDeviceKey" Parameter="contextDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ContextUserAccountKey" Parameter="contextUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SearchText" Parameter="searchText" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="bsp_FindVisitorUsersResult">
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveDirectoryDomainName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="JobTitle" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AccountExpirationUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LockedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasAllAreas" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Core.usp_UserRoleMemberByPKDelete" Method="usp_UserRoleMemberByPKDelete">
+    <Parameter Name="UserRoleMemberKey" Parameter="userRoleMemberKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleUpdate" Method="usp_UserRoleUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="RoleName" Parameter="roleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AllowForTemporaryUserFlag" Parameter="allowForTemporaryUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleInsert" Method="usp_UserRoleInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="RoleName" Parameter="roleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AllowForTemporaryUserFlag" Parameter="allowForTemporaryUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_GetUnitOfMeasures" Method="bsp_GetUnitOfMeasures">
+    <Parameter Name="UnitOfMeasureKeyString" Parameter="unitOfMeasureKeyString" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DisplayCode" Parameter="displayCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DebugFlag" Parameter="debugFlag" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="bsp_GetUnitOfMeasuresResult">
+      <Column Name="UOMKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="UseDosageFormFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BaseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ConversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Core.usp_UserAccountParentUpdate" Method="usp_UserAccountParentUpdate">
+    <Parameter Name="LastPasswordExpirationNoticeUTCDateTime" Parameter="lastPasswordExpirationNoticeUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastPasswordExpirationNoticeUTCDateTimeSpecifiedFlag" Parameter="lastPasswordExpirationNoticeUTCDateTimeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastPasswordExpirationNoticeLocalDateTime" Parameter="lastPasswordExpirationNoticeLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastPasswordExpirationNoticeLocalDateTimeSpecifiedFlag" Parameter="lastPasswordExpirationNoticeLocalDateTimeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastSuccessfulPasswordAuthenticationUTCDateTime" Parameter="lastSuccessfulPasswordAuthenticationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastSuccessfulPasswordAuthenticationUTCDateTimeSpecifiedFlag" Parameter="lastSuccessfulPasswordAuthenticationUTCDateTimeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastSuccessfulPasswordAuthenticationLocalDateTime" Parameter="lastSuccessfulPasswordAuthenticationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastSuccessfulPasswordAuthenticationLocalDateTimeSpecifiedFlag" Parameter="lastSuccessfulPasswordAuthenticationLocalDateTimeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastFacilityKey" Parameter="lastFacilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastFacilityKeySpecifiedFlag" Parameter="lastFacilityKeySpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastAreaKey" Parameter="lastAreaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastAreaKeySpecifiedFlag" Parameter="lastAreaKeySpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleAreaDelete" Method="usp_UserRoleAreaDelete">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DisassociationUTCDateTime" Parameter="disassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationLocalDateTime" Parameter="disassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DisassociationActorKey" Parameter="disassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserRoleAreaInsert" Method="usp_UserRoleAreaInsert">
+    <Parameter Name="UserRoleKey" Parameter="userRoleKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AreaKey" Parameter="areaKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationActorKey" Parameter="associationActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserRoleAreaKey" Parameter="userRoleAreaKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_MultiUserAccountActiveDirectoryInsert" Method="bsp_MultiUserAccountActiveDirectoryInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountXML" Parameter="userAccountXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_MultiUserAccountActiveDirectoryUpdate" Method="bsp_MultiUserAccountActiveDirectoryUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountXML" Parameter="userAccountXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_MultiUserAccountDelete" Method="bsp_MultiUserAccountDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountXML" Parameter="userAccountXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserAccountDelete" Method="usp_UserAccountDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserAccountInsert" Method="usp_UserAccountInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ActiveDirectoryDomainKey" Parameter="activeDirectoryDomainKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CreatedAtDispensingDeviceKey" Parameter="createdAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserID" Parameter="userID" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SuffixText" Parameter="suffixText" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="InitialsText" Parameter="initialsText" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="JobTitleText" Parameter="jobTitleText" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="EmailAddressValue" Parameter="emailAddressValue" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="ContactInformation" Parameter="contactInformation" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ScanCodeValue" Parameter="scanCodeValue" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="AccountExpirationUTCDateTime" Parameter="accountExpirationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AccountExpirationLocalDateTime" Parameter="accountExpirationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="FingerprintExemptFlag" Parameter="fingerprintExemptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TemporaryFlag" Parameter="temporaryFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LockedFlag" Parameter="lockedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SuperUserFlag" Parameter="superUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SupportUserFlag" Parameter="supportUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ActiveDirectoryObjectGloballyUniqueID" Parameter="activeDirectoryObjectGloballyUniqueID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DirectoryChangePasswordUTCDateTime" Parameter="directoryChangePasswordUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DirectoryChangePasswordLocalDateTime" Parameter="directoryChangePasswordLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CardPINExemptFlag" Parameter="cardPINExemptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CardSerialID" Parameter="cardSerialID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserAccountLockFlagUpdate" Method="usp_UserAccountLockFlagUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LockedFlag" Parameter="lockedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserAccountUndelete" Method="usp_UserAccountUndelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserAccountUpdate" Method="usp_UserAccountUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ActiveDirectoryDomainKey" Parameter="activeDirectoryDomainKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserID" Parameter="userID" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SuffixText" Parameter="suffixText" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="InitialsText" Parameter="initialsText" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="JobTitleText" Parameter="jobTitleText" Type="System.String" DbType="NVarChar(64)" />
+    <Parameter Name="EmailAddressValue" Parameter="emailAddressValue" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="ContactInformation" Parameter="contactInformation" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ScanCodeValue" Parameter="scanCodeValue" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="AccountExpirationUTCDateTime" Parameter="accountExpirationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AccountExpirationLocalDateTime" Parameter="accountExpirationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="FingerprintExemptFlag" Parameter="fingerprintExemptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TemporaryFlag" Parameter="temporaryFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LockedFlag" Parameter="lockedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SuperUserFlag" Parameter="superUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SupportUserFlag" Parameter="supportUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ActiveDirectoryObjectGloballyUniqueID" Parameter="activeDirectoryObjectGloballyUniqueID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DirectoryChangePasswordUTCDateTime" Parameter="directoryChangePasswordUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DirectoryChangePasswordLocalDateTime" Parameter="directoryChangePasswordLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CardPINExemptFlag" Parameter="cardPINExemptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CardSerialID" Parameter="cardSerialID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_MultiUserAccountUpdate" Method="bsp_MultiUserAccountUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="JobTitleText" Parameter="jobTitleText" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="JobTitleTextSpecifiedFlag" Parameter="jobTitleTextSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AccountExpirationUTCDateTime" Parameter="accountExpirationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AccountExpirationUTCDateTimeSpecifiedFlag" Parameter="accountExpirationUTCDateTimeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AccountExpirationLocalDateTime" Parameter="accountExpirationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AccountExpirationLocalDateTimeSpecifiedFlag" Parameter="accountExpirationLocalDateTimeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FingerprintExemptFlag" Parameter="fingerprintExemptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FingerprintExemptFlagSpecifiedFlag" Parameter="fingerprintExemptFlagSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CardPinExemptFlag" Parameter="cardPinExemptFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CardPinExemptFlagSpecifiedFlag" Parameter="cardPinExemptFlagSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SuperUserFlag" Parameter="superUserFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SuperUserFlagSpecifiedFlag" Parameter="superUserFlagSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActiveFlag" Parameter="activeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ActiveFlagSpecifiedFlag" Parameter="activeFlagSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserTypeSpecifiedFlag" Parameter="userTypeSpecifiedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountXML" Parameter="userAccountXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="UserAccountRolesXML" Parameter="userAccountRolesXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="UserAccountRoleAreasXML" Parameter="userAccountRoleAreasXML" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserTypeInsert" Method="usp_UserTypeInsert">
+    <Parameter Name="DisplayCode" Parameter="displayCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="StandardUserTypeInternalCode" Parameter="standardUserTypeInternalCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SortValue" Parameter="sortValue" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedUTCDateTime" Parameter="createdUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedLocalDateTime" Parameter="createdLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_UserTypeUpdate" Method="usp_UserTypeUpdate">
+    <Parameter Name="DisplayCode" Parameter="displayCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DescriptionText" Parameter="descriptionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="SortValue" Parameter="sortValue" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StandardUserTypeInternalCode" Parameter="standardUserTypeInternalCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="EndUTCDateTime" Parameter="endUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EndLocalDateTime" Parameter="endLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserTypeKey" Parameter="userTypeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.bsp_MapLocalUserToDomainUserMultiUpdate" Method="bsp_MapLocalUserToDomainUserMultiUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="OldUserAccountKey" Parameter="oldUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NewUserAccountKey" Parameter="newUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_DistributorDelete" Method="usp_DistributorDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DistributorKey" Parameter="distributorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_DistributorInsert" Method="usp_DistributorInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DistributorID" Parameter="distributorID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DistributorName" Parameter="distributorName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="StreetAddressText" Parameter="streetAddressText" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CityName" Parameter="cityName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SubdivisionName" Parameter="subdivisionName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="CountryName" Parameter="countryName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactName" Parameter="contactName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactPhoneNumberText" Parameter="contactPhoneNumberText" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DistributorKey" Parameter="distributorKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Core.usp_DistributorUpdate" Method="usp_DistributorUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DistributorID" Parameter="distributorID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DistributorName" Parameter="distributorName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="StreetAddressText" Parameter="streetAddressText" Type="System.String" DbType="NVarChar(120)" />
+    <Parameter Name="CityName" Parameter="cityName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SubdivisionName" Parameter="subdivisionName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PostalCode" Parameter="postalCode" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="CountryName" Parameter="countryName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactName" Parameter="contactName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ContactPhoneNumberText" Parameter="contactPhoneNumberText" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DistributorKey" Parameter="distributorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

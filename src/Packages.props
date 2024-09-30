@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Common Versions -->
+  <PropertyGroup>
+    <PyxisCoreVersion>5.8.0-main.355</PyxisCoreVersion>
+  </PropertyGroup>
+  
+  <!--Internal package reference item group-->
+  <ItemGroup>
+    <PackageReference Update="Dispensing.PharmacyOrderScheduler" Version="5.1.9" />
+    <PackageReference Update="Dispensing.UserDirectoryManagement" Version="2.4.0-main.25" />
+    <PackageReference Update="Mms.Logging" Version="1.0.0.25" />
+    <PackageReference Update="Mms.Logging.Serilog.EventLog" Version="1.1.1" />
+    <PackageReference Update="Pyxis.Core.Data" Version="$(PyxisCoreVersion)" />
+    <PackageReference Update="Pyxis.Core.Data.InternalCodes" Version="$(PyxisCoreVersion)" />
+    <PackageReference Update="Pyxis.IdentityServer.Middleware" Version="4.4.0-main.291" />
+  </ItemGroup>
+  <!--External package reference item group-->
+  <ItemGroup>
+    <PackageReference Update="EnterpriseLibrary.Common" Version="6.0.1304" />
+    <PackageReference Update="EnterpriseLibrary.Validation" Version="6.0.1304" />
+    <PackageReference Update="IdentityModel" Version="6.0.0" />
+    <PackageReference Update="LinqKit" Version="1.1.26" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Update="Moq" Version="4.18.4" />
+    <PackageReference Update="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Update="Nito.AsyncEx" Version="5.1.2" />
+    <PackageReference Update="NUnit" Version="3.13.3" />
+    <PackageReference Update="NUnit3TestAdapter" Version="4.4.2" />
+    <PackageReference Update="protobuf-net" Version="3.2.16" />
+    <PackageReference Update="System.Configuration.ConfigurationManager" Version="6.0.1" />
+    <PackageReference Update="Unity.Container" Version="5.11.11" />
+    <PackageReference Update="Unity.Abstractions" Version="5.11.7" />
+  </ItemGroup>
+</Project>

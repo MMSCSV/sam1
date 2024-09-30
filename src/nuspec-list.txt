@@ -1,0 +1,8 @@
+**/src/Dispensing.Data/Dispensing.Data.csproj
+**/src/Dispensing.Data.Entities/Dispensing.Data.Entities.csproj
+**/src/Dispensing.Services/Dispensing.Services.csproj
+**/src/Dispensing/Dispensing.csproj
+**/src/Dispensing.ResourceLibrary/Dispensing.ResourceLibrary.csproj
+**/src/Dispensing.DI/Dispensing.DI.csproj
+**/src/Dispensing.Notification.PublishedNotices/Dispensing.Notification.PublishedNotices.csproj
+**/src/Dispensing.Encryption/Dispensing.Encryption.csproj

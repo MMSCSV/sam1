@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Pyxis.Dispensing.Notification.PublishedNotices</RootNamespace>
+    <AssemblyName>Pyxis.Dispensing.Notification.PublishedNotices</AssemblyName>
+    <PackageId>Dispensing.Notification.PublishedNotices</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Mms.Logging" />
+    <PackageReference Include="Pyxis.Core.Data" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>
+</Project>

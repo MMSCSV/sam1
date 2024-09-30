@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Connecting" xml:space="preserve">
+    <value>Connecting...</value>
+  </data>
+  <data name="CUBIE2Drawer" xml:space="preserve">
+    <value>CUBIE drawer Gen II</value>
+  </data>
+  <data name="CUBIEDrawer" xml:space="preserve">
+    <value>CUBIE drawer</value>
+  </data>
+  <data name="MatrixBinHeightDrawer" xml:space="preserve">
+    <value>Bin Height Matrix drawer</value>
+  </data>
+  <data name="MatrixFullHeightDrawer" xml:space="preserve">
+    <value>Full Height Matrix drawer</value>
+  </data>
+  <data name="MedAux6" xml:space="preserve">
+    <value>Auxiliary 6 drawer</value>
+  </data>
+  <data name="MedAux7" xml:space="preserve">
+    <value>Auxiliary 7 drawer</value>
+  </data>
+  <data name="MedMain" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="MiniDrawer10" xml:space="preserve">
+    <value>MiniDrawer 10 tray</value>
+  </data>
+  <data name="MiniDrawer14" xml:space="preserve">
+    <value>MiniDrawer 14 tray</value>
+  </data>
+  <data name="MiniDrawer18" xml:space="preserve">
+    <value>MiniDrawer 18 tray</value>
+  </data>
+  <data name="MiniDrawer6" xml:space="preserve">
+    <value>MiniDrawer 6 tray</value>
+  </data>
+  <data name="NoFacilitiesFound" xml:space="preserve">
+    <value>No Facility names found.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PleaseCloseDrawer" xml:space="preserve">
+    <value>Please close drawer first.</value>
+  </data>
+  <data name="ServerNameRequired" xml:space="preserve">
+    <value>Provide server name before connecting.</value>
+  </data>
+  <data name="DrawerAssignment" xml:space="preserve">
+    <value>Drawer Assignment</value>
+  </data>
+  <data name="SelectDrawerPosition" xml:space="preserve">
+    <value>Select a position before closing the drawer.</value>
+  </data>
+  <data name="DrawerConfiguration" xml:space="preserve">
+    <value>Storage Space Configuration</value>
+  </data>
+  <data name="RecoverStorageSpace" xml:space="preserve">
+    <value>Recover Storage Space</value>
+  </data>
+  <data name="SRM" xml:space="preserve">
+    <value>SRM</value>
+  </data>
+  <data name="TallAux" xml:space="preserve">
+    <value>TallAux</value>
+  </data>
+  <data name="UnknownDevice" xml:space="preserve">
+    <value>Unknown Device</value>
+  </data>
+  <data name="ExternalReturnBin" xml:space="preserve">
+    <value>ExternalReturnBin</value>
+  </data>
+  <data name="DeviceFailureTitle" xml:space="preserve">
+    <value>Failure Type</value>
+  </data>
+  <data name="DeviceLocationTitle" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="DeviceTypeTitle" xml:space="preserve">
+    <value>Device Type</value>
+  </data>
+  <data name="DeviceConfiguration" xml:space="preserve">
+    <value>Device Settings</value>
+  </data>
+  <data name="MedAux" xml:space="preserve">
+    <value>Auxiliary cabinet</value>
+  </data>
+  <data name="SelectFacility" xml:space="preserve">
+    <value>Please select a facility.</value>
+  </data>
+  <data name="CancelLabel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ConnectLabel" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="DataSyncSetupTitle" xml:space="preserve">
+    <value>Data Synchronization Setup</value>
+  </data>
+  <data name="DispensingDeviceLabel" xml:space="preserve">
+    <value>Dispensing Device:</value>
+  </data>
+  <data name="FacilityLabel" xml:space="preserve">
+    <value>Facility:</value>
+  </data>
+  <data name="OKLabel" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ServerNameLabel" xml:space="preserve">
+    <value>Server Name:</value>
+  </data>
+  <data name="SynchronizationInProgress" xml:space="preserve">
+    <value>Synchronization in progress...</value>
+  </data>
+  <data name="ApplyToAllTrays" xml:space="preserve">
+    <value>Apply to all trays</value>
+  </data>
+  <data name="CloseDoorToContinue" xml:space="preserve">
+    <value>Close the door to continue</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Drawer</value>
+  </data>
+  <data name="DrawerLabel" xml:space="preserve">
+    <value>Drawer Label</value>
+  </data>
+  <data name="NumberOfPockets" xml:space="preserve">
+    <value>Number of Pockets</value>
+  </data>
+  <data name="PocketsInTray" xml:space="preserve">
+    <value>Pockets in tray</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ReturnBin" xml:space="preserve">
+    <value>Return Bin</value>
+  </data>
+  <data name="TypeOfDrawer" xml:space="preserve">
+    <value>Type of drawer</value>
+  </data>
+  <data name="DataDownload" xml:space="preserve">
+    <value>Data Download</value>
+  </data>
+  <data name="StartDownloadLabel" xml:space="preserve">
+    <value>Start Download</value>
+  </data>
+  <data name="DeviceAlreadyAssigned" xml:space="preserve">
+    <value>Device {0} is already assigned to a different computer {1}. </value>
+  </data>
+  <data name="ServerConnectionFailure_General" xml:space="preserve">
+    <value>Failed to get data from server. Possible connection failure</value>
+  </data>
+  <data name="ServerConnectionFailure_StartDownload" xml:space="preserve">
+    <value>Failed to start download. Possible connection failure</value>
+  </data>
+  <data name="DeviceNotFound" xml:space="preserve">
+    <value>Device could not be found on the server</value>
+  </data>
+  <data name="DataSyncSetup" xml:space="preserve">
+    <value>Data Synchronization</value>
+  </data>
+  <data name="SelectDevice" xml:space="preserve">
+    <value>Please select a device</value>
+  </data>
+  <data name="CloseDrawerToContinue" xml:space="preserve">
+    <value>Close the drawer to continue</value>
+  </data>
+  <data name="TwoDrawerMain" xml:space="preserve">
+    <value>Two Drawer Main</value>
+  </data>
+  <data name="SaveLabel" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ConfigureLabel" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="VariousLabel" xml:space="preserve">
+    <value>Various</value>
+  </data>
+  <data name="VariousPocketsLabel" xml:space="preserve">
+    <value>{0} pockets per tray</value>
+  </data>
+  <data name="StorageSpaceConfig" xml:space="preserve">
+    <value>Storage Space Config</value>
+  </data>
+  <data name="CubieMap" xml:space="preserve">
+    <value>CUBIE Map</value>
+  </data>
+  <data name="SyncStatus" xml:space="preserve">
+    <value>Sync Status</value>
+  </data>
+  <data name="DataUpgradeInProgress" xml:space="preserve">
+    <value>Data upgrade in progress...</value>
+  </data>
+  <data name="SyncServerAddressLabel" xml:space="preserve">
+    <value>Sync Server Address:</value>
+  </data>
+  <data name="StreamDBDownloadLabel" xml:space="preserve">
+    <value>File Mode Download:</value>
+  </data>
+  <data name="ComputerAlreadyAssigned" xml:space="preserve">
+    <value>Computer {0} is already assigned to a different device {1}.</value>
+  </data>
+  <data name="DeviceNotDefined" xml:space="preserve">
+    <value>Dispensing device {0} with device key {1} is not defined at server.</value>
+  </data>
+  <data name="WebServiceUnreachable" xml:space="preserve">
+    <value>Web server service is not reachable at {0}.</value>
+  </data>
+  <data name="UnknownErrorCheckServiceLog" xml:space="preserve">
+    <value>Unknown error, check web service log for details.</value>
+  </data>
+  <data name="NoSyncServerURLDefined" xml:space="preserve">
+    <value>No sync server url defined. Set the sync server url using the server application.</value>
+  </data>
+</root>

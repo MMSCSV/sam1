@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSServerOLTP" Class="ExtDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSServerOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="Ext.vw_ExternalUOMCurrent" Member="ExternalUnitOfMeasureEntities">
+    <Type Name="ExternalUnitOfMeasureEntity">
+      <Column Name="ExternalUOMKey" Member="Key" Storage="_ExternalUOMKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UOMRoleInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UOMCode" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="UOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UseOnOutboundFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Ext.SendInventoryEvent" Member="SendInventoryEventEntities">
+    <Type Name="SendInventoryEventEntity">
+      <Column Name="SendInventoryEventKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SendInventoryEventTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemTransactionTypeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CompletedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CompletedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SendInventoryEventEntity_SendInventoryEventDispensingDeviceEntity" Member="SendInventoryEventDispensingDeviceEntities" ThisKey="Key" OtherKey="SendInventoryEventKey" Type="SendInventoryEventDispensingDeviceEntity" />
+      <Association Name="SendInventoryEventTypeEntity_SendInventoryEventEntity" Member="SendInventoryEventTypeEntity" ThisKey="SendInventoryEventTypeInternalCode" OtherKey="InternalCode" Type="SendInventoryEventTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Ext.SendInventoryEventDispensingDevice" Member="SendInventoryEventDispensingDeviceEntities">
+    <Type Name="SendInventoryEventDispensingDeviceEntity">
+      <Column Name="SendInventoryEventDispensingDeviceKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SendInventoryEventKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SendInventoryFailureInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SendInventoryEventEntity_SendInventoryEventDispensingDeviceEntity" Member="SendInventoryEventEntity" ThisKey="SendInventoryEventKey" OtherKey="Key" Type="SendInventoryEventEntity" IsForeignKey="true" />
+      <Association Name="SendInventoryFailureEntity_SendInventoryEventDispensingDeviceEntity" Member="SendInventoryFailureEntity" ThisKey="SendInventoryFailureInternalCode" OtherKey="InternalCode" Type="SendInventoryFailureEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Ext.SendInventoryEventType" Member="SendInventoryEventTypeEntities">
+    <Type Name="SendInventoryEventTypeEntity">
+      <Column Name="SendInventoryEventTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SendInventoryEventTypeEntity_SendInventoryEventEntity" Member="SendInventoryEventEntities" ThisKey="InternalCode" OtherKey="SendInventoryEventTypeInternalCode" Type="SendInventoryEventEntity" />
+    </Type>
+  </Table>
+  <Table Name="Ext.SendInventoryFailure" Member="SendInventoryFailureEntities">
+    <Type Name="SendInventoryFailureEntity">
+      <Column Name="SendInventoryFailureInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SendInventoryFailureEntity_SendInventoryEventDispensingDeviceEntity" Member="SendInventoryEventDispensingDeviceEntities" ThisKey="InternalCode" OtherKey="SendInventoryFailureInternalCode" Type="SendInventoryEventDispensingDeviceEntity" />
+    </Type>
+  </Table>
+  <Table Name="Ext.NewItemIDEvent" Member="NewItemIDEventEntities">
+    <Type Name="NewItemIDEventEntity">
+      <Column Name="NewItemIDEventKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NewItemID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CompletedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CompletedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Ext.EquivalencyChangeEvent" Member="EquivalencyChangeEventEntities">
+    <Type Name="EquivalencyChangeEventEntity">
+      <Column Name="EquivalencyChangeEventKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CompletedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CompletedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Function Name="Ext.usp_NewItemIDEventUpdate" Method="usp_NewItemIDEventUpdate">
+    <Parameter Name="CompletedUTCDateTime" Parameter="completedUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CompletedLocalDateTime" Parameter="completedLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="NewItemIDEventKey" Parameter="newItemIDEventKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Ext.usp_EquivalencyChangeEventUpdate" Method="usp_EquivalencyChangeEventUpdate">
+    <Parameter Name="CompletedUTCDateTime" Parameter="completedUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CompletedLocalDateTime" Parameter="completedLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EquivalencyChangeEventKey" Parameter="equivalencyChangeEventKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

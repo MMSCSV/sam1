@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>CareFusion.Dispensing</RootNamespace>
+    <AssemblyName>CareFusion.Dispensing</AssemblyName>
+    <PackageId>Dispensing</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dispensing.PharmacyOrderScheduler" />
+    <PackageReference Include="EnterpriseLibrary.Common" />
+    <PackageReference Include="EnterpriseLibrary.Validation" />
+    <PackageReference Include="Mms.Logging" />
+    <PackageReference Include="protobuf-net" />
+    <PackageReference Include="Pyxis.Core.Data.InternalCodes" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dispensing.ResourceLibrary\Dispensing.ResourceLibrary.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Contracts\ReferenceEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReferenceEntities.tt</DependentUpon>
+    </Compile>
+    <None Update="Contracts\ReferenceEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ReferenceEntities.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Contracts\Authentication\IUserAuthenticationService.cs" />
+    <Compile Remove="Contracts\PharmacyOrderManagement\LocationRepeatPatternTimeSummary.cs" />
+    <Compile Remove="Contracts\PharmacyOrderManagement\PharmacyOrderRelationshipRecord.cs" />
+    <Compile Remove="Contracts\PharmacyOrderManagement\PharmacyOrderRelativeTime.cs" />
+    <Compile Remove="Contracts\PharmacyOrderManagement\PharmacyOrderSchedule.cs" />
+    <Compile Remove="Contracts\PharmacyOrderManagement\RelationshipRecordAssociation.cs" />
+    <Compile Remove="Contracts\PharmacyOrderManagement\StandardRepeatPattern.cs" />
+    <Compile Remove="Contracts\StorageSpace\StorageSpaceType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessOrder" xml:space="preserve">
+    <value>Access Order</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddAuxCabinet" xml:space="preserve">
+    <value>Add Aux Cabinet</value>
+  </data>
+  <data name="AddMainCabinet" xml:space="preserve">
+    <value>Add Main Cabinet</value>
+  </data>
+  <data name="AddRemoteStock" xml:space="preserve">
+    <value>Add Remote Stock</value>
+  </data>
+  <data name="AuxCabinet" xml:space="preserve">
+    <value>Aux Cabinet</value>
+  </data>
+  <data name="MiniAuxCabinet" xml:space="preserve">
+    <value>Mini Aux Cabinet</value>
+  </data>
+  <data name="CabinetName" xml:space="preserve">
+    <value>Cabinet Name*</value>
+  </data>
+  <data name="CabinetSettings" xml:space="preserve">
+    <value>Cabinet Settings</value>
+  </data>
+  <data name="CloseDrawer" xml:space="preserve">
+    <value>Close the drawer to commit assignment</value>
+  </data>
+  <data name="CubieBottomPosition" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="CubieTopPosition" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="DispenseAccessOrder" xml:space="preserve">
+    <value>Dispense/Inventory access order*</value>
+  </data>
+  <data name="DispenseAccessOrderOne" xml:space="preserve">
+    <value>Dispense/Inventory access order : 1</value>
+  </data>
+  <data name="DoorsLabel" xml:space="preserve">
+    <value>Doors &amp; Pockets:</value>
+  </data>
+  <data name="DrawerAssignment" xml:space="preserve">
+    <value>Assign Drawers</value>
+  </data>
+  <data name="DrawerSettings" xml:space="preserve">
+    <value>Drawer Settings</value>
+  </data>
+  <data name="DrawersLabel" xml:space="preserve">
+    <value>Drawers &amp; Types:</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditAuxConfiguration" xml:space="preserve">
+    <value>Edit Aux Cabinet Configuration</value>
+  </data>
+  <data name="Editing" xml:space="preserve">
+    <value>Editing</value>
+  </data>
+  <data name="EditMainConfiguration" xml:space="preserve">
+    <value>Edit Main Cabinet Configuration</value>
+  </data>
+  <data name="EditRemoteStockConfiguration" xml:space="preserve">
+    <value>Edit Remote Stock Configuration</value>
+  </data>
+  <data name="EnterRequiredFields" xml:space="preserve">
+    <value>Enter required drawer information</value>
+  </data>
+  <data name="ExternalBin" xml:space="preserve">
+    <value>External Return Bin</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>Incomplete</value>
+  </data>
+  <data name="InternalReturnBin" xml:space="preserve">
+    <value>Internal Return Bin</value>
+  </data>
+  <data name="InterReturnBinLabel" xml:space="preserve">
+    <value>Internal Return Bin:</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameIsRequiredError" xml:space="preserve">
+    <value>Name is required</value>
+  </data>
+  <data name="NameNotUniqueError" xml:space="preserve">
+    <value>Name is not unique</value>
+  </data>
+  <data name="NoMainCabinetWaring" xml:space="preserve">
+    <value>Main Cabinet not found. Press Ok to  add Main Cabinet.</value>
+  </data>
+  <data name="NotAssignedToCabinet" xml:space="preserve">
+    <value>Drawer not assigned to cabinet</value>
+  </data>
+  <data name="NumberOfDrawers" xml:space="preserve">
+    <value>Number of Drawers*</value>
+  </data>
+  <data name="NumberOfPockets" xml:space="preserve">
+    <value>Number of Pockets*</value>
+  </data>
+  <data name="PocketCountError" xml:space="preserve">
+    <value>Number of pockets cannot be lower than number of pockets with inventory</value>
+  </data>
+  <data name="PocketCountLessThanOneError" xml:space="preserve">
+    <value>Number of pockets can not be less than 1</value>
+  </data>
+  <data name="PocketsCountGreaterThanFormat" xml:space="preserve">
+    <value>Number of pockets cannot be greater than {0}</value>
+  </data>
+  <data name="PocketsCountLessThanFormat" xml:space="preserve">
+    <value>Number of pockets cannot be less than {0}</value>
+  </data>
+  <data name="PocketsLabel" xml:space="preserve">
+    <value>Number of Pockets:</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PositionNotUniqueError" xml:space="preserve">
+    <value>Position is not unique</value>
+  </data>
+  <data name="PositionZeroError" xml:space="preserve">
+    <value>Position can not be zero</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Product Name:</value>
+  </data>
+  <data name="RemoteStock" xml:space="preserve">
+    <value>Remote Stock</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="SelectDrawerPosition" xml:space="preserve">
+    <value>Touch the drawer position in the cabinet</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="SerialNumberLabel" xml:space="preserve">
+    <value>Serial Number:</value>
+  </data>
+  <data name="StartDrawerAssingment" xml:space="preserve">
+    <value>Press start to start drawer assignment</value>
+  </data>
+  <data name="StorageSpaceConfig" xml:space="preserve">
+    <value>Storage Space Configuration</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="YesLabel" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="LowerTemperatureMinError" xml:space="preserve">
+    <value>Lower temperature setting must be more than or equal to {0}</value>
+  </data>
+  <data name="LowerTemperatureUpperTemperatureError" xml:space="preserve">
+    <value>Upper temperature limit must be greater than the lower temperature limit + 1.</value>
+  </data>
+  <data name="ReportingIntervalMaxError" xml:space="preserve">
+    <value>Report interval must be less than or equal to {0}</value>
+  </data>
+  <data name="ReportingIntervalMinError" xml:space="preserve">
+    <value>Report interval must be more than or equal to {0}</value>
+  </data>
+  <data name="UpperTemperatureMaxError" xml:space="preserve">
+    <value>Upper temperature setting must be less than or equal to {0}</value>
+  </data>
+  <data name="WarningDelayMaxError" xml:space="preserve">
+    <value>Out of Range Warning delay must be less than or equal to {0}</value>
+  </data>
+  <data name="WarningDelayMinimumError" xml:space="preserve">
+    <value>Out of Range Warning delay must be more than or equal to {0}</value>
+  </data>
+  <data name="CloseDrawerBeforeStopping" xml:space="preserve">
+    <value>Close drawer to continue with stopping.</value>
+  </data>
+  <data name="PocketCountDoorError" xml:space="preserve">
+    <value>Door {0}: Number of pockets cannot be lower than number of pockets with inventory</value>
+  </data>
+  <data name="AssignDrawers" xml:space="preserve">
+    <value>Assign Drawers</value>
+  </data>
+  <data name="BinHeightMatrixCountFormat" xml:space="preserve">
+    <value>Bin Height Matrix ({0})</value>
+  </data>
+  <data name="Door" xml:space="preserve">
+    <value>Door</value>
+  </data>
+  <data name="FullHeightCubieCountFormat" xml:space="preserve">
+    <value>CUBIE Full Height ({0})</value>
+  </data>
+  <data name="HalfHeightCubieCountFormat" xml:space="preserve">
+    <value>CUBIE Half Height ({0})</value>
+  </data>
+  <data name="FullHeightMatrixCountFormat" xml:space="preserve">
+    <value>Matrix Full Height ({0})</value>
+  </data>
+  <data name="HasInternalReturnBinlbl" xml:space="preserve">
+    <value>Has Internal Return Bin:</value>
+  </data>
+  <data name="IncompleteConfiguration" xml:space="preserve">
+    <value>Incomplete Configuration</value>
+  </data>
+  <data name="MiniCountFormat" xml:space="preserve">
+    <value>Mini ({0})</value>
+  </data>
+  <data name="NumberofPocketslbl" xml:space="preserve">
+    <value>Number of Pockets:</value>
+  </data>
+  <data name="SelectDrawerPostionTitle" xml:space="preserve">
+    <value>Select  drawer position</value>
+  </data>
+  <data name="OpenDoorWarning" xml:space="preserve">
+    <value>Please close the door before opening another door</value>
+  </data>
+  <data name="OpenDoorWarningHeader" xml:space="preserve">
+    <value>Open Door Warning</value>
+  </data>
+  <data name="OpenDoorOnExitWarning" xml:space="preserve">
+    <value>Please close the door</value>
+  </data>
+  <data name="MedsLoadedWarning" xml:space="preserve">
+    <value>Meds are loaded so cannot open the door</value>
+  </data>
+  <data name="MedsLoadedWarningHeader" xml:space="preserve">
+    <value>Loaded Meds Warning</value>
+  </data>
+  <data name="Celsius" xml:space="preserve">
+    <value>Celsius</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Door1" xml:space="preserve">
+    <value>Door 1*</value>
+  </data>
+  <data name="Door2" xml:space="preserve">
+    <value>Door 2*</value>
+  </data>
+  <data name="Door3" xml:space="preserve">
+    <value>Door 3*</value>
+  </data>
+  <data name="Door4" xml:space="preserve">
+    <value>Door 4*</value>
+  </data>
+  <data name="EditSRMConfig" xml:space="preserve">
+    <value>Edit Smart Remote Manager</value>
+  </data>
+  <data name="EditTowerConfig" xml:space="preserve">
+    <value>Edit Tower Configuration</value>
+  </data>
+  <data name="Fahrenheit" xml:space="preserve">
+    <value>Fahrenheit</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From*</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="NumOfPocketsTitle" xml:space="preserve">
+    <value>Number of Pockets:</value>
+  </data>
+  <data name="OpenDoor" xml:space="preserve">
+    <value>Open Door</value>
+  </data>
+  <data name="OutOfRangeWarningDelay" xml:space="preserve">
+    <value>Out of Range Warning Delay*</value>
+  </data>
+  <data name="ReportInterval" xml:space="preserve">
+    <value>Report Interval*</value>
+  </data>
+  <data name="Reposition" xml:space="preserve">
+    <value>Reposition</value>
+  </data>
+  <data name="TemperatureRange" xml:space="preserve">
+    <value>Temperature Range:</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To*</value>
+  </data>
+  <data name="Configured" xml:space="preserve">
+    <value>Configured</value>
+  </data>
+  <data name="NotOnBus" xml:space="preserve">
+    <value>Not on bus</value>
+  </data>
+  <data name="Unconfigured" xml:space="preserve">
+    <value>Unconfigured</value>
+  </data>
+  <data name="Repositioned" xml:space="preserve">
+    <value>Repositioned</value>
+  </data>
+  <data name="RepositionStopWarning" xml:space="preserve">
+    <value>Stopping will revert all reposition changes made.</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="DeleteCabinetWarning" xml:space="preserve">
+    <value>Do you want to delete the selected cabinet ?</value>
+  </data>
+  <data name="DeleteDrawerWarning" xml:space="preserve">
+    <value>Do you want to delete the selected drawer ?</value>
+  </data>
+  <data name="DrawerCountError" xml:space="preserve">
+    <value>Drawer count can not be lower than assigned drawer count</value>
+  </data>
+  <data name="PositionLessThanOneError" xml:space="preserve">
+    <value>Position cannot be less than 1</value>
+  </data>
+  <data name="FailedDrawerWarning" xml:space="preserve">
+    <value>Selected drawer has failed</value>
+  </data>
+  <data name="CloseDrawerToContinue" xml:space="preserve">
+    <value>You must close the drawer to continue</value>
+  </data>
+  <data name="OpenDrawerWithInventory" xml:space="preserve">
+    <value>Cannot access a drawer that has been assigned inventory</value>
+  </data>
+  <data name="InternalBinLocationFormat" xml:space="preserve">
+    <value>, drawer </value>
+  </data>
+  <data name="PositionGreaterError" xml:space="preserve">
+    <value>Position cannot be greater than 200</value>
+  </data>
+  <data name="RemoteStockName" xml:space="preserve">
+    <value>Name*</value>
+  </data>
+  <data name="Create1x1" xml:space="preserve">
+    <value>Create 1x1</value>
+  </data>
+  <data name="Create3x1" xml:space="preserve">
+    <value>Create 3x1</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="SelectNone" xml:space="preserve">
+    <value>Select None</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="CloseDrawerToChangeSelectedItem" xml:space="preserve">
+    <value>You must first close the drawer to select another item</value>
+  </data>
+  <data name="CloseDrawerToExit" xml:space="preserve">
+    <value>You must first close the drawer to exit</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="Loaded" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="Pended" xml:space="preserve">
+    <value>Pended</value>
+  </data>
+  <data name="OpenDoorFailureError" xml:space="preserve">
+    <value>Failed to open the door</value>
+  </data>
+  <data name="OpenDoorFailureErrorHeader" xml:space="preserve">
+    <value>Failed Door</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="CloseDrawerToCreateTrays" xml:space="preserve">
+    <value>Close the drawer to create trays</value>
+  </data>
+  <data name="DrawerSettingsDone" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ReturnBinAlreadyAssigned" xml:space="preserve">
+    <value>There is already a return bin assigned to this cabinet.</value>
+  </data>
+  <data name="ReturnBinHasInventory" xml:space="preserve">
+    <value>Cannot remove a return bin that has been assigned inventory.</value>
+  </data>
+  <data name="SettingsSave" xml:space="preserve">
+    <value>Drawer settings have been saved</value>
+  </data>
+  <data name="Creating1x1Trays" xml:space="preserve">
+    <value>Creating 1x1 trays</value>
+  </data>
+  <data name="Creating3x1Trays" xml:space="preserve">
+    <value>Creating 3x1 trays</value>
+  </data>
+  <data name="OpeningTray" xml:space="preserve">
+    <value>Opening Tray</value>
+  </data>
+  <data name="MedsLoadedCubieWarning" xml:space="preserve">
+    <value>Cannot select a Cubie that has inventory assigned</value>
+  </data>
+  <data name="AddExtReturnBin" xml:space="preserve">
+    <value>Destruction Bin</value>
+  </data>
+  <data name="EditExtReturnBin" xml:space="preserve">
+    <value>Edit External Return Bin</value>
+  </data>
+  <data name="OpeningDoor" xml:space="preserve">
+    <value>Opening Door</value>
+  </data>
+  <data name="PocketCountLessThanLoadedFormat" xml:space="preserve">
+    <value>Pockets count cannot be less than number of Loaded pockets: {0}</value>
+  </data>
+  <data name="PocketsBlank" xml:space="preserve">
+    <value>Number of pockets cannot be blank</value>
+  </data>
+  <data name="CannotChangeConfigurationForLoadedPendedTrays" xml:space="preserve">
+    <value>Cannot change configuraton for loaded or pended trays</value>
+  </data>
+  <data name="CannotChangePocketCountForLoadePendedTrays" xml:space="preserve">
+    <value>Cannot cannot pocket count for loaded or pended trays</value>
+  </data>
+  <data name="PendingCubieReleaseWarning" xml:space="preserve">
+    <value>Please complete the cubie release</value>
+  </data>
+  <data name="ReleaseCubie" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="MedsLoadedMiniWarning" xml:space="preserve">
+    <value>Cannot select a mini tray that has inventory assigned</value>
+  </data>
+  <data name="CannotChangePocketCountWhenDrawerOpen" xml:space="preserve">
+    <value>Cannot change pocket when drawer is open</value>
+  </data>
+  <data name="SelectTraystoChangePocketCount" xml:space="preserve">
+    <value>Select trays to change pocket count</value>
+  </data>
+  <data name="ConfigurationsDontMatch" xml:space="preserve">
+    <value>Failed to replace, drawer configurations do not match.</value>
+  </data>
+  <data name="NumberofDrawersRequired" xml:space="preserve">
+    <value>Number of drawers is required</value>
+  </data>
+  <data name="EditRemoteManager" xml:space="preserve">
+    <value>Edit Remote Manager</value>
+  </data>
+  <data name="IsBinHeightMatrixDrawer" xml:space="preserve">
+    <value>Is this Bin height matrix drawer?</value>
+  </data>
+  <data name="MedCartMiniTrayWarning" xml:space="preserve">
+    <value>Use Drawer Settings to verify the Minitray configuration</value>
+  </data>
+  <data name="DefrostModeWarningMessage" xml:space="preserve">
+    <value>Please empty the refrigerator of medication items. Refrigerator items will not be accessible from device formulary lists while checked.</value>
+  </data>
+  <data name="DefrostMode" xml:space="preserve">
+    <value>Defrost Mode</value>
+  </data>
+  <data name="SRMOutRangeTempCelsius" xml:space="preserve">
+    <value>{0}°C</value>
+  </data>
+  <data name="SRMOutRangeTempFahrenheit" xml:space="preserve">
+    <value>{0}°F</value>
+  </data>
+  <data name="SRMOutRangeTooltip" xml:space="preserve">
+    <value>{0}: {1} (Normal: {2} - {3})</value>
+  </data>
+  <data name="BinHeightAccessibleMatrixCountFormat" xml:space="preserve">
+    <value>Bin Height Accessible Matrix ({0})</value>
+  </data>
+  <data name="DrawerNumber0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DrawerNumber2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DrawerNumber6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ReplacingFailedSRM" xml:space="preserve">
+    <value>Replacing failed SRM</value>
+  </data>
+  <data name="ReplaceSRMWarning" xml:space="preserve">
+    <value>Are you sure you want to replace this SRM cabinet ?</value>
+  </data>
+  <data name="CopySettings" xml:space="preserve">
+    <value>Copy Settings</value>
+  </data>
+  <data name="ReplacingFailedTower" xml:space="preserve">
+    <value>Replacing failed Tower</value>
+  </data>
+  <data name="ReplaceTowerWarning" xml:space="preserve">
+    <value>Are you sure you want to replace this Tower cabinet ?</value>
+  </data>
+  <data name="ReplaceRemoteManagerWarning" xml:space="preserve">
+    <value>Are you sure you want to replace this Remote Manager ?</value>
+  </data>
+  <data name="ReplacingFailedRemoteManager" xml:space="preserve">
+    <value>Replacing failed Remote Manager</value>
+  </data>
+  <data name="FullHeightAccessibleMatrixCount" xml:space="preserve">
+    <value>Accessible Matrix Full Height ({0})</value>
+  </data>
+  <data name="HalfHeightAccessibleMatrixCount" xml:space="preserve">
+    <value>Accessible Matrix Half Height ({0})</value>
+  </data>
+  <data name="InternalBinConfigured" xml:space="preserve">
+    <value>Internal bin configured</value>
+  </data>
+  <data name="InternalBinNotConfigured" xml:space="preserve">
+    <value>Internal bin not configured</value>
+  </data>
+  <data name="EditIntegratedMainConfig" xml:space="preserve">
+    <value>Edit Integrated Main Configuration</value>
+  </data>
+  <data name="AddIntegratedMain" xml:space="preserve">
+    <value>Add Integrated Main</value>
+  </data>
+  <data name="PocketsWithStar" xml:space="preserve">
+    <value>Pockets*</value>
+  </data>
+  <data name="DoorNotOnBus" xml:space="preserve">
+    <value>Door at position {0} is not connected</value>
+  </data>
+  <data name="JoinTowers" xml:space="preserve">
+    <value>Join Towers</value>
+  </data>
+  <data name="CoupledWithDoor" xml:space="preserve">
+    <value>Coupled with Door {0}</value>
+  </data>
+  <data name="PendingConfigurationWrite" xml:space="preserve">
+    <value>Please accept the configuration first</value>
+  </data>
+  <data name="Unassigned" xml:space="preserve">
+    <value>Unassigned</value>
+  </data>
+  <data name="JoinNotOnBusError" xml:space="preserve">
+    <value>You can't join a tower that is not on the bus</value>
+  </data>
+  <data name="SeparatingTowers" xml:space="preserve">
+    <value>Separating Towers</value>
+  </data>
+  <data name="TowerHasInventory" xml:space="preserve">
+    <value>You can't separate towers if any one of them are loaded</value>
+  </data>
+  <data name="TowerSeparationWarning" xml:space="preserve">
+    <value>This will cause both towers to become unconfigured and return you to the storage space configuration list.</value>
+  </data>
+  <data name="PrimaryTower" xml:space="preserve">
+    <value>(Primary)</value>
+  </data>
+  <data name="SecondaryTower" xml:space="preserve">
+    <value>(Secondary)</value>
+  </data>
+  <data name="ReplaceTowerConfigurationError" xml:space="preserve">
+    <value>Towers being replaced must have the same configuration</value>
+  </data>
+  <data name="CloseDoorBeforeContinuing" xml:space="preserve">
+    <value>Please close the door before continuing</value>
+  </data>
+  <data name="CouplingInventoryWarning" xml:space="preserve">
+    <value>Can't couple because one or more of the doors are pended or loaded</value>
+  </data>
+  <data name="DecouplingInventoryWarning" xml:space="preserve">
+    <value>Can't decouple because door is pended or loaded</value>
+  </data>
+  <data name="JoinToCoupledDoorsWarning" xml:space="preserve">
+    <value>You can't join to a door that is already coupled</value>
+  </data>
+  <data name="TowerWithInventoryNotJoinable" xml:space="preserve">
+    <value>A loaded or pended tower can't be joined with another one</value>
+  </data>
+  <data name="JoinTower" xml:space="preserve">
+    <value>Join Tower</value>
+  </data>
+  <data name="SeparateTower" xml:space="preserve">
+    <value>Separate Tower</value>
+  </data>
+  <data name="CoupleNotOnBus" xml:space="preserve">
+    <value>Can't couple because one or more doors are not connected</value>
+  </data>
+  <data name="DecoupleNotOnBus" xml:space="preserve">
+    <value>Can't decouple because door is not connected</value>
+  </data>
+  <data name="TowerDoorNotOnBus" xml:space="preserve">
+    <value>Door is not connected or is coupled</value>
+  </data>
+  <data name="DecoupleWarning" xml:space="preserve">
+    <value>Decouple Warning</value>
+  </data>
+  <data name="DecouplingWarningInformation" xml:space="preserve">
+    <value>This will decouple the doors</value>
+  </data>
+  <data name="FailedTowerDoorWarning" xml:space="preserve">
+    <value>One or more doors are failed, must recover first</value>
+  </data>
+  <data name="DoorsDetected" xml:space="preserve">
+    <value>Doors detected</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="DrawersWithInvalidConfiguration" xml:space="preserve">
+    <value>Drawers with invalid configuration:</value>
+  </data>
+  <data name="InvalidConfiguration" xml:space="preserve">
+    <value>Invalid Configuration</value>
+  </data>
+  <data name="NoSlotOrCubieFoundInAnyDrawer" xml:space="preserve">
+    <value>No empty slot or replaceable cubie found in any drawer.</value>
+  </data>
+  <data name="NoSlotOrCubieFoundInOpenDrawer" xml:space="preserve">
+    <value>No empty slot or replaceable cubie found in the open drawer. Please close the drawer.</value>
+  </data>
+  <data name="EditRefrigeratedAux" xml:space="preserve">
+    <value>Edit Refrigerated Aux</value>
+  </data>
+  <data name="OutOfServiceWarning" xml:space="preserve">
+    <value>Please empty the Refrigerator Cabinet of medication items. Refrigerator Cabinet items will not be accessible from device formulary lists while checked.</value>
+  </data>
+  <data name="RefrigeratorCabinetOutRangeTempCelsius" xml:space="preserve">
+    <value>{0}°C</value>
+  </data>
+  <data name="RefrigeratorCabinetOutRangeTempFahrenheit" xml:space="preserve">
+    <value>{0}°F</value>
+  </data>
+  <data name="RefrigeratorCabinetOutRangeTooltip" xml:space="preserve">
+    <value>{0}: {1} (Normal: {2} - {3})</value>
+  </data>
+  <data name="OpenShelfPockets" xml:space="preserve">
+    <value>Number of Open Shelf Pockets*</value>
+  </data>
+  <data name="OpenShelfPocketsLabel" xml:space="preserve">
+    <value>Number of Open Shelf Pockets:</value>
+  </data>
+  <data name="OutOfServiceMode" xml:space="preserve">
+    <value>Defrost Mode/Out of Service</value>
+  </data>
+  <data name="SecurePockets" xml:space="preserve">
+    <value>Number of Secure Pockets</value>
+  </data>
+  <data name="SecurePocketsLabel" xml:space="preserve">
+    <value>Number of Secure Pockets:</value>
+  </data>
+  <data name="OpenShelfPocketsCountFormat" xml:space="preserve">
+    <value>Open Shelf Pockets ({0})</value>
+  </data>
+  <data name="OutOfServiceModeWarningMessage" xml:space="preserve">
+    <value>Please empty the Refrigerator Cabinet of medication items. Refrigerator Cabinet items will not be accessible from device formulary lists while checked.</value>
+  </data>
+  <data name="ReplaceRefrigeratorCabinetWarning" xml:space="preserve">
+    <value>Are you sure you want to replace this Refrigerator Cabinet?</value>
+  </data>
+  <data name="ReplacingFailedRefrigeratorCabinet" xml:space="preserve">
+    <value>Replacing failed Refrigerator Cabinet</value>
+  </data>
+  <data name="SecureBinsCountFormat" xml:space="preserve">
+    <value>Secure Bins ({0})</value>
+  </data>
+  <data name="SecureBinsLabel" xml:space="preserve">
+    <value>Secure Bins</value>
+  </data>
+  <data name="AddExcess" xml:space="preserve">
+    <value>Add Excess Stock</value>
+  </data>
+  <data name="EditExcess" xml:space="preserve">
+    <value>Edit Excess Stock</value>
+  </data>
+  <data name="ExcessStock" xml:space="preserve">
+    <value>Excess Stock</value>
+  </data>
+  <data name="ExcessStockName" xml:space="preserve">
+    <value>Excess Stock Name*</value>
+  </data>
+  <data name="PocketCountDoorError2" xml:space="preserve">
+    <value>Door {0}: Number of pockets cannot be lower than number of pockets with inventory ({1})</value>
+  </data>
+  <data name="DestructionBinHasInventory" xml:space="preserve">
+    <value>Cannot remove a destruction bin that has been assigned inventory.</value>
+  </data>
+</root>

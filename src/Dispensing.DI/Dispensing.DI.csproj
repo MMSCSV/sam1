@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>CareFusion.Dispensing.DI</RootNamespace>
+    <AssemblyName>CareFusion.Dispensing.DI</AssemblyName>
+    <PackageId>Dispensing.DI</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Unity.Abstractions" />
+    <PackageReference Include="Unity.Container" />
+  </ItemGroup>
+</Project>

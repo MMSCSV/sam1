@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSClientOLTP" Class="TxDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSClientOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="Tx.vw_StorageSpaceInventoryCurrent" Member="StorageSpaceInventoryEntities">
+    <Type Name="StorageSpaceInventoryEntity">
+      <Column Name="StorageSpaceInventoryKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StorageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="InventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StrengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StrengthUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="VolumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="VolumeUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EarliestNextExpirationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="StorageSpaceInventoryEntity_StorageItemTransactionEntity" Member="StorageItemTransactionEntities" ThisKey="Key" OtherKey="StartStorageSpaceInventoryKey" Type="StorageItemTransactionEntity" />
+      <Association Name="StorageSpaceInventoryEntity_StorageItemTransactionEntity1" Member="StorageItemTransactionEntities1" ThisKey="Key" OtherKey="EndStorageSpaceInventoryKey" Type="StorageItemTransactionEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.ItemTransactionType" Member="ItemTransactionTypeEntities">
+    <Type Name="ItemTransactionTypeEntity">
+      <Column Name="ItemTransactionTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MedDescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplyDescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StorageApplicableFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ItemTransactionTypeEntity_ItemTransactionEntity" Member="ItemTransactionEntities" ThisKey="InternalCode" OtherKey="ItemTransactionTypeInternalCode" Type="ItemTransactionEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_PharmacyOrderItemTransactionCurrent" Member="PharmacyOrderItemTransactionEntities">
+    <Type Name="PharmacyOrderItemTransactionEntity">
+      <Column Name="PharmacyOrderItemTransactionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="TaskUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="TaskLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="PharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyOrderSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyOrderRouteSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderComponentSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderComponentKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderSupplierDispensingInstructionSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderAdminInstructionSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderOrderingPersonSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderTimingRecordSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DecreasedDoseFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ItemTransactionEntity_PharmacyOrderItemTransactionEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_StorageItemTransactionCurrent" Member="StorageItemTransactionEntities">
+    <Type Name="StorageItemTransactionEntity">
+      <Column Name="StorageItemTransactionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DispensingDeviceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StorageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StorageSpaceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Level2StorageSpaceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Level1StorageSpaceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Level0StorageSpaceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="StorageSpaceItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StorageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartStorageSpaceInventoryKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EndStorageSpaceInventoryKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ManuallyVerifiedStorageSpaceFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StorageSpaceAbbreviatedName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="StorageSpaceShortName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="EndTotalInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="MobileFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="InsertFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="EjectFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="StorageSpaceDisconnectFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="InsertUncheckedCUBIEFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CUBIEAnotherDestinationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="ParentStorageSpaceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ParentStorageSpaceShortName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="StorageSpaceInventoryEntity_StorageItemTransactionEntity" Member="StorageSpaceInventoryEntity" ThisKey="StartStorageSpaceInventoryKey" OtherKey="Key" Type="StorageSpaceInventoryEntity" IsForeignKey="true" />
+      <Association Name="StorageSpaceInventoryEntity_StorageItemTransactionEntity1" Member="StorageSpaceInventoryEntity1" ThisKey="EndStorageSpaceInventoryKey" OtherKey="Key" Type="StorageSpaceInventoryEntity" IsForeignKey="true" />
+      <Association Name="ItemTransactionEntity_StorageItemTransactionEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_EncounterItemTransactionCurrent" Member="EncounterItemTransactionEntities">
+    <Type Name="EncounterItemTransactionEntity">
+      <Column Name="EncounterItemTransactionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="PatientKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientAllergySetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PatientIDSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PrimaryPatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FacilityPatientSiloSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterPatientLocationKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedFacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedFacilitySnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedUnitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AssignedUnitSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AssignedUnitRoomKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AssignedUnitRoomSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryUnitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryUnitSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryUnitRoomKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryUnitRoomSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EncounterPhysicianRoleSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TooCloseReasonKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TooCloseFreeFormReasonText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="OverrideReasonKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OverrideFreeFormReasonText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="TooCloseReasonSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="OverrideReasonSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Association Name="ItemTransactionEntity_EncounterItemTransactionEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_ItemTransactionCurrent" Member="ItemTransactionEntities">
+    <Type Name="ItemTransactionEntity">
+      <Column Name="ItemTransactionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="TransactionSessionTypeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PharmacyOrderComponentKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="RemainingDispenseQuantity" Storage="_RemainingDispenseTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18)" CanBeNull="true" />
+      <Column Name="OriginalUndocumentedDisposeQuantity" Type="System.Decimal" DbType="Decimal(28,18)" CanBeNull="true" />
+      <Column Name="RemainingUndocumentedDisposeQuantity" Type="System.Decimal" DbType="Decimal(28,18)" CanBeNull="true" />
+      <Column Name="ResolvedUndocumentedDisposeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="PharmacyOrderTaskUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="true" />
+      <Column Name="PharmacyOrderTaskLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="true" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RelatedItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CompositeItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemTransactionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTransactionCompositeRoleInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CancelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UndocumentedDisposeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyOrderUsedFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ItemIssueTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemIssueUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemIssueUOMDisplayCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EnteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMDisplayCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnteredUOMPerEachQuantity" Type="System.Decimal" DbType="Decimal(28,14) " CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="StrengthTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="StrengthUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="VolumeTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="VolumeUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilitySnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="MedItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemEquivalencySetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FacilityKitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FacilityKitSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FacilityKitStatFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="WitnessAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WitnessAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="MyItemsUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="MyItemsUserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="UserEncounterQueueEntryKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ComboItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboFacilityItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboFacilityItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboMedItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboMedItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboComponentKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ComboComponentSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreditPatientFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DiscrepancyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OverrideScanFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeOutFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CriticalOverrideModeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DispenseFractionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FractionalUOMTypeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="RxCheckReasonKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="RxCheckReasonSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="RxCheckFreeFormReasonText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="WithoutRxCheckFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserAtDispensingDeviceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserAtDispensingDeviceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FromExternalSystemFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExternalSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecoveredFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExplicitUserCancelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="InventoryReferenceID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ExternalInventoryCountRequestKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ExternalRefillRequestKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemTransactionReferenceID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="RelatedItemTransactionReferenceID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ItemTransactionEntity_PharmacyOrderItemTransactionEntity" Member="PharmacyOrderItemTransactionEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="PharmacyOrderItemTransactionEntity" />
+      <Association Name="ItemTransactionEntity_StorageItemTransactionEntity" Member="StorageItemTransactionEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="StorageItemTransactionEntity" />
+      <Association Name="ItemTransactionEntity_EncounterItemTransactionEntity" Member="EncounterItemTransactionEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="EncounterItemTransactionEntity" />
+      <Association Name="ItemTransactionEntity_ItemTransactionClinicalDataNoticeEntity" Member="ItemTransactionClinicalDataNoticeEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="ItemTransactionClinicalDataNoticeEntity" />
+      <Association Name="ItemTransactionEntity_CountInventoryListEntryEntity" Member="CountInventoryListEntryEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="CountInventoryListEntryEntity" />
+      <Association Name="ItemTransactionEntity_DiscrepancyEntity" Member="DiscrepancyEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="DiscrepancyEntity" />
+      <Association Name="ItemTransactionEntity_DiscrepancyNoteEntity" Member="DiscrepancyNoteEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="DiscrepancyNoteEntity" />
+      <Association Name="ItemTransactionEntity_ItemTransactionScanEntity" Member="ItemTransactionScanEntities" ThisKey="Key" OtherKey="ItemTransactionKey" Type="ItemTransactionScanEntity" />
+      <Association Name="ItemTransactionTypeEntity_ItemTransactionEntity" Member="ItemTransactionTypeEntity" ThisKey="ItemTransactionTypeInternalCode" OtherKey="InternalCode" Type="ItemTransactionTypeEntity" IsForeignKey="true" />
+      <Association Name="ItemTransactionCompositeRoleEntity_ItemTransactionEntity" Member="ItemTransactionCompositeRoleEntity" ThisKey="ItemTransactionCompositeRoleInternalCode" OtherKey="InternalCode" Type="ItemTransactionCompositeRoleEntity" IsForeignKey="true" />
+      <Association Name="TransactionSessionEntity_ItemTransactionEntity" Member="TransactionSessionEntity" ThisKey="TransactionSessionKey" OtherKey="Key" Type="TransactionSessionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.ClinicalDataNotice" Member="ClinicalDataNoticeEntities">
+    <Type Name="ClinicalDataNoticeEntity">
+      <Column Name="ClinicalDataNoticeKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NoticeUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="NoticeLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ResponseUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ResponseLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ResponseFreeFormText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataNoticeEntity_ClinicalDataNoticeResponseEntity" Member="ClinicalDataNoticeResponseEntities" ThisKey="Key" OtherKey="ClinicalDataNoticeKey" Type="ClinicalDataNoticeResponseEntity" />
+      <Association Name="ClinicalDataNoticeEntity_ItemTransactionClinicalDataNoticeEntity" Member="ItemTransactionClinicalDataNoticeEntities" ThisKey="Key" OtherKey="ClinicalDataNoticeKey" Type="ItemTransactionClinicalDataNoticeEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.ClinicalDataNoticeResponse" Member="ClinicalDataNoticeResponseEntities">
+    <Type Name="ClinicalDataNoticeResponseEntity">
+      <Column Name="ClinicalDataNoticeResponseKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClinicalDataNoticeKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataResponseKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataResponseSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataNoticeEntity_ClinicalDataNoticeResponseEntity" Member="ClinicalDataNoticeEntity" ThisKey="ClinicalDataNoticeKey" OtherKey="Key" Type="ClinicalDataNoticeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.ItemTransactionClinicalDataNotice" Member="ItemTransactionClinicalDataNoticeEntities">
+    <Type Name="ItemTransactionClinicalDataNoticeEntity">
+      <Column Name="ItemTransactionClinicalDataNoticeKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalDataNoticeKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ClinicalDataNoticeEntity_ItemTransactionClinicalDataNoticeEntity" Member="ClinicalDataNoticeEntity" ThisKey="ClinicalDataNoticeKey" OtherKey="Key" Type="ClinicalDataNoticeEntity" IsForeignKey="true" />
+      <Association Name="ItemTransactionEntity_ItemTransactionClinicalDataNoticeEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_CountInventoryListCurrent" Member="CountInventoryListEntities">
+    <Type Name="CountInventoryListEntity">
+      <Column Name="CountInventoryListKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="FinishUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="FinishLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="FinishOrCompleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="CountInventoryListEntity_CountInventoryListEntryEntity" Member="CountInventoryListEntryEntities" ThisKey="Key" OtherKey="CountInventoryListKey" Type="CountInventoryListEntryEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_CountInventoryListEntryCurrent" Member="CountInventoryListEntryEntities">
+    <Type Name="CountInventoryListEntryEntity">
+      <Column Name="CountInventoryListEntryKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CountInventoryListEntrySnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CountInventoryListKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StorageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="SuspendFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="CountInventoryListEntity_CountInventoryListEntryEntity" Member="CountInventoryListEntity" ThisKey="CountInventoryListKey" OtherKey="Key" Type="CountInventoryListEntity" IsForeignKey="true" />
+      <Association Name="ItemTransactionEntity_CountInventoryListEntryEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.ItemTransactionCompositeRole" Member="ItemTransactionCompositeRoleEntities">
+    <Type Name="ItemTransactionCompositeRoleEntity">
+      <Column Name="ItemTransactionCompositeRoleInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="ItemTransactionCompositeRoleEntity_ItemTransactionEntity" Member="ItemTransactionEntities" ThisKey="InternalCode" OtherKey="ItemTransactionCompositeRoleInternalCode" Type="ItemTransactionEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.TransactionSessionType" Member="TransactionSessionTypeEntities">
+    <Type Name="TransactionSessionTypeEntity">
+      <Column Name="TransactionSessionTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="TransactionSessionTypeEntity_TransactionSessionEntity" Member="TransactionSessionEntities" ThisKey="InternalCode" OtherKey="TransactionSessionTypeInternalCode" Type="TransactionSessionEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.TransactionSession" Member="TransactionSessionEntities">
+    <Type Name="TransactionSessionEntity">
+      <Column Name="TransactionSessionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransactionSessionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SessionStartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="SessionStartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="SessionEndUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="SessionEndLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AbnormalEndFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilitySnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DispensingDeviceSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FirstRecoveryAttemptUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="FirstRecoveryAttemptLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastRecoveryAttemptUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastRecoveryAttemptLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="UnrecoveredTransactionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RecoveryDataRecordQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoNotSendOutboundFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MobileFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="ItemTransactionRecordQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Association Name="TransactionSessionEntity_ItemTransactionEntity" Member="ItemTransactionEntities" ThisKey="Key" OtherKey="TransactionSessionKey" Type="ItemTransactionEntity" />
+      <Association Name="TransactionSessionEntity_DiscrepancyEntity" Member="DiscrepancyEntities" ThisKey="Key" OtherKey="ResolvedTransactionSessionKey" Type="DiscrepancyEntity" />
+      <Association Name="TransactionSessionTypeEntity_TransactionSessionEntity" Member="TransactionSessionTypeEntity" ThisKey="TransactionSessionTypeInternalCode" OtherKey="InternalCode" Type="TransactionSessionTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_DiscrepancyCurrent" Member="DiscrepancyEntities">
+    <Type Name="DiscrepancyEntity">
+      <Column Name="DiscrepancyKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ResolvedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ResolvedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AutoResolvedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ResolvedUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ResolvedUserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WitnessUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WitnessUserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DiscrepancyResolutionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ResolutionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PriorItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="DiscrepancyResolutionSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ResolvedTransactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Association Name="ItemTransactionEntity_DiscrepancyEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+      <Association Name="TransactionSessionEntity_DiscrepancyEntity" Member="TransactionSessionEntity" ThisKey="ResolvedTransactionSessionKey" OtherKey="Key" Type="TransactionSessionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.DiscrepancyNote" Member="DiscrepancyNoteEntities">
+    <Type Name="DiscrepancyNoteEntity">
+      <Column Name="DiscrepancyNoteKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NoteText" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUserAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="ServerFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Association Name="ItemTransactionEntity_DiscrepancyNoteEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.ItemTransactionScan" Member="ItemTransactionScanEntities">
+    <Type Name="ItemTransactionScanEntity">
+      <Column Name="ItemTransactionScanKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemScanCodeValue" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="OverrideFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ReplenishmentTransactionID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PickQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LotID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="LotIDManuallyEnteredFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SerialID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SerialIDManuallyEnteredFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpirationDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpirationYearMonthOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpirationManuallyEnteredFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WrongItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WrongItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WrongMedItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WrongMedItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UnknownItemFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UnverifiedScanTypeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="ItemTransactionEntity_ItemTransactionScanEntity" Member="ItemTransactionEntity" ThisKey="ItemTransactionKey" OtherKey="Key" Type="ItemTransactionEntity" IsForeignKey="true" />
+      <Association Name="UnverifiedScanTypeEntity_ItemTransactionScanEntity" Member="UnverifiedScanTypeEntity" ThisKey="UnverifiedScanTypeInternalCode" OtherKey="InternalCode" Type="UnverifiedScanTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.UserEncounterQueue" Member="UserEncounterQueueEntities">
+    <Type Name="UserEncounterQueueEntity">
+      <Column Name="UserEncounterQueueKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserEncounterQueueEntity_UserEncounterQueueEntryEntity" Member="UserEncounterQueueEntryEntities" ThisKey="Key" OtherKey="UserEncounterQueueKey" Type="UserEncounterQueueEntryEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_UserEncounterQueueEntryCurrent" Member="UserEncounterQueueEntryEntities">
+    <Type Name="UserEncounterQueueEntryEntity">
+      <Column Name="UserEncounterQueueEntryKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserEncounterQueueEntrySnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="UserEncounterQueueKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderRouteSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderComponentSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderSupplierDispensingInstructionSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderAdminInstructionSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderOrderingPersonSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderTimingRecordSetKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EnteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EnteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TaskUTCDateTime" Type="System.DateTime" DbType="DateTime2 NULL" CanBeNull="true" />
+      <Column Name="TaskLocalDateTime" Type="System.DateTime" DbType="DateTime2 NULL" CanBeNull="true" />
+      <Column Name="CompletedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CompletedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="UserAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserEncounterQueueEntity_UserEncounterQueueEntryEntity" Member="UserEncounterQueueEntity" ThisKey="UserEncounterQueueKey" OtherKey="Key" Type="UserEncounterQueueEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Tx.UnverifiedScanType" Member="UnverifiedScanTypeEntities">
+    <Type Name="UnverifiedScanTypeEntity">
+      <Column Name="UnverifiedScanTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UnverifiedScanTypeEntity_ItemTransactionScanEntity" Member="ItemTransactionScanEntities" ThisKey="InternalCode" OtherKey="UnverifiedScanTypeInternalCode" Type="ItemTransactionScanEntity" />
+    </Type>
+  </Table>
+  <Table Name="Tx.vw_EncounterItemTransactionCurrent" Member="vw_EncounterItemTransactionCurrents">
+    <Type Name="vw_EncounterItemTransactionCurrent">
+      <Column Name="TooCloseReasonSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OverrideReasonSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="Tx.usp_ClinicalDataNoticeInsert" Method="usp_ClinicalDataNoticeInsert">
+    <Parameter Name="ClinicalDataSubjectKey" Parameter="clinicalDataSubjectKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NoticeUTCDateTime" Parameter="noticeUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="NoticeLocalDateTime" Parameter="noticeLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ClinicalDataResponseKey" Parameter="clinicalDataResponseKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ResponseFreeFormText" Parameter="responseFreeFormText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataNoticeKey" Parameter="clinicalDataNoticeKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_CountInventoryListEntryInsert" Method="usp_CountInventoryListEntryInsert">
+    <Parameter Name="CountInventoryListKey" Parameter="countInventoryListKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageSpaceItemKey" Parameter="storageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="SuspendFlag" Parameter="suspendFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CountInventoryListEntryKey" Parameter="countInventoryListEntryKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_CountInventoryListEntryUpdate" Method="usp_CountInventoryListEntryUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="SuspendFlag" Parameter="suspendFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CountInventoryListEntryKey" Parameter="countInventoryListEntryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_CountInventoryListInsert" Method="usp_CountInventoryListInsert">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CreatedUTCDateTime" Parameter="createdUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedLocalDateTime" Parameter="createdLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CountInventoryListKey" Parameter="countInventoryListKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_CountInventoryListUpdate" Method="usp_CountInventoryListUpdate">
+    <Parameter Name="FinishUTCDateTime" Parameter="finishUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="FinishLocalDateTime" Parameter="finishLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CountInventoryListKey" Parameter="countInventoryListKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_ItemTransactionClinicalDataNoticeInsert" Method="usp_ItemTransactionClinicalDataNoticeInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClinicalDataNoticeKey" Parameter="clinicalDataNoticeKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AssociationUTCDateTime" Parameter="associationUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AssociationLocalDateTime" Parameter="associationLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemTransactionClinicalDataNoticeKey" Parameter="itemTransactionClinicalDataNoticeKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_PharmacyOrderItemTransactionInsert" Method="usp_PharmacyOrderItemTransactionInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TaskUTCDateTime" Parameter="taskUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TaskLocalDateTime" Parameter="taskLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="PharmacyOrderKey" Parameter="pharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PharmacyOrderComponentKey" Parameter="pharmacyOrderComponentKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DecreasedDoseFlag" Parameter="decreasedDoseFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PharmacyOrderItemTransactionKey" Parameter="pharmacyOrderItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_UserEncounterQueueInsert" Method="usp_UserEncounterQueueInsert">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterKey" Parameter="encounterKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CreatedUTCDateTime" Parameter="createdUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedLocalDateTime" Parameter="createdLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="UserEncounterQueueKey" Parameter="userEncounterQueueKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_StorageSpaceInventoryInsert" Method="usp_StorageSpaceInventoryInsert">
+    <Parameter Name="StorageSpaceItemKey" Parameter="storageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="InventoryQuantity" Parameter="inventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="StrengthInventoryQuantity" Parameter="strengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="StrengthUOMKey" Parameter="strengthUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="VolumeInventoryQuantity" Parameter="volumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="VolumeUOMKey" Parameter="volumeUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EarliestNextExpirationDate" Parameter="earliestNextExpirationDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageSpaceInventoryKey" Parameter="storageSpaceInventoryKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_StorageSpaceInventoryUpdate" Method="usp_StorageSpaceInventoryUpdate">
+    <Parameter Name="StorageSpaceItemKey" Parameter="storageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="InventoryQuantity" Parameter="inventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="StrengthInventoryQuantity" Parameter="strengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="StrengthUOMKey" Parameter="strengthUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="VolumeInventoryQuantity" Parameter="volumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="VolumeUOMKey" Parameter="volumeUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EarliestNextExpirationDate" Parameter="earliestNextExpirationDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="NewStorageSpaceInventoryKey" Parameter="newStorageSpaceInventoryKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.bsp_ListStorageSpaceItemDiscrepancyTransactionDetail" Method="bsp_ListStorageSpaceItemDiscrepancyTransactionDetail">
+    <Parameter Name="StorageSpaceItemKey" Parameter="storageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SequenceNumber" Parameter="sequenceNumber" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="bsp_ListStorageSpaceItemDiscrepancyTransactionDetailResult">
+      <Column Name="TransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CancelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EnteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMDisplayCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnteredUOMBaseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMConversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" CanBeNull="true" />
+      <Column Name="EnteredUOMUseDosageFormFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ItemIssueTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18) NOT NULL" CanBeNull="false" />
+      <Column Name="StrengthTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="VolumeTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="DispenseFractionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StartStrengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StartVolumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EndInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EndStrengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EndVolumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="ItemTransactionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MedDescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionSessionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WitnessID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="WitnessLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WitnessFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WitnessMiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SurvivingEncounterKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Discrepancyflag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiscrepancyResolvedflag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Tx.bsp_ListDispenseTransactions" Method="bsp_ListDispenseTransactions">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterKeyString" Parameter="encounterKeyString" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="TransactionUTCStartDateTime" Parameter="transactionUTCStartDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <ElementType Name="bsp_ListDispenseTransactionsResult">
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTransactionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MedItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FacilityItemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityItemSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PharmacyOrderTaskUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="TransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="RemainingDispenseQuantity" Type="System.Decimal" DbType="Decimal(28,18)" CanBeNull="true" />
+      <Column Name="RemainingUndocumentedDisposeQuantity" Type="System.Decimal" DbType="Decimal(28,18)" CanBeNull="true" />
+      <Column Name="EnteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EnteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMDisplayCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnteredUOMBaseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMConversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" CanBeNull="true" />
+      <Column Name="EnteredUOMUseDosageFormFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DispenseFractionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Tx.usp_TransactionSessionInsert" Method="usp_TransactionSessionInsert">
+    <Parameter Name="TransactionSessionTypeInternalCode" Parameter="transactionSessionTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="SessionStartUTCDateTime" Parameter="sessionStartUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="SessionStartLocalDateTime" Parameter="sessionStartLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AbnormalEndFlag" Parameter="abnormalEndFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UnrecoveredTransactionFlag" Parameter="unrecoveredTransactionFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RecoveryDataRecordQuantity" Parameter="recoveryDataRecordQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DoNotSendOutboundFlag" Parameter="doNotSendOutboundFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MobileFlag" Parameter="mobileFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ItemTransactionRecordQuantity" Parameter="itemTransactionRecordQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TransactionSessionKey" Parameter="transactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_TransactionSessionUpdate" Method="usp_TransactionSessionUpdate">
+    <Parameter Name="AbnormalEndFlag" Parameter="abnormalEndFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UnrecoveredTransactionFlag" Parameter="unrecoveredTransactionFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RecoveryDataRecordQuantity" Parameter="recoveryDataRecordQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SessionEndUTCDateTime" Parameter="sessionEndUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="SessionEndLocalDateTime" Parameter="sessionEndLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TransactionSessionKey" Parameter="transactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey " Parameter="lastModifiedDispensingDeviceKey " Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.bsp_ListSingleMiniTrayDiscrepancyTransactionDetail" Method="bsp_ListSingleMiniTrayDiscrepancyTransactionDetail">
+    <Parameter Name="StorageSpaceItemKey" Parameter="storageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SequenceNumber" Parameter="sequenceNumber" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="bsp_ListSingleMiniTrayDiscrepancyTransactionDetailResult">
+      <Column Name="TransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CancelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EnteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EnteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMDisplayCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnteredUOMBaseUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EnteredUOMConversionAmount" Type="System.Decimal" DbType="Decimal(28,14)" CanBeNull="true" />
+      <Column Name="EnteredUOMUseDosageFormFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ExposedPocketCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TotalPocketCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ItemIssueTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StrengthTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="VolumeTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="DispenseFractionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StartStrengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="StartVolumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EndInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EndStrengthInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EndVolumeInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="ItemTransactionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CompositeItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelatedItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ParentEndTotalInventoryQuantity" Type="System.Decimal" DbType="Decimal(14,4)" CanBeNull="true" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SurvivingEncounterKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="MedDescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionSessionTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WitnessID" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="WitnessLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WitnessFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WitnessMiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Discrepancyflag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiscrepancyResolvedflag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="Tx.usp_EncounterItemTransactionInsert" Method="usp_EncounterItemTransactionInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="PatientKey" Parameter="patientKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterKey" Parameter="encounterKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterPatientLocationKey" Parameter="encounterPatientLocationKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TooCloseReasonKey" Parameter="tooCloseReasonKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TooCloseFreeFormReasonText" Parameter="tooCloseFreeFormReasonText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="OverrideReasonKey" Parameter="overrideReasonKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="OverrideFreeFormReasonText" Parameter="overrideFreeFormReasonText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterItemTransactionKey" Parameter="encounterItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_ItemTransactionScanInsert" Method="usp_ItemTransactionScanInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemScanCodeValue" Parameter="itemScanCodeValue" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="OverrideFlag" Parameter="overrideFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ProductID" Parameter="productID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ReplenishmentTransactionID" Parameter="replenishmentTransactionID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PickQuantity" Parameter="pickQuantity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LotID" Parameter="lotID" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LotIDManuallyEnteredFlag" Parameter="lotIDManuallyEnteredFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SerialID" Parameter="serialID" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SerialIDManuallyEnteredFlag" Parameter="serialIDManuallyEnteredFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExpirationDate" Parameter="expirationDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ExpirationYearMonthOnlyFlag" Parameter="expirationYearMonthOnlyFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExpirationManuallyEnteredFlag" Parameter="expirationManuallyEnteredFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="WrongItemKey" Parameter="wrongItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UnverifiedScanTypeInternalCode" Parameter="unverifiedScanTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="UnknownItemFlag" Parameter="unknownItemFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemTransactionScanKey" Parameter="itemTransactionScanKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_DiscrepancyNoteInsert" Method="usp_DiscrepancyNoteInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="NoteText" Parameter="noteText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="CreatedUTCDateTime" Parameter="createdUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedLocalDateTime" Parameter="createdLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CreatedUserAccountKey" Parameter="createdUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DiscrepancyNoteKey" Parameter="discrepancyNoteKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_ItemTransactionUpdate" Method="usp_ItemTransactionUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EncounterKey" Parameter="encounterKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemIssueTransactionQuantity" Parameter="itemIssueTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="EnteredQuantity" Parameter="enteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="EnteredUOMPerEachQuantity" Parameter="enteredUOMPerEachQuantity" Type="System.Decimal" DbType="Decimal(28,14)" />
+    <Parameter Name="CancelFlag" Parameter="cancelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UndocumentedDisposeFlag" Parameter="undocumentedDisposeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="StrengthTransactionQuantity" Parameter="strengthTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="StrengthUOMKey" Parameter="strengthUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="VolumeTransactionQuantity" Parameter="volumeTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="VolumeUOMKey" Parameter="volumeUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="InventoryReferenceID" Parameter="inventoryReferenceID" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="WitnessAccountKey" Parameter="witnessAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="WitnessAccountSnapshotKey" Parameter="witnessAccountSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="WitnessCancelFlag" Parameter="witnessCancelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="RecoveredFlag" Parameter="recoveredFlag" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_StorageItemTransactionInsert" Method="usp_StorageItemTransactionInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageSpaceKey" Parameter="storageSpaceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageSpaceItemKey" Parameter="storageSpaceItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartStorageSpaceInventoryKey" Parameter="startStorageSpaceInventoryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EndStorageSpaceInventoryKey" Parameter="endStorageSpaceInventoryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ManuallyVerifiedStorageSpaceFlag" Parameter="manuallyVerifiedStorageSpaceFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InsertFlag" Parameter="insertFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EjectFlag" Parameter="ejectFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="StorageSpaceDisconnectFlag" Parameter="storageSpaceDisconnectFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InsertUncheckedCUBIEFlag" Parameter="insertUncheckedCUBIEFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CUBIEAnotherDestinationFlag" Parameter="cUBIEAnotherDestinationFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UnloadReasonInternalCode" Parameter="unloadReasonInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="UnloadReasonFreeText" Parameter="unloadReasonFreeText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="LocationFreeText" Parameter="locationFreeText" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="GCSMCompareReportFlag" Parameter="gCSMCompareReportFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StorageItemTransactionKey" Parameter="storageItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_ItemTransactionActivityUpdate" Method="usp_ItemTransactionActivityUpdate">
+    <Parameter Name="RemainingDispenseQuantity" Parameter="remainingDispenseQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="OriginalUndocumentedDisposeQuantity" Parameter="originalUndocumentedDisposeQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="RemainingUndocumentedDisposeQuantity" Parameter="remainingUndocumentedDisposeQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="OutstandingTransactionQuantity" Parameter="outstandingTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="ResolvedUndocumentedDisposeFlag" Parameter="resolvedUndocumentedDisposeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="GCSMCompareReportFlag" Parameter="gCSMCompareReportFlag" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_ItemTransactionInsert" Method="usp_ItemTransactionInsert">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TransactionSessionKey" Parameter="transactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TransactionSessionTypeInternalCode" Parameter="transactionSessionTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PharmacyOrderKey" Parameter="pharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="PharmacyOrderComponentKey" Parameter="pharmacyOrderComponentKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterKey" Parameter="encounterKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="RemainingDispenseQuantity" Parameter="remainingDispenseQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="RemainingUndocumentedDisposeQuantity" Parameter="remainingUndocumentedDisposeQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="OutstandingTransactionQuantity" Parameter="outstandingTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="ResolvedUndocumentedWasteFlag" Parameter="resolvedUndocumentedWasteFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PharmacyOrderTaskUTCDateTime" Parameter="pharmacyOrderTaskUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="PharmacyOrderTaskLocalDateTime" Parameter="pharmacyOrderTaskLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="GCSMItemTransactionRecordFlag" Parameter="gCSMItemTransactionRecordFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RelatedItemTransactionKey" Parameter="relatedItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CompositeItemTransactionKey" Parameter="compositeItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemTransactionTypeInternalCode" Parameter="itemTransactionTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ItemTransactionCompositeRoleInternalCode" Parameter="itemTransactionCompositeRoleInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CancelFlag" Parameter="cancelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UndocumentedDisposeFlag" Parameter="undocumentedDisposeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PharmacyOrderUsedFlag" Parameter="pharmacyOrderUsedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TransactionUTCDateTime" Parameter="transactionUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TransactionLocalDateTime" Parameter="transactionLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ItemIssueTransactionQuantity" Parameter="itemIssueTransactionQuantity" Type="System.Decimal" DbType="Decimal(28,18)" />
+    <Parameter Name="ItemIssueUOMKey" Parameter="itemIssueUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EnteredQuantity" Parameter="enteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="EnteredUOMKey" Parameter="enteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EnteredUOMPerEachQuantity" Parameter="enteredUOMPerEachQuantity" Type="System.Decimal" DbType="Decimal(28,14)" />
+    <Parameter Name="StrengthTransactionQuantity" Parameter="strengthTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="StrengthUOMKey" Parameter="strengthUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="VolumeTransactionQuantity" Parameter="volumeTransactionQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="VolumeUOMKey" Parameter="volumeUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKey" Parameter="facilityKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemKey" Parameter="itemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MedItemKey" Parameter="medItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemEquivalencySetKey" Parameter="itemEquivalencySetKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityItemKey" Parameter="facilityItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKitKey" Parameter="facilityKitKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FacilityKitStatFlag" Parameter="facilityKitStatFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserID" Parameter="userID" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="WitnessAccountKey" Parameter="witnessAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="WitnessCancelFlag" Parameter="witnessCancelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MyItemsUserAccountKey" Parameter="myItemsUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserEncounterQueueEntryKey" Parameter="userEncounterQueueEntryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ComboItemKey" Parameter="comboItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ComboFacilityItemKey" Parameter="comboFacilityItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ComboMedItemKey" Parameter="comboMedItemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ComboComponentKey" Parameter="comboComponentKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="CreditPatientFlag" Parameter="creditPatientFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DiscrepancyFlag" Parameter="discrepancyFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="OverrideScanFlag" Parameter="overrideScanFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TimeOutFlag" Parameter="timeOutFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CriticalOverrideModeFlag" Parameter="criticalOverrideModeFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DispenseFractionFlag" Parameter="dispenseFractionFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="FractionalUOMTypeInternalCode" Parameter="fractionalUOMTypeInternalCode" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="RxCheckReasonKey" Parameter="rxCheckReasonKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="RxCheckFreeFormReasonText" Parameter="rxCheckFreeFormReasonText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="UndocumentedDisposeReasonText" Parameter="undocumentedDisposeReasonText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="WithoutRxCheckFlag" Parameter="withoutRxCheckFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserAtDispensingDeviceKey" Parameter="userAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FromExternalSystemFlag" Parameter="fromExternalSystemFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientSystemApplicationInternalCode" Parameter="clientSystemApplicationInternalCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ExternalSequenceNumber" Parameter="externalSequenceNumber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RecoveredFlag" Parameter="recoveredFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ExplicitUserCancelFlag" Parameter="explicitUserCancelFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="InventoryReferenceID" Parameter="inventoryReferenceID" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="ExternalInventoryCountRequestKey" Parameter="externalInventoryCountRequestKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ExternalRefillRequestKey" Parameter="externalRefillRequestKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="RelatedItemTransactionReferenceID" Parameter="relatedItemTransactionReferenceID" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="CancelNoStorageSpaceAccessFlag" Parameter="cancelNoStorageSpaceAccessFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="WasteReasonSnapshotKey" Parameter="wasteReasonSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="GCSMCompareReportFlag" Parameter="gCSMCompareReportFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="GCSMCompareItemFlag" Parameter="gCSMCompareItemFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Parameter Name="ItemTransactionReferenceID" Parameter="itemTransactionReferenceID" Type="System.String" DbType="NVarChar(30)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_UserEncounterQueueEntryUpdate" Method="usp_UserEncounterQueueEntryUpdate">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CompletedUTCDateTime" Parameter="completedUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="CompletedLocalDateTime" Parameter="completedLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserEncounterQueueEntryKey" Parameter="userEncounterQueueEntryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_UserEncounterQueueEntryDelete" Method="usp_UserEncounterQueueEntryDelete">
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserEncounterQueueEntryKey" Parameter="userEncounterQueueEntryKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_UserEncounterQueueEntryInsert" Method="usp_UserEncounterQueueEntryInsert">
+    <Parameter Name="UserEncounterQueueKey" Parameter="userEncounterQueueKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="PharmacyOrderKey" Parameter="pharmacyOrderKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ItemKey" Parameter="itemKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EnteredQuantity" Parameter="enteredQuantity" Type="System.Decimal" DbType="Decimal(14,4)" />
+    <Parameter Name="EnteredUOMKey" Parameter="enteredUOMKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TaskUTCDateTime" Parameter="taskUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="TaskLocalDateTime" Parameter="taskLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="UserAtDispensingDeviceKey" Parameter="userAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FromExternalSystemFlag" Parameter="fromExternalSystemFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientSystemApplicationInternalCode" Parameter="clientSystemApplicationInternalCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserEncounterQueueEntryKey" Parameter="userEncounterQueueEntryKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_DiscrepancyInsert" Method="usp_DiscrepancyInsert">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ResolvedUTCDateTime" Parameter="resolvedUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ResolvedLocalDateTime" Parameter="resolvedLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="AutoResolvedFlag" Parameter="autoResolvedFlag" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ResolvedUserAccountKey" Parameter="resolvedUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ResolvedTransactionSessionKey" Parameter="resolvedTransactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="WitnessUserAccountKey" Parameter="witnessUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DiscrepancyResolutionKey" Parameter="discrepancyResolutionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ResolutionText" Parameter="resolutionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DiscrepancyKey" Parameter="discrepancyKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="Tx.usp_DiscrepancyUpdate" Method="usp_DiscrepancyUpdate">
+    <Parameter Name="ItemTransactionKey" Parameter="itemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StartUTCDateTime" Parameter="startUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="StartLocalDateTime" Parameter="startLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ResolvedUTCDateTime" Parameter="resolvedUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ResolvedLocalDateTime" Parameter="resolvedLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="ResolvedUserAccountKey" Parameter="resolvedUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ResolvedTransactionSessionKey" Parameter="resolvedTransactionSessionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="WitnessUserAccountKey" Parameter="witnessUserAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DiscrepancyResolutionKey" Parameter="discrepancyResolutionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ResolutionText" Parameter="resolutionText" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="PriorItemTransactionKey" Parameter="priorItemTransactionKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedActorKey" Parameter="lastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastModifiedBinaryValue" Parameter="lastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion" />
+    <Parameter Name="CheckConcurrency" Parameter="checkConcurrency" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

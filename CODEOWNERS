@@ -1,0 +1,8 @@
+# These owners will be the default owners for everything in the repo. 
+* @Alfonso-AngelesRodri_bdgh @Lucas-Christinson_bdgh @Shiv-Verma_bdgh
+
+# Installers and CI
+/Jenkinsfile @Emilio-Parra_bdgh
+
+# Notification Library
+/src/Dispensing.Notification.PublishedNotices/ @Emilio-Parra_bdgh

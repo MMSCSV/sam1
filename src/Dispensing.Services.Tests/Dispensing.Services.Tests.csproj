@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <IsTestProject>True</IsTestProject>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+  </PropertyGroup>  
+  <ItemGroup>
+    <ProjectReference Include="..\Dispensing.Data\Dispensing.Data.csproj" />
+    <ProjectReference Include="..\Dispensing.ResourceLibrary\Dispensing.ResourceLibrary.csproj" />
+    <ProjectReference Include="..\Dispensing.Services\Dispensing.Services.csproj" />
+    <ProjectReference Include="..\Dispensing\Dispensing.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="Pyxis.Core.Data" />
+    <PackageReference Include="Pyxis.IdentityServer.Middleware" />
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>  
+</Project>

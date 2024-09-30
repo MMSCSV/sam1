@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSServerOLTP" Class="LocationDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSServerOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="Location.vw_FacilityCurrent" Member="FacilityEntities">
+    <Type Name="FacilityEntity">
+      <Column Name="FacilityKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FacilitySnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LocationTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PatientReconciliationDefaultFilterDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TemporaryPatientDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ResendAfterTemporaryRemainsUnmergedDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="StreetAddressText" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubdivisionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NotesText" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TimeZoneID" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="PharmacyInformationSystemKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="MedTemporaryUserAccessDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="UseVisitorRolesInMedTemporaryUserAccessFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TooCloseRemoveDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="NoADTMessageReceivedDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="NoPISMessageReceivedDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PISMessageProcessingBehindDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ADTMessageProcessingBehindDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="BioIDFailoverInternalCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UserScanModeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FreeFormReasonFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UseUnverifiedScanCodeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LateRemoveDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MedExpirationCheckDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CriticalOverrideSchedulingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LeastRemovedDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SelectAllForRemoveListFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NoticeDiscrepancyDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="NoticeDeviceNotCommunicatingDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="NoticeIncludeScheduledCriticalOverrideFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NoticeETLDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DecreaseOrderedDoseFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OMNLToPrintEquivalenciesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TemporaryPatientNoIDText" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DisplayEncounterIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayAlternateEncounterIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayAccountIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayPatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="OptionalTemporaryEncounterIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OptionalTemporaryAlternateEncounterIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OptionalTemporaryAccountIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OptionalTemporaryPatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RemoveMedLabelDisplayIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemoveMedLabelEncounterIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemoveMedLabelAlternateEncounterIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemoveMedLabelAccountIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemoveMedLabelPatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RemoveMedLabelProductIDFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotReturnableMedMessageText" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AllowSingleMultiDoseDispenseCancelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemoveOrderedItemWithoutDoseFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemoteDispensingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="MedQueueDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MedQueueBeforeDueDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MedQueueBeforeOrderStartDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MedQueueAfterOrderExpiredDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MedQueueBeforeDueNowDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MedQueueAfterDueNowDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PreadmissionLeadDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PreadmissionProlongedInactivityDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdmissionProlongedInactivityDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DischargeDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TransferDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LeaveOfAbsenceDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="MyItemsNotificationDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DeliveryStatusDisplayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DiscontinueOrdersOnReadmitDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PartialMultiComponentOrderRemoveFlag" Storage="_PartialMuiltiComponentOrderRemoveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RxCheckDelayDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="IncreaseOrderedDoseFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RxCheckExpirationDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ExcludeRxCheckCUBIEOrSingleMultiDoseMiniFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ExcludeRxCheckScanOnLoadRefillFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JITMgmtURLID" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PharmogisticsURLID" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AddFacilityNonMedItemOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisablePendAssignOutdateTrackingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TruncatedAllergyCommentText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TruncatedOrderCommentText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DispensingDeviceUserScanFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MatchByUserScanCodeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserIDScanCodePrefixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="UserIDScanCodeSuffixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OrderIDScanCodePrefixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OrderIDScanCodeSuffixLengthQuantity" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="OrderIDScanCodeSuffixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OrderIDScanCodePrefixLengthQuantity" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="RepickWaitDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CUBIEESFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InsertUncheckedCUBIEFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CUBIEAnotherDestinationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CardinalASSISTFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LongTermCareFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DispensingDeviceAllOrdersFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="MixedDeviceTypeQueuingModeProfileFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RequestPharmacyOrderDoseFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RequestPharmacyOrderDoseDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RemoveMedLabelItemIDBarcodeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RemovePatientIDBarcodeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="SequentialDrainModeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ExternalInventoryCountRequestFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExternalRefillRequestFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExternalRefillRequestExpirationDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="UseEquivalenciesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FacilitySpecificEquivalenciesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AutoApprovePISItemFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReverseDischargeDurationAmount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReverseDischargeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MedSearchStringFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MedSearchStringLengthQuantity" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="MedSelectionOrderFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowPatientsToBeSearchedByLocationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultSortPatientsByLocationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserAuthenticationRequestDuration2Amount" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayPatientPreferredNameOnRemoveLabelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMReceivePurchaseOrderRequiredFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMLogisticsOrderingInterfaceSupportFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMLogisticsReceiveInterfaceSupportFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMCardinalAssistInterfaceSupportFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMDefaultOnReceiveDistributorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="GCSMAllDeviceEventsReviewSignaturesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMPrintADMLabelFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMPrintLabelByDispenseOrderFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMShowInvoiceTypeFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GCSMDispenseMultiMedSheetReconciliationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstSnapshotFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="GCSMChangeEmptyDestructionBinQuantityFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="GCSMAddItemFromCountDestructionBinFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="GCSMAddItemFromEmptyDestructionBinFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="GCSMDestructionBinEmptyWithDiscrepancyModeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DisablePyxisBarcodeScanOnLoadRefillFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PreventCardPINAuthenticationFailoverFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="RFIDFailoverInternalCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="FacilityEntity_UnitEntity" Member="UnitEntities" ThisKey="Key" OtherKey="FacilityKey" Type="UnitEntity" />
+      <Association Name="FacilityEntity_AreaEntity" Member="AreaEntities" ThisKey="Key" OtherKey="FacilityKey" Type="AreaEntity" />
+      <Association Name="FacilityEntity_FacilityPatientSiloEntity" Member="FacilityPatientSiloEntities" ThisKey="Key" OtherKey="FacilityKey" Type="FacilityPatientSiloEntity" />
+    </Type>
+  </Table>
+  <Table Name="Location.vw_UnitCurrent" Member="UnitEntities">
+    <Type Name="UnitEntity">
+      <Column Name="UnitKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LocationTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AutoDischargeModeInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AutoDischargeDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AlternateAutoDischargeDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ShowPreadmissionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ShowRecurringAdmissionFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PreadmissionLeadDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PreadmissionProlongedInactivityDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AdmissionProlongedInactivityDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DischargeDelayDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TransferDelayDurationAmount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="OMNLNoticePrinterName" Type="System.String" DbType="NVarChar(260)" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="LongTermCareFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Association Name="UnitEntity_UnitRoomEntity" Member="UnitRoomEntities" ThisKey="Key" OtherKey="UnitKey" Type="UnitRoomEntity" />
+      <Association Name="UnitEntity_AreaUnitEntity" Member="AreaUnitEntities" ThisKey="Key" OtherKey="UnitKey" Type="AreaUnitEntity" />
+      <Association Name="FacilityEntity_UnitEntity" Member="FacilityEntity" ThisKey="FacilityKey" OtherKey="Key" Type="FacilityEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Location.vw_UnitRoomCurrent" Member="UnitRoomEntities">
+    <Type Name="UnitRoomEntity">
+      <Column Name="UnitRoomKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitRoomSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="UnitKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoomName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomDescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UnitEntity_UnitRoomEntity" Member="UnitEntity" ThisKey="UnitKey" OtherKey="Key" Type="UnitEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Location.vw_AreaCurrent" Member="AreaEntities">
+    <Type Name="AreaEntity">
+      <Column Name="AreaKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AreaName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AllUserRolesFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AreaEntity_AreaDispensingDeviceEntity" Member="AreaDispensingDeviceEntities" ThisKey="Key" OtherKey="AreaKey" Type="AreaDispensingDeviceEntity" />
+      <Association Name="AreaEntity_AreaUnitEntity" Member="AreaUnitEntities" ThisKey="Key" OtherKey="AreaKey" Type="AreaUnitEntity" />
+      <Association Name="AreaEntity_UserRoleAreaEntity" Member="UserRoleAreaEntities" Storage="_UserRoleAreas" ThisKey="Key" OtherKey="AreaKey" Type="UserRoleAreaEntity" />
+      <Association Name="FacilityEntity_AreaEntity" Member="FacilityEntity" ThisKey="FacilityKey" OtherKey="Key" Type="FacilityEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Location.vw_AreaDispensingDeviceCurrent" Member="AreaDispensingDeviceEntities">
+    <Type Name="AreaDispensingDeviceEntity">
+      <Column Name="AreaDispensingDeviceKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AreaEntity_AreaDispensingDeviceEntity" Member="AreaEntity" ThisKey="AreaKey" OtherKey="Key" Type="AreaEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Location.vw_AreaUnitCurrent" Member="AreaUnitEntities">
+    <Type Name="AreaUnitEntity">
+      <Column Name="AreaUnitKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UnitKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AreaEntity_AreaUnitEntity" Member="AreaEntity" ThisKey="AreaKey" OtherKey="Key" Type="AreaEntity" IsForeignKey="true" />
+      <Association Name="UnitEntity_AreaUnitEntity" Member="UnitEntity" ThisKey="UnitKey" OtherKey="Key" Type="UnitEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Location.vw_FacilityPatientSiloCurrent" Member="FacilityPatientSiloEntities">
+    <Type Name="FacilityPatientSiloEntity">
+      <Column Name="FacilityPatientSiloKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientSiloKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="FacilityPatientSiloStatusInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="FacilityEntity_FacilityPatientSiloEntity" Member="FacilityEntity" ThisKey="FacilityKey" OtherKey="Key" Type="FacilityEntity" IsForeignKey="true" />
+      <Association Name="FacilityPatientSiloStatusEntity_FacilityPatientSiloEntity" Member="FacilityPatientSiloStatusEntity" ThisKey="FacilityPatientSiloStatusInternalCode" OtherKey="InternalCode" Type="FacilityPatientSiloStatusEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Core.vw_UserRoleAreaCurrent" Member="UserRoleAreaEntities">
+    <Type Name="UserRoleAreaEntity">
+      <Column Name="UserRoleAreaKey" Member="Key" Storage="_UserRoleAreaKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserRoleKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AreaKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AreaEntity_UserRoleAreaEntity" Member="AreaEntity" ThisKey="AreaKey" OtherKey="Key" Type="AreaEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Location.FacilityPatientSiloStatus" Member="FacilityPatientSiloStatusEntities">
+    <Type Name="FacilityPatientSiloStatusEntity">
+      <Column Name="FacilityPatientSiloStatusInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="FacilityPatientSiloStatusEntity_FacilityPatientSiloEntity" Member="FacilityPatientSiloEntities" ThisKey="InternalCode" OtherKey="FacilityPatientSiloStatusInternalCode" Type="FacilityPatientSiloEntity" />
+    </Type>
+  </Table>
+</Database>

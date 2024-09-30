@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AssignableMedItemNotActionableReason_ItemRequiresScan" xml:space="preserve">
+    <value>Item needs to be scanned</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_ItemPended" xml:space="preserve">
+    <value>Storage space has pended items</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_NoPendOverStandardStock" xml:space="preserve">
+    <value>Cannot pend over Standard Stock</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_StorageSpaceBlocked" xml:space="preserve">
+    <value>Storage space is blocked</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_Backordered" xml:space="preserve">
+    <value>Backordered</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_Inactive" xml:space="preserve">
+    <value>Inactive Med</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_InFailedStorageUnit" xml:space="preserve">
+    <value>Med in failed storage space</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_NotLoaded" xml:space="preserve">
+    <value>Not loaded</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_OutOfStock" xml:space="preserve">
+    <value>Out of stock</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_RestrictedAccess" xml:space="preserve">
+    <value>No access</value>
+  </data>
+  <data name="InventoryCountNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="InventoryCountNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="InventoryCountNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_UnloadOnLoadWithoutPermission" xml:space="preserve">
+    <value>You have to unload the item in this storage location before loading.  You don't have unload permission during load and refill.</value>
+  </data>
+  <data name="MiniDrawerTrayModeInternalCode_MATRIX" xml:space="preserve">
+    <value>Matrix</value>
+  </data>
+  <data name="MiniDrawerTrayModeInternalCode_MULTIDOSE" xml:space="preserve">
+    <value>Multi dose</value>
+  </data>
+  <data name="MiniDrawerTrayModeInternalCode_SINGLEDOSE" xml:space="preserve">
+    <value>Single dose</value>
+  </data>
+  <data name="OutdateNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="OutdateNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="OutdateNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="StorageSpaceRecoveryNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="StorageSpaceRecoveryNotActionableReason_RecoverOpenCUBIEFirst" xml:space="preserve">
+    <value>Drawer contains an unsecured CUBIE that needs to be recovered first</value>
+  </data>
+  <data name="UnloadNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="UnloadNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="UnloadNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="PatientCaseNotActionableReasons_ZeroTransactionAmount" xml:space="preserve">
+    <value>Item has been returned/wasted/transferred in full</value>
+  </data>
+  <data name="AssignableMedItemNotActionableReason_Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_UnloadOnLoadBlocked" xml:space="preserve">
+    <value>You have to unload the item in this storage location before loading.  The unload item is blocked.</value>
+  </data>
+  <data name="UserNotActionableReason_Expired" xml:space="preserve">
+    <value>User is expired</value>
+  </data>
+  <data name="UserNotActionableReason_HasAccessToAllAreas" xml:space="preserve">
+    <value>User already has access</value>
+  </data>
+  <data name="UserNotActionableReason_Inactive" xml:space="preserve">
+    <value>User is inactive</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer</value>
+  </data>
+  <data name="InventoryCountNotActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer</value>
+  </data>
+  <data name="UnloadNotActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer</value>
+  </data>
+  <data name="OutdateNotActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer</value>
+  </data>
+  <data name="OutdateNotActionableReason_NotTrackingOutdate" xml:space="preserve">
+    <value>Outdate tracking is not enabled for this item</value>
+  </data>
+  <data name="MyKitNotActionableReason_NoRemovePermission" xml:space="preserve">
+    <value>You do not have permission to this item</value>
+  </data>
+  <data name="DispenseMedNotActionableReason_NotMyItems" xml:space="preserve">
+    <value>Medication is unavailable to dispense to My Items</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_FractionalConflict" xml:space="preserve">
+    <value>The item cannot be loaded due to conflicting Remove Fractional Unit setting.</value>
+  </data>
+  <data name="DestockNotActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer.</value>
+  </data>
+  <data name="DestockNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="DestockNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting.</value>
+  </data>
+  <data name="DestockNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed.</value>
+  </data>
+  <data name="DestockNotActionableReason_CannotDestock" xml:space="preserve">
+    <value>You do not have permission to destock this item.</value>
+  </data>
+  <data name="RxCheckNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="RxCheckNotActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting.</value>
+  </data>
+  <data name="RxCheckNotActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed.</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceFailedToLock" xml:space="preserve">
+    <value>Device failed to lock</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceFailedToOpen" xml:space="preserve">
+    <value>Device failed to open</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceFailedToRelease" xml:space="preserve">
+    <value>Device failed to release</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceFailedToStayClosed" xml:space="preserve">
+    <value>Device failed to stay closed</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceFailedToUnlock" xml:space="preserve">
+    <value>Device failed to unlock</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceGeneralFailure" xml:space="preserve">
+    <value>General hardware failure</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceLatchAmbiguous" xml:space="preserve">
+    <value>Device latch ambiguous</value>
+  </data>
+  <data name="DeviceFailureEventReason_DeviceNotFound" xml:space="preserve">
+    <value>Device not found</value>
+  </data>
+  <data name="DeviceFailureEventReason_MiniTrayOverspeedError" xml:space="preserve">
+    <value>Mini tray overspeed error</value>
+  </data>
+  <data name="DeviceFailureEventReason_MiniTrayShortedOrOpenSolenoidCircuit" xml:space="preserve">
+    <value>Mini tray shorted or open solenoid circuit</value>
+  </data>
+  <data name="DeviceFailureEventReason_MiniTrayTimeout" xml:space="preserve">
+    <value>Mini tray timeout</value>
+  </data>
+  <data name="DeviceFailureEventReason_None" xml:space="preserve">
+    <value>Unknown hardware failure</value>
+  </data>
+  <data name="AutoloadNotActionableReason_PendedOnLoadedPocket" xml:space="preserve">
+    <value>Pended items in this drawer require unload.  Please load from Load/Refill Function.</value>
+  </data>
+  <data name="AutoloadNotActionableReason_PendedOnLoadedRequireReferenceNum" xml:space="preserve">
+    <value>Pended items in this drawer require unload or inventory reference number(s).  Please load from Load/Refill Function.</value>
+  </data>
+  <data name="AutoloadNotActionableReason_RequireReferenceNumber" xml:space="preserve">
+    <value>Pended items in this drawer require inventory reference number(s).  Please load from Load/Refill Function.</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="DestockNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="InventoryCountNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="LoadRefillNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="OutdateNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="RxCheckNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="UnloadNotActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="StorageSpaceRecoveryNotActionableReason_RecoverOpenBinFirst" xml:space="preserve">
+    <value>Storage Cabinet contains an unsecured bin that needs to be recovered first</value>
+  </data>
+  <data name="StorageSpaceRecoveryNotActionableReason_RefrigeratorPowerLoss" xml:space="preserve">
+    <value>Refrigerator does not have enough power to recover</value>
+  </data>
+  <data name="StorageSpaceRecoveryNotActionableReason_BatteryDepleted" xml:space="preserve">
+    <value>Device battery does not have enough power to recover</value>
+  </data>
+  <data name="ReceiveNonActionableReason_Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="ReceiveNonActionableReason_FractionalConflict" xml:space="preserve">
+    <value>The item cannot be received due to conflicting Receive Fractional Unit setting.</value>
+  </data>
+  <data name="ReceiveNonActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="ReceiveNonActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="ReceiveNonActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="ReceiveNonActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="InvoiceNotActionableReason_AlreadySelected" xml:space="preserve">
+    <value>Item is already selected</value>
+  </data>
+  <data name="ReceiveNonActionableReason_FillToMaxIsZero" xml:space="preserve">
+    <value>Storage space is full</value>
+  </data>
+  <data name="ReceiveNonActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer</value>
+  </data>
+  <data name="ReceiveNonActionableReason_ScanItemRequired" xml:space="preserve">
+    <value>Item needs to be scanned</value>
+  </data>
+  <data name="ReceiveNonActionableReason_StorageSpaceNotAvailable" xml:space="preserve">
+    <value>Storage space not available</value>
+  </data>
+  <data name="ReceiveNonActionableReason_CubieNotSelectable" xml:space="preserve">
+    <value>Cubie is not available for selection</value>
+  </data>
+  <data name="ReceiveNonActionableReason_NoMedAccess" xml:space="preserve">
+    <value>You do not have permission to access this item</value>
+  </data>
+  <data name="ReallocateNonActionableReason_AlreadySelected" xml:space="preserve">
+    <value>Already selected</value>
+  </data>
+  <data name="ReallocateNonActionableReason_Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="ReallocateNonActionableReason_CubieNotSelectable" xml:space="preserve">
+    <value>Cubie is not available for selection</value>
+  </data>
+  <data name="ReallocateNonActionableReason_FillToMaxIsZero" xml:space="preserve">
+    <value>Storage space is full</value>
+  </data>
+  <data name="ReallocateNonActionableReason_FractionalConflict" xml:space="preserve">
+    <value>The item cannot be received due to conflicting Receive Fractional Unit setting.</value>
+  </data>
+  <data name="ReallocateNonActionableReason_NoInventoryAvailable" xml:space="preserve">
+    <value>Out of stock</value>
+  </data>
+  <data name="ReallocateNonActionableReason_NoMedAccess" xml:space="preserve">
+    <value>You don't have permission to access the med</value>
+  </data>
+  <data name="ReallocateNonActionableReason_NoOpenDrawerPermission" xml:space="preserve">
+    <value>You don't have permission to open the drawer</value>
+  </data>
+  <data name="ReallocateNonActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="ReallocateNonActionableReason_StorageSpaceDefrosting" xml:space="preserve">
+    <value>Storage space is defrosting</value>
+  </data>
+  <data name="ReallocateNonActionableReason_StorageSpaceFailed" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="ReallocateNonActionableReason_StorageSpaceNotAvailable" xml:space="preserve">
+    <value>Storage space not available</value>
+  </data>
+  <data name="ReallocateNonActionableReason_StorageSpaceOutOfService" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="ReceiveNonActionableReason_AlreadySelected" xml:space="preserve">
+    <value>Already selected</value>
+  </data>
+  <data name="TakeOutNonActionableReason_Blocked" xml:space="preserve">
+    <value>Medication is blocked by pharmacy</value>
+  </data>
+  <data name="TakeOutNonActionableReason_InactiveMedication" xml:space="preserve">
+    <value>Inactive Med</value>
+  </data>
+  <data name="TakeOutNonActionableReason_InFailedStorageUnit" xml:space="preserve">
+    <value>Med in failed storage space</value>
+  </data>
+  <data name="TakeOutNonActionableReason_InOutOfServiceStorageUnit" xml:space="preserve">
+    <value>Storage space is out of service</value>
+  </data>
+  <data name="TakeOutNonActionableReason_InsufficientQuantity" xml:space="preserve">
+    <value>Insufficient quantity</value>
+  </data>
+  <data name="TakeOutNonActionableReason_NotLoaded" xml:space="preserve">
+    <value>Not loaded</value>
+  </data>
+  <data name="TakeOutNonActionableReason_OutOfStock" xml:space="preserve">
+    <value>Out of stock</value>
+  </data>
+  <data name="TakeOutNonActionableReason_RestrictedAccess" xml:space="preserve">
+    <value>No access</value>
+  </data>
+  <data name="IssueNonActionableReason_Selected" xml:space="preserve">
+    <value>Destination is already selected</value>
+  </data>
+  <data name="ReallocateNonActionableReason_ExpiredMed" xml:space="preserve">
+    <value>Medication is expired</value>
+  </data>
+  <data name="ReceiveNonActionableReason_NotApproved" xml:space="preserve">
+    <value>Med Not Approved</value>
+  </data>
+  <data name="TakeOutNonActionableReason_NotApproved" xml:space="preserve">
+    <value>Med Not Approved</value>
+  </data>
+  <data name="TakeOutNonActionableReason_InDefrostingStorageUnit" xml:space="preserve">
+    <value>Med in defrosting storage space</value>
+  </data>
+  <data name="TransactionNonActionableReason_AlreadySelected" xml:space="preserve">
+    <value>Already Selected</value>
+  </data>
+  <data name="TransactionNonActionableReason_NoOutstanding" xml:space="preserve">
+    <value>No Outstanding</value>
+  </data>
+  <data name="ReceiveNonActionableReason_InactiveMed" xml:space="preserve">
+    <value>Inactive Med</value>
+  </data>
+  <data name="AssignableStorageSpaceNotActionableReason_NoStorageSpaceAccess" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="TakeOutNonActionableReason_Backordered" xml:space="preserve">
+    <value>Backordered</value>
+  </data>
+  <data name="TransactionNonActionableReason_NoPermission" xml:space="preserve">
+    <value>No Permission</value>
+  </data>
+  <data name="TakeOutNonActionableReason_MissingComponent" xml:space="preserve">
+    <value>Some meds have not been approved or are deleted</value>
+  </data>
+  <data name="DeviceItemNonActionableReason_OutOfService" xml:space="preserve">
+    <value>Out of Service Device</value>
+  </data>
+  <data name="DeviceItemNonActionableReason_CSLicenseExpired" xml:space="preserve">
+    <value>Expired CS License </value>
+  </data>
+  <data name="SellLocationNonActionableReason_CSLicenseExpired" xml:space="preserve">
+    <value>Expired CS License</value>
+  </data>
+  <data name="CompoundNonActionableReason_NoAcess" xml:space="preserve">
+    <value>User does not have permission to complete the workflow</value>
+  </data>
+  <data name="IssueNonActionableReason_CSLicenseExpired" xml:space="preserve">
+    <value>Expired CS License</value>
+  </data>
+  <data name="IssueNonActionableReason_OutOfService" xml:space="preserve">
+    <value>Out of Service Device</value>
+  </data>
+  <data name="IssueNonActionableReason_MedItemNotAvailable" xml:space="preserve">
+    <value>The medication is not available in the device's facility</value>
+  </data>
+  <data name="TakeOutNonActionableReason_MedItemNotAvailable" xml:space="preserve">
+    <value>The medication is not available in the device's facility</value>
+  </data>
+</root>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSClientOLTP" Class="SyncDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=localhost;Initial Catalog=DSClientOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="Sync.SyncTransfer" Member="SyncTransferEntities">
+    <Type Name="SyncTransferEntity">
+      <Column Name="SyncTransferKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SyncTransferTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SyncTransferStatusInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TransferStartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="TransferStartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="RetrieveRecordQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetrieveDurationAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplyRecordQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplyDurationAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalDurationAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorText" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SyncTransferStatusEntity_SyncTransferEntity" Member="SyncTransferStatusEntity" ThisKey="SyncTransferStatusInternalCode" OtherKey="InternalCode" Type="SyncTransferStatusEntity" IsForeignKey="true" />
+      <Association Name="SyncTransferTypeEntity_SyncTransferEntity" Member="SyncTransferTypeEntity" ThisKey="SyncTransferTypeInternalCode" OtherKey="InternalCode" Type="SyncTransferTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Sync.SyncTransferStatus" Member="SyncTransferStatusEntities">
+    <Type Name="SyncTransferStatusEntity">
+      <Column Name="SyncTransferStatusInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SyncTransferStatusEntity_SyncTransferEntity" Member="SyncTransferEntities" ThisKey="InternalCode" OtherKey="SyncTransferStatusInternalCode" Type="SyncTransferEntity" />
+    </Type>
+  </Table>
+  <Table Name="Sync.SyncTransferType" Member="SyncTransferTypeEntities">
+    <Type Name="SyncTransferTypeEntity">
+      <Column Name="SyncTransferTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="SyncTransferTypeEntity_SyncTransferEntity" Member="SyncTransferEntities" ThisKey="InternalCode" OtherKey="SyncTransferTypeInternalCode" Type="SyncTransferEntity" />
+    </Type>
+  </Table>
+  <Table Name="Sync.NewColumnList" Member="NewColumnLists">
+    <Type Name="NewColumnList">
+      <Column Name="NewColumnListKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullTableName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ColumnListValue" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="PrimaryKeyColumnName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BulkInsertFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="Sync.DispensingDeviceSyncState" Member="DispensingDeviceSyncStateEntities">
+    <Type Name="DispensingDeviceSyncStateEntity">
+      <Column Name="DispensingDeviceSyncStateKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceSyncStateStatusInternalCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUploadMessageSequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastUploadChangeTrackingValue" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastDownloadMessageSequenceNumber" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastDownloadMessageDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="LastDownloadDateTime" Type="System.DateTimeOffset" DbType="DateTimeOffset" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+</Database>

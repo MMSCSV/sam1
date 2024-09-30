@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DatabaseError" xml:space="preserve">
+    <value>Database Error: Rebuild an empty database and try again.</value>
+  </data>
+  <data name="DataUpgradeRetry" xml:space="preserve">
+    <value>Retrying data upgrade...</value>
+  </data>
+  <data name="FailedToDeleteAllData" xml:space="preserve">
+    <value>Failed to delete all data.</value>
+  </data>
+  <data name="FailedToDownLoadDataFromServer" xml:space="preserve">
+    <value>Download error: Failed to download data from the server. Please retry again.</value>
+  </data>
+  <data name="FailedToGetDataFileList" xml:space="preserve">
+    <value>No data or partial files were found at Server. Please try full download at a later time.</value>
+  </data>
+  <data name="FailedToStartDataUpgrade" xml:space="preserve">
+    <value>Failed to start data upgrade. Please check if all services are running. Press OK to retry.</value>
+  </data>
+  <data name="FailedToStartFullDownload" xml:space="preserve">
+    <value>Failed to start full download. Please check if all services are running.</value>
+  </data>
+  <data name="FailedToUploadPendingDataToServer" xml:space="preserve">
+    <value>Upload error: Failed to upload pending data to server. Fix the error and retry again.</value>
+  </data>
+  <data name="FullDownloadWarning" xml:space="preserve">
+    <value>Full download operation will delete existing data from device. Are you sure you want to continue with full download?</value>
+    <comment>Display with Yes and No buttons</comment>
+  </data>
+  <data name="WaitForSyncService" xml:space="preserve">
+    <value>Waiting for sync services to start.</value>
+  </data>
+  <data name="NoValidFullSyncFileFound" xml:space="preserve">
+    <value>No valid full sync file found at the server. Cannot continue file full sync.</value>
+  </data>
+  <data name="DatabaseInCorruptedStateCannotContinueFullSync" xml:space="preserve">
+    <value>Database is in corrupted state. Cannot continue file full sync.</value>
+  </data>
+  <data name="FailedToDeleteDataCannotContinueFullSync" xml:space="preserve">
+    <value>Failed to delete data. Cannot continue full sync.</value>
+  </data>
+  <data name="FailedToDownloadDataCleaningPartialData" xml:space="preserve">
+    <value>Failed to download data. Cleaning up any partial data.</value>
+  </data>
+  <data name="FailedToUploadPendingDataCannotContinueFullSync" xml:space="preserve">
+    <value>Failed to upload pending data. Cannot continue full sync.</value>
+  </data>
+  <data name="UnableToConnectWithServerAbortingFullSync" xml:space="preserve">
+    <value>Unable to connect with server - {0}. Aborting full sync. Please retry again.</value>
+  </data>
+  <data name="UnknownErrorOccurredCleaningPartialData" xml:space="preserve">
+    <value>Unknown error occurred during full sync. Cleaning up any partial data.</value>
+  </data>
+  <data name="UnknownExceptionOccurredDuringFullSync" xml:space="preserve">
+    <value>Unknown exception occurred during full sync. Please retry again.</value>
+  </data>
+  <data name="AbortingAnyDownloadInProgress" xml:space="preserve">
+    <value>Aborting any download in progress...</value>
+  </data>
+  <data name="StoppingAllRunningTasks" xml:space="preserve">
+    <value>Stopping all running tasks...</value>
+  </data>
+  <data name="PurgingAllData" xml:space="preserve">
+    <value>Purging all data...</value>
+  </data>
+  <data name="DownloadingFacilityLevelDataFiles" xml:space="preserve">
+    <value>Downloading facility level data files...</value>
+  </data>
+  <data name="DroppingDBConstraint" xml:space="preserve">
+    <value>Dropping DB constraint...</value>
+  </data>
+  <data name="DeletingAllData" xml:space="preserve">
+    <value>Deleting all data...</value>
+  </data>
+  <data name="DownloadingFacilityLevelDataCompleted" xml:space="preserve">
+    <value>Downloading facility level data completed...</value>
+  </data>
+  <data name="DownloadingDeviceLevelDataCompleted" xml:space="preserve">
+    <value>Downloading device level data completed...</value>
+  </data>
+  <data name="ApplyingDBConstraint" xml:space="preserve">
+    <value>Applying DB constraint...</value>
+  </data>
+  <data name="UpdatingSyncStatistics" xml:space="preserve">
+    <value>Updating sync statistics...</value>
+  </data>
+  <data name="ReIndexingDatabaseStarted" xml:space="preserve">
+    <value>Re-indexing database started.</value>
+  </data>
+  <data name="ReIndexingDatabaseFailed" xml:space="preserve">
+    <value>Re-indexing database failed.</value>
+  </data>
+  <data name="ReIndexingDatabaseCompleted" xml:space="preserve">
+    <value>Re-indexing database completed.</value>
+  </data>
+  <data name="Applying" xml:space="preserve">
+    <value>Applying {0}...</value>
+  </data>
+  <data name="ProcessingFacilityLevelData" xml:space="preserve">
+    <value>Processing facility level data...</value>
+  </data>
+  <data name="DownloadingDeviceLevelData" xml:space="preserve">
+    <value>Downloading device level data...</value>
+  </data>
+  <data name="FailedToDownloadUpgradedData" xml:space="preserve">
+    <value>Failed to download upgraded data.</value>
+  </data>
+  <data name="FailedToUploadPendingDataCannotContinueDataUpgrade" xml:space="preserve">
+    <value>Failed to upload pending data. Cannot continue data upgrade.</value>
+  </data>
+  <data name="UploadingPendingDataForDataUpgrade" xml:space="preserve">
+    <value>Uploading pending data for data upgrade...</value>
+  </data>
+  <data name="DownloadingUpgradedData" xml:space="preserve">
+    <value>Downloading upgraded data...</value>
+  </data>
+  <data name="SyncContextOrDevicePropertiesAreNull" xml:space="preserve">
+    <value>Sync Context or device properties are null in DataUpgrade workflow!</value>
+  </data>
+  <data name="UnknownExceptionOccurredDuringDataUpgrade" xml:space="preserve">
+    <value>Unknown exception occurred during data upgrade. Please retry again.</value>
+  </data>
+  <data name="CleaningUpOldDataFiles" xml:space="preserve">
+    <value>Cleaning up old data files...</value>
+  </data>
+  <data name="FileForSchemaAlreadyDownloadedToDevice" xml:space="preserve">
+    <value>File {0} for schema {1} is already downloaded to device. Skipping to download again...</value>
+  </data>
+  <data name="ChangesForSchemaSuccessfullyApplied" xml:space="preserve">
+    <value>Changes for schema - {0} successfully applied.</value>
+  </data>
+  <data name="StoppingMaintenanceService" xml:space="preserve">
+    <value>Stopping Maintenance Service...</value>
+  </data>
+  <data name="ShrinkDatabase" xml:space="preserve">
+    <value>Shrinking Database...</value>
+  </data>
+  <data name="ShrinkDatabaseCompleted" xml:space="preserve">
+    <value>Shrinking Database Completed...</value>
+  </data>
+  <data name="FullDownloadCannotAccessSync" xml:space="preserve">
+    <value>Device sync service not responding. Please ensure it is running.</value>
+  </data>
+  <data name="FullDownloadFailed" xml:space="preserve">
+    <value>Full download failed: {0}</value>
+  </data>
+  <data name="FullDownloadInterrupted" xml:space="preserve">
+    <value>Full download was interrupted, please try again.</value>
+  </data>
+  <data name="ReviewSyncLogFilesForDetails" xml:space="preserve">
+    <value>Please review sync log files for details.</value>
+  </data>
+</root>

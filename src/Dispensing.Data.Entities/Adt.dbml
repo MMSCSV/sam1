@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DSClientOLTP" Class="AdtDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=DSClientOLTP;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="ADT.vw_PatientCurrent" Member="PatientEntities">
+    <Type Name="PatientEntity">
+      <Column Name="PatientKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="PatientSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="GenderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SurvivingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="PatientSiloKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PrefixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PreferredName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UnknownLastNameFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="SuffixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BirthLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="BirthDateTimePrecisionInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DeceasedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RestrictedAccessFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceholderFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CreatedAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientEntity_PatientIDSetEntity" Member="PatientIDSetEntities" ThisKey="Key" OtherKey="PatientKey" Type="PatientIDSetEntity" />
+      <Association Name="PatientEntity_PatientAllergySetEntity" Member="PatientAllergySetEntities" ThisKey="Key" OtherKey="PatientKey" Type="PatientAllergySetEntity" />
+      <Association Name="GenderEntity_PatientEntity" Member="GenderEntity" ThisKey="GenderKey" OtherKey="Key" Type="GenderEntity" IsForeignKey="true" />
+      <Association Name="PatientSiloEntity_PatientEntity" Member="PatientSiloEntity" ThisKey="PatientSiloKey" OtherKey="Key" Type="PatientSiloEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.Gender" Member="GenderEntities">
+    <Type Name="GenderEntity">
+      <Column Name="GenderKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="GenderEntity_PatientEntity" Member="PatientEntities" ThisKey="Key" OtherKey="GenderKey" Type="PatientEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_EncounterCurrent" Member="EncounterEntities">
+    <Type Name="EncounterEntity">
+      <Column Name="EncounterKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="EncounterSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastItemTransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastItemTransactionLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="SurvivingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterAdmissionStatusInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EncounterIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PreadmitID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PreadmitIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AlternateEncounterID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AlternateEncounterIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AccountID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PatientKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AdmitUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AdmitLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AdmitDateOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedAdmitUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ExpectedAdmitLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ExpectedAdmitDateOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DischargeUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DischargeLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DischargeDateOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AlternateAutoDischargeDurationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="EncounterPatientClassKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HospitalServiceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CommentText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RecurringFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TemporaryFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="HeightAmount" Type="System.Decimal" DbType="Decimal(10,3)" CanBeNull="true" />
+      <Column Name="HeightUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HeightMethodInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="WeightAmount" Type="System.Decimal" DbType="Decimal(10,3)" CanBeNull="true" />
+      <Column Name="WeightUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="WeightLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="WeightUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WeightMethodInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CreatedAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="LeaveOfAbsenceEffectiveUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LeaveOfAbsenceEffectiveLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LeaveOfAbsenceReturnUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LeaveOfAbsenceReturnLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" UpdateCheck="Always" />
+      <Association Name="EncounterEntity_EncounterPatientLocationEntity" Member="EncounterPatientLocationEntities" ThisKey="Key" OtherKey="EncounterKey" Type="EncounterPatientLocationEntity" />
+      <Association Name="EncounterEntity_EncounterPhysicianRoleSetEntity" Member="EncounterPhysicianRoleSetEntities" ThisKey="Key" OtherKey="EncounterKey" Type="EncounterPhysicianRoleSetEntity" />
+      <Association Name="EncounterEntity_UserEncounterAssociationEntity" Member="UserEncounterAssociationEntities" ThisKey="Key" OtherKey="EncounterKey" Type="UserEncounterAssociationEntity" />
+      <Association Name="EncounterPatientClassEntity_EncounterEntity" Member="EncounterPatientClassEntity" ThisKey="EncounterPatientClassKey" OtherKey="Key" Type="EncounterPatientClassEntity" IsForeignKey="true" />
+      <Association Name="EncounterAdmissionStatusEntity_EncounterEntity" Member="EncounterAdmissionStatusEntity" ThisKey="EncounterAdmissionStatusInternalCode" OtherKey="InternalCode" Type="EncounterAdmissionStatusEntity" IsForeignKey="true" />
+      <Association Name="HospitalServiceEntity_EncounterEntity" Member="HospitalServiceEntity" ThisKey="HospitalServiceKey" OtherKey="Key" Type="HospitalServiceEntity" IsForeignKey="true" />
+      <Association Name="EncounterMergeEntity_EncounterEntity" Member="EncounterMergeEntity" ThisKey="Key" OtherKey="SurvivingEncounterKey" Type="EncounterMergeEntity" IsForeignKey="true" />
+      <Association Name="EncounterMergeEntity_EncounterEntity1" Member="EncounterMergeEntity1" ThisKey="Key" OtherKey="NonSurvivingEncounterKey" Type="EncounterMergeEntity" IsForeignKey="true" />
+      <Association Name="EncounterTypeEntity_EncounterEntity" Member="EncounterTypeEntity" ThisKey="EncounterTypeInternalCode" OtherKey="InternalCode" Type="EncounterTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_EncounterPatientLocationCurrent" Member="EncounterPatientLocationEntities">
+    <Type Name="EncounterPatientLocationEntity">
+      <Column Name="EncounterPatientLocationKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedFacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedUnitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AssignedUnitRoomKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AssignedBedID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TemporaryUnitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryUnitRoomKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryBedID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterEntity_EncounterPatientLocationEntity" Member="EncounterEntity" ThisKey="EncounterKey" OtherKey="Key" Type="EncounterEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_EncounterPhysicianRoleSetCurrent" Member="EncounterPhysicianRoleSetEntities">
+    <Type Name="EncounterPhysicianRoleSetEntity">
+      <Column Name="EncounterPhysicianRoleSetKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterPhysicianRoleInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterPhysicianRoleSetEntity_EncounterPhysicianEntity" Member="EncounterPhysicianEntities" ThisKey="Key" OtherKey="EncounterPhysicianRoleSetKey" Type="EncounterPhysicianEntity" />
+      <Association Name="EncounterEntity_EncounterPhysicianRoleSetEntity" Member="EncounterEntity" ThisKey="EncounterKey" OtherKey="Key" Type="EncounterEntity" IsForeignKey="true" />
+      <Association Name="EncounterPhysicianRoleEntity_EncounterPhysicianRoleSetEntity" Member="EncounterPhysicianRoleEntity" ThisKey="EncounterPhysicianRoleInternalCode" OtherKey="InternalCode" Type="EncounterPhysicianRoleEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_UserEncounterAssociationCurrent" Member="UserEncounterAssociationEntities">
+    <Type Name="UserEncounterAssociationEntity">
+      <Column Name="UserEncounterAssociationKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserAccountKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterEntity_UserEncounterAssociationEntity" Member="EncounterEntity" ThisKey="EncounterKey" OtherKey="Key" Type="EncounterEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.PatientIDType" Member="PatientIDTypeEntities">
+    <Type Name="PatientIDTypeEntity">
+      <Column Name="PatientIDTypeKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="InternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActiveFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientIDTypeEntity_PatientIDEntity" Member="PatientIDEntities" ThisKey="Key" OtherKey="PatientIDTypeKey" Type="PatientIDEntity" />
+      <Association Name="PatientIDTypeEntity_PatientSiloEntity" Member="PatientSiloEntities" ThisKey="Key" OtherKey="PrimaryPatientIDTypeKey" Type="PatientSiloEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.PatientID" Member="PatientIDEntities">
+    <Type Name="PatientIDEntity">
+      <Column Name="PatientIDKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientIDSetKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientIDTypeEntity_PatientIDEntity" Member="PatientIDTypeEntity" ThisKey="PatientIDTypeKey" OtherKey="Key" Type="PatientIDTypeEntity" IsForeignKey="true" />
+      <Association Name="PatientIDSetEntity_PatientIDEntity" Member="PatientIDSetEntity" ThisKey="PatientIDSetKey" OtherKey="Key" Type="PatientIDSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_PatientIDSetCurrent" Member="PatientIDSetEntities">
+    <Type Name="PatientIDSetEntity">
+      <Column Name="PatientIDSetKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientIDSetEntity_PatientIDEntity" Member="PatientIDEntities" ThisKey="Key" OtherKey="PatientIDSetKey" Type="PatientIDEntity" />
+      <Association Name="PatientEntity_PatientIDSetEntity" Member="PatientEntity" ThisKey="PatientKey" OtherKey="Key" Type="PatientEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_AllergyTypeCurrent" Member="AllergyTypeEntities">
+    <Type Name="AllergyTypeEntity">
+      <Column Name="AllergyTypeKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AllergyTypeCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AllergyTypeEntity_PatientAllergyEntity" Member="PatientAllergyEntities" ThisKey="Key" OtherKey="AllergyTypeKey" Type="PatientAllergyEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.PatientAllergy" Member="PatientAllergyEntities">
+    <Type Name="PatientAllergyEntity">
+      <Column Name="PatientAllergyKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientAllergySetKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MemberNumber" Storage="_SequenceNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AllergyTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AllergenCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AllergenDescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="AllergenDescriptionTruncatedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllergySeverityKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SensitivityCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SensitivityDescriptionText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="AllergyUniqueID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientAllergyEntity_PatientAllergyReactionEntity" Member="PatientAllergyReactionEntities" ThisKey="Key" OtherKey="PatientAllergyKey" Type="PatientAllergyReactionEntity" />
+      <Association Name="AllergyTypeEntity_PatientAllergyEntity" Member="AllergyTypeEntity" ThisKey="AllergyTypeKey" OtherKey="Key" Type="AllergyTypeEntity" IsForeignKey="true" />
+      <Association Name="PatientAllergySetEntity_PatientAllergyEntity" Member="PatientAllergySetEntity" ThisKey="PatientAllergySetKey" OtherKey="Key" Type="PatientAllergySetEntity" IsForeignKey="true" />
+      <Association Name="AllergySeverityEntity_PatientAllergyEntity" Member="AllergySeverityEntity" ThisKey="AllergySeverityKey" OtherKey="Key" Type="AllergySeverityEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_PatientAllergySetCurrent" Member="PatientAllergySetEntities">
+    <Type Name="PatientAllergySetEntity">
+      <Column Name="PatientAllergySetKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientAllergySetEntity_PatientAllergyEntity" Member="PatientAllergyEntities" ThisKey="Key" OtherKey="PatientAllergySetKey" Type="PatientAllergyEntity" />
+      <Association Name="PatientEntity_PatientAllergySetEntity" Member="PatientEntity" ThisKey="PatientKey" OtherKey="Key" Type="PatientEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_AllergySeverityCurrent" Member="AllergySeverityEntities">
+    <Type Name="AllergySeverityEntity">
+      <Column Name="AllergySeverityKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AllergySeverityCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="AllergySeverityEntity_PatientAllergyEntity" Member="PatientAllergyEntities" ThisKey="Key" OtherKey="AllergySeverityKey" Type="PatientAllergyEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_EncounterPatientClassCurrent" Member="EncounterPatientClassEntities">
+    <Type Name="EncounterPatientClassEntity">
+      <Column Name="EncounterPatientClassKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterPatientClassCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterPatientClassEntity_EncounterEntity" Member="EncounterEntities" ThisKey="Key" OtherKey="EncounterPatientClassKey" Type="EncounterEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.EncounterPhysicianRole" Member="EncounterPhysicianRoleEntities">
+    <Type Name="EncounterPhysicianRoleEntity">
+      <Column Name="EncounterPhysicianRoleInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterPhysicianRoleEntity_EncounterPhysicianRoleSetEntity" Member="EncounterPhysicianRoleSetEntities" ThisKey="InternalCode" OtherKey="EncounterPhysicianRoleInternalCode" Type="EncounterPhysicianRoleSetEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.EncounterPhysician" Member="EncounterPhysicianEntities">
+    <Type Name="EncounterPhysicianEntity">
+      <Column Name="EncounterPhysicianKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EncounterPhysicianRoleSetKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MemberNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PhysicianID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PrefixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SuffixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterPhysicianRoleSetEntity_EncounterPhysicianEntity" Member="EncounterPhysicianRoleSetEntity" ThisKey="EncounterPhysicianRoleSetKey" OtherKey="Key" Type="EncounterPhysicianRoleSetEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_PatientSiloCurrent" Member="PatientSiloEntities">
+    <Type Name="PatientSiloEntity">
+      <Column Name="PatientSiloKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientSiloSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StartLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="ADTSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientSiloName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryPatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientAllergyProviderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PatientPhysicalObservationProviderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientSiloEntity_PatientEntity" Member="PatientEntities" ThisKey="Key" OtherKey="PatientSiloKey" Type="PatientEntity" />
+      <Association Name="PatientIDTypeEntity_PatientSiloEntity" Member="PatientIDTypeEntity" ThisKey="PrimaryPatientIDTypeKey" OtherKey="Key" Type="PatientIDTypeEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.EncounterAdmissionStatus" Member="EncounterAdmissionStatusEntities">
+    <Type Name="EncounterAdmissionStatusEntity">
+      <Column Name="EncounterAdmissionStatusInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterAdmissionStatusEntity_EncounterEntity" Member="EncounterEntities" ThisKey="InternalCode" OtherKey="EncounterAdmissionStatusInternalCode" Type="EncounterEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_HospitalServiceCurrent" Member="HospitalServiceEntities">
+    <Type Name="HospitalServiceEntity">
+      <Column Name="HospitalServiceKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExternalSystemKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="HospitalServiceCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeleteFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastModifiedActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="HospitalServiceEntity_EncounterEntity" Member="EncounterEntities" ThisKey="Key" OtherKey="HospitalServiceKey" Type="EncounterEntity" />
+    </Type>
+  </Table>
+  <Table Name="ADT.PatientAllergyReaction" Member="PatientAllergyReactionEntities">
+    <Type Name="PatientAllergyReactionEntity">
+      <Column Name="PatientAllergyReactionKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientAllergyKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MemberNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReactionCode" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="PatientAllergyEntity_PatientAllergyReactionEntity" Member="PatientAllergyEntity" ThisKey="PatientAllergyKey" OtherKey="Key" Type="PatientAllergyEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.EncounterDispensingDevice" Member="EncounterDispensingDeviceEntities">
+    <Type Name="EncounterDispensingDeviceEntity">
+      <Column Name="EncounterDispensingDeviceKey" Member="Key" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastUsedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastUsedLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_EncounterMergeCurrent" Member="EncounterMergeEntities">
+    <Type Name="EncounterMergeEntity">
+      <Column Name="EncounterMergeKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurvivingEncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NonSurvivingEncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DerivedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="AssociationLocalDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="DisassociationUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DisassociationLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AssociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DisassociationActorKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterMergeEntity_EncounterEntity" Member="SurvivingEncounterEntity" ThisKey="SurvivingEncounterKey" OtherKey="Key" Type="EncounterEntity" Cardinality="One" />
+      <Association Name="EncounterMergeEntity_EncounterEntity1" Member="NonSurvivingEncounterEntity" ThisKey="NonSurvivingEncounterKey" OtherKey="Key" Type="EncounterEntity" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="ADT.EncounterType" Member="EncounterTypeEntities">
+    <Type Name="EncounterTypeEntity">
+      <Column Name="EncounterTypeInternalCode" Member="InternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SortValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="EncounterTypeEntity_EncounterEntity" Member="EncounterEntities" ThisKey="InternalCode" OtherKey="EncounterTypeInternalCode" Type="EncounterEntity" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientSiloFacilityResults">
+    <Type Name="PatientSiloFacilityResult">
+      <Column Name="PatientSiloKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="FacilityKey" Type="System.Guid" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ADT.vw_FacilityPrimaryPatientIDTypeCurrent" Member="FacilityPrimaryPatientIDTypeEntities">
+    <Type Name="FacilityPrimaryPatientIDTypeEntity">
+      <Column Name="FacilityKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryPatientIDTypeKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientIDSetResults">
+    <Type Name="PatientIDSetResult">
+      <Column Name="PatientIDSetKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientIDResults">
+    <Type Name="PatientIDResult">
+      <Column Name="PatientIDKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientIDSetKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientIDTypeKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientIDTypeDisplayCode" Type="System.String" CanBeNull="false" />
+      <Column Name="PatientID" Type="System.String" CanBeNull="false" />
+      <Column Name="CheckValue" Type="System.String" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientAllergySetResults">
+    <Type Name="PatientAllergySetResult">
+      <Column Name="PatientAllergySetKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientAllergyResults">
+    <Type Name="PatientAllergyResult">
+      <Column Name="PatientAllergyKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientAllergySetKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="MemberNumber" Type="System.Int32" CanBeNull="false" />
+      <Column Name="AllergyTypeKey" Type="System.Guid" CanBeNull="true" />
+      <Column Name="AllergenCode" Type="System.String" CanBeNull="false" />
+      <Column Name="AllergenDescriptionText" Type="System.String" CanBeNull="false" />
+      <Column Name="AllergenDescriptionTruncatedFlag" Type="System.Boolean" CanBeNull="false" />
+      <Column Name="AllergySeverityKey" Type="System.Guid" CanBeNull="true" />
+      <Column Name="SensitivityCode" Type="System.String" CanBeNull="false" />
+      <Column Name="SensitivityDescriptionText" Type="System.String" CanBeNull="false" />
+      <Column Name="AllergyUniqueID" Type="System.String" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientAllergyReactionResults">
+    <Type Name="PatientAllergyReactionResult">
+      <Column Name="PatientAllergyReactionKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PatientAllergyKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="MemberNumber" Type="System.Int32" CanBeNull="false" />
+      <Column Name="ReactionCode" Type="System.String" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="EncounterPatientLocationResults">
+    <Type Name="EncounterPatientLocationResult">
+      <Column Name="EncounterPatientLocationKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="EncounterKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="AssignedFacilityKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="AssignedUnitKey" Type="System.Guid" CanBeNull="true" />
+      <Column Name="AssignedUnitRoomKey" Type="System.Guid" CanBeNull="true" />
+      <Column Name="AssignedBedID" Type="System.String" CanBeNull="false" />
+      <Column Name="TemporaryUnitKey" Type="System.Guid" CanBeNull="true" />
+      <Column Name="TemporaryUnitRoomKey" Type="System.Guid" CanBeNull="true" />
+      <Column Name="TemporaryBedID" Type="System.String" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="EncounterPhysicianRoleSetResults">
+    <Type Name="EncounterPhysicianRoleSetResult">
+      <Column Name="EncounterPhysicianRoleSetKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="EncounterKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="EncounterPhysicianRoleInternalCode" Type="System.String" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="EncounterPhysicianResults">
+    <Type Name="EncounterPhysicianResult">
+      <Column Name="EncounterPhysicianKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="EncounterPhysicianRoleSetKey" Type="System.Guid" CanBeNull="false" />
+      <Column Name="MemberNumber" Type="System.Int32" CanBeNull="false" />
+      <Column Name="PhysicianID" Type="System.String" CanBeNull="false" />
+      <Column Name="PrefixText" Type="System.String" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" CanBeNull="false" />
+      <Column Name="SuffixText" Type="System.String" CanBeNull="false" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PatientResults">
+    <Type Name="PatientResult">
+      <Column Name="PatientSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatientKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientSiloKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PrefixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PreferredName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UnknownLastNameFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SuffixText" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BirthUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="BirthLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="BirthDateTimePrecisionInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="GenderKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DeceasedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RestrictedAccessFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceholderFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="SurvivingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="GenderDisplayCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="EncounterResults">
+    <Type Name="EncounterResult">
+      <Column Name="EncounterSnapshotKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterAdmissionStatusInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EncounterIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="PreadmitID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PreadmitIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="AlternateEncounterID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AlternateEncounterIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="AccountID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountIDCheckValue" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="PatientKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PatientChangedFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdmitUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AdmitLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="AdmitDateOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpectedAdmitUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ExpectedAdmitLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="ExpectedAdmitDateOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DischargeUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DischargeLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="DischargeDateOnlyFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AlternateAutoDischargeDurationFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CancelledUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CancelledLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="EncounterPatientClassKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HospitalServiceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CommentText" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RecurringFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TemporaryFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EncounterTypeInternalCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HeightAmount" Type="System.Decimal" DbType="Decimal(10,3)" CanBeNull="true" />
+      <Column Name="HeightUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HeightMethodInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="WeightAmount" Type="System.Decimal" DbType="Decimal(10,3)" CanBeNull="true" />
+      <Column Name="WeightUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="WeightLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="WeightUOMKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="WeightMethodInternalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LeaveOfAbsenceEffectiveUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LeaveOfAbsenceEffectiveLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LeaveOfAbsenceReturnUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LeaveOfAbsenceReturnLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedAtDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LastModifiedBinaryValue" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="LastItemTransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="LastItemTransactionLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="SurvivingFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CreatedLocalDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="ADT.bsp_ListActiveEncounterKeys" Method="bsp_ListActiveEncounterKeys">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="SearchScope" Parameter="searchScope" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="bsp_ListActiveEncounterKeysResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="ADT.usp_EncounterDispensingDeviceInsert" Method="usp_EncounterDispensingDeviceInsert">
+    <Parameter Name="EncounterKey" Parameter="encounterKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="LastUsedUTCDateTime" Parameter="lastUsedUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastUsedLocalDateTime" Parameter="lastUsedLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="EncounterDispensingDeviceKey" Parameter="encounterDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="ADT.bsp_ListRecentEncounterKeys" Method="bsp_ListRecentEncounterKeys">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="bsp_ListRecentEncounterKeysResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastUsedUTCDateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="ADT.bsp_ListActiveEncounters" Method="bsp_ListActiveEncounters">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="bsp_ListActiveEncountersResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AssignedUnitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TemporaryUnitKey" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="ADT.bsp_GetApplicableEncounterKeys" Method="bsp_GetApplicableEncounterKeys">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="bsp_GetApplicableEncounterKeysResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="ADT.bsp_ListMyUndocumentedWasteEncounterKeys" Method="bsp_ListMyUndocumentedWasteEncounterKeys">
+    <Parameter Name="UserKey" Parameter="userKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="bsp_ListMyUndocumentedWasteEncounterKeysResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="ADT.usp_EncounterActivityUpdate" Method="usp_EncounterActivityUpdate">
+    <Parameter Name="LastItemTransactionUTCDateTime" Parameter="lastItemTransactionUTCDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastItemTransactionLocalDateTime" Parameter="lastItemTransactionLocalDateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="LastModifiedDispensingDeviceKey" Parameter="lastModifiedDispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EncounterKey" Parameter="encounterKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="ADT.bsp_ListUserEncounters" Method="bsp_ListUserEncounters">
+    <Parameter Name="UserAccountKey" Parameter="userAccountKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="bsp_ListUserEncountersResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LastAddUTCDateTime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="ADT.bsp_FindActiveEncounterKeys" Method="bsp_FindActiveEncounterKeys">
+    <Parameter Name="DispensingDeviceKey" Parameter="dispensingDeviceKey" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FilterRestrictedAccess" Parameter="filterRestrictedAccess" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PatientID" Parameter="patientID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PatientLocation" Parameter="patientLocation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MatchAllFields" Parameter="matchAllFields" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SearchByPreferrednameEnabled" Parameter="searchByPreferrednameEnabled" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="bsp_FindActiveEncounterKeysResult">
+      <Column Name="EncounterKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

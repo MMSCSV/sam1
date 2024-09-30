@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessibleLocations" xml:space="preserve">
+    <value>Accessible Locations</value>
+  </data>
+  <data name="AmountCannotBeGreaterThanDispenseQuantity" xml:space="preserve">
+    <value>{0} amount cannot be greater than remaining dispense quantity</value>
+  </data>
+  <data name="AmountEmpty" xml:space="preserve">
+    <value>{0} amount cannot be empty</value>
+  </data>
+  <data name="AmountGreaterThanZero" xml:space="preserve">
+    <value>{0} amount has to be greater than 0</value>
+  </data>
+  <data name="CannotReturn" xml:space="preserve">
+    <value>Cannot Return</value>
+  </data>
+  <data name="CannotReturnFractionalQuantity" xml:space="preserve">
+    <value>Cannot return a fractional quantity for {0}</value>
+  </data>
+  <data name="ContactPharmacyWarning" xml:space="preserve">
+    <value>If cannot return, cancel and return to another station or call pharmacy</value>
+  </data>
+  <data name="DoesNotMatchScanIdWarning" xml:space="preserve">
+    <value>Scan does not match this medication. Try again.</value>
+  </data>
+  <data name="ExpiredMedicationsWarnigTitle" xml:space="preserve">
+    <value>Expired Medication Warning</value>
+  </data>
+  <data name="ExpiredMedWarning" xml:space="preserve">
+    <value>Do Not return to the pocket. \n\r Close drawer and return to Internal Return Bin.</value>
+  </data>
+  <data name="ExternalBin" xml:space="preserve">
+    <value>External bin</value>
+  </data>
+  <data name="InsufficientQuantity" xml:space="preserve">
+    <value>Insufficient Quantity.</value>
+  </data>
+  <data name="InternalBin" xml:space="preserve">
+    <value>Internal bin</value>
+  </data>
+  <data name="MedicationToReturn" xml:space="preserve">
+    <value>Medication to Return</value>
+  </data>
+  <data name="MedsToReturn" xml:space="preserve">
+    <value>Meds to Return</value>
+  </data>
+  <data name="NotReturnable" xml:space="preserve">
+    <value>Cannot be returned, dispose per hospital policy</value>
+  </data>
+  <data name="OverrideScanWarning" xml:space="preserve">
+    <value>Are you sure you want to override scanning of the dispensed medication?</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Removed:</value>
+  </data>
+  <data name="RequiresWitness" xml:space="preserve">
+    <value>Requires Witness</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="ReturnBin" xml:space="preserve">
+    <value>Return bin</value>
+  </data>
+  <data name="ReturnMed" xml:space="preserve">
+    <value>Return Med</value>
+  </data>
+  <data name="ReturnScanInstructionText" xml:space="preserve">
+    <value>Please scan each medication being returned</value>
+  </data>
+  <data name="ReturnToExternalBin" xml:space="preserve">
+    <value>Return to External Bin</value>
+  </data>
+  <data name="ReturnToInternalBin" xml:space="preserve">
+    <value>Return to Internal Bin</value>
+  </data>
+  <data name="ReturnToStock" xml:space="preserve">
+    <value>Return to Stock</value>
+  </data>
+  <data name="ScanMedication" xml:space="preserve">
+    <value>Scan Medication</value>
+  </data>
+  <data name="ScanStatusFormat" xml:space="preserve">
+    <value>Item {0}</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="TotalGreaterThanPhysicalMaxWarning" xml:space="preserve">
+    <value>Physical Max of the pocket will be exceeded.</value>
+  </data>
+  <data name="TotalGreathanMaxHeader" xml:space="preserve">
+    <value>Exceeds physical max</value>
+  </data>
+  <data name="WasteAndCredit" xml:space="preserve">
+    <value>If cannot return, cancel and return to another station or waste</value>
+  </data>
+  <data name="ReturnToPharmacy" xml:space="preserve">
+    <value>Return to Pharmacy</value>
+  </data>
+  <data name="CancelScanReturnWarning" xml:space="preserve">
+    <value>Are you sure you wish to cancel return of the dispensed medication?</value>
+  </data>
+  <data name="CannotReturnWasteScannedMeds" xml:space="preserve">
+    <value>Cannot return, waste the scanned medications</value>
+  </data>
+  <data name="DonotReturnToStock" xml:space="preserve">
+    <value>Do not return to Stock</value>
+  </data>
+  <data name="ReturnScanMedsToExternalBin" xml:space="preserve">
+    <value>Return scanned medications to the External Return Bin</value>
+  </data>
+  <data name="ReturnScanMedsToInternalBin" xml:space="preserve">
+    <value>Return scanned medications to the Internal Return Bin</value>
+  </data>
+  <data name="ReturnScanMedsToPharmacy" xml:space="preserve">
+    <value>Return scanned medications to the Pharmacy</value>
+  </data>
+  <data name="NotReturnableWaste" xml:space="preserve">
+    <value>Cannot be returned, waste item</value>
+  </data>
+  <data name="DateEnteredInPast" xml:space="preserve">
+    <value>The date you entered is in the past.</value>
+  </data>
+  <data name="IsThisCorrect" xml:space="preserve">
+    <value>Is this correct?</value>
+  </data>
+  <data name="ExpirationDateEmpty" xml:space="preserve">
+    <value>Expiration date cannot be empty</value>
+  </data>
+  <data name="LotIdEmpty" xml:space="preserve">
+    <value>Lot number cannot be empty</value>
+  </data>
+  <data name="SerialIdEmpty" xml:space="preserve">
+    <value>Serial number cannot be empty</value>
+  </data>
+  <data name="ScanItemToReturn" xml:space="preserve">
+    <value>Scan Item to Return</value>
+  </data>
+  <data name="ScanItemToReturnInstruction" xml:space="preserve">
+    <value>Scan Item to Return (#{0})</value>
+  </data>
+  <data name="GreaterThanPhysicalMaxWarning" xml:space="preserve">
+    <value>Return amount will exceed the Physical Max of the pocket.</value>
+  </data>
+  <data name="ReturnedWithoutRemoveTransaction" xml:space="preserve">
+    <value>Returned without an associated remove transaction</value>
+  </data>
+  <data name="ReturnTitle" xml:space="preserve">
+    <value>Return</value>
+  </data>
+</root>

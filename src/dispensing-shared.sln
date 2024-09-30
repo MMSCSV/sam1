@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing", "Dispensing\Dispensing.csproj", "{9FB06181-2372-4062-9078-6433C360D14D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Tests", "Dispensing.Tests\Dispensing.Tests.csproj", "{CCA44013-8707-4CD6-ACEF-1CD003A08693}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Data", "Dispensing.Data\Dispensing.Data.csproj", "{BA897E9F-A708-49FA-A0B8-855055153327}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Services", "Dispensing.Services\Dispensing.Services.csproj", "{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.ResourceLibrary", "Dispensing.ResourceLibrary\Dispensing.ResourceLibrary.csproj", "{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.DI", "Dispensing.DI\Dispensing.DI.csproj", "{AE60A547-0E40-4CDD-9332-90E8DA51916F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Notification.PublishedNotices", "Dispensing.Notification.PublishedNotices\Dispensing.Notification.PublishedNotices.csproj", "{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Services.Tests", "Dispensing.Services.Tests\Dispensing.Services.Tests.csproj", "{A2AF1418-B3EA-4201-974F-62718BBEA8F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Build", ".Build", "{6F942EAE-CAA4-4CBC-9353-D9A8808EF3F5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.targets = Directory.Build.targets
+		..\Jenkinsfile = ..\Jenkinsfile
+		nuspec-list.txt = nuspec-list.txt
+		Packages.props = Packages.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Encryption", "Dispensing.Encryption\Dispensing.Encryption.csproj", "{4410BC06-86E8-479F-A75D-84B1E135BAB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispensing.Data.Entities", "Dispensing.Data.Entities\Dispensing.Data.Entities.csproj", "{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release-Resources|Any CPU = Release-Resources|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FB06181-2372-4062-9078-6433C360D14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB06181-2372-4062-9078-6433C360D14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB06181-2372-4062-9078-6433C360D14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB06181-2372-4062-9078-6433C360D14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FB06181-2372-4062-9078-6433C360D14D}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB06181-2372-4062-9078-6433C360D14D}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{CCA44013-8707-4CD6-ACEF-1CD003A08693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA44013-8707-4CD6-ACEF-1CD003A08693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA44013-8707-4CD6-ACEF-1CD003A08693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA44013-8707-4CD6-ACEF-1CD003A08693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA44013-8707-4CD6-ACEF-1CD003A08693}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA44013-8707-4CD6-ACEF-1CD003A08693}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{BA897E9F-A708-49FA-A0B8-855055153327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA897E9F-A708-49FA-A0B8-855055153327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA897E9F-A708-49FA-A0B8-855055153327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA897E9F-A708-49FA-A0B8-855055153327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA897E9F-A708-49FA-A0B8-855055153327}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{BA897E9F-A708-49FA-A0B8-855055153327}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F9EF5F-FB11-4FDD-97AD-FA32E48D1886}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1EF5D6-DF76-4E2A-A3AD-FB7ABC45B3C8}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{AE60A547-0E40-4CDD-9332-90E8DA51916F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE60A547-0E40-4CDD-9332-90E8DA51916F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE60A547-0E40-4CDD-9332-90E8DA51916F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE60A547-0E40-4CDD-9332-90E8DA51916F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE60A547-0E40-4CDD-9332-90E8DA51916F}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{AE60A547-0E40-4CDD-9332-90E8DA51916F}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2D47E8-2056-4A1C-99ED-D78C733E8C07}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{A2AF1418-B3EA-4201-974F-62718BBEA8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AF1418-B3EA-4201-974F-62718BBEA8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AF1418-B3EA-4201-974F-62718BBEA8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AF1418-B3EA-4201-974F-62718BBEA8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2AF1418-B3EA-4201-974F-62718BBEA8F2}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AF1418-B3EA-4201-974F-62718BBEA8F2}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{4410BC06-86E8-479F-A75D-84B1E135BAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4410BC06-86E8-479F-A75D-84B1E135BAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4410BC06-86E8-479F-A75D-84B1E135BAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4410BC06-86E8-479F-A75D-84B1E135BAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4410BC06-86E8-479F-A75D-84B1E135BAB3}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{4410BC06-86E8-479F-A75D-84B1E135BAB3}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+		{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}.Release-Resources|Any CPU.ActiveCfg = Release|Any CPU
+		{E45D2A6A-83B6-4814-A15F-8A3FA097FF06}.Release-Resources|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45
+		SolutionGuid = {F2A08B62-1C89-4897-895B-E9EBF5E4D5DE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADGroupNameNotFound" xml:space="preserve">
+    <value>{0} group not found in {1} domain.</value>
+  </data>
+  <data name="ServerNotContacted" xml:space="preserve">
+    <value>The server could not be contacted.</value>
+  </data>
+  <data name="ConsoleNeverCommunicated" xml:space="preserve">
+    <value>The console with the following Alias ID '{0}' never communicated with the dispensing system.</value>
+  </data>
+  <data name="ConsoleNotCommunicating" xml:space="preserve">
+    <value>The console with the following Alias ID '{0}' is failing to communicate with the dispensing system. The last time the console communicated was at '{1}'.</value>
+  </data>
+  <data name="DomainAuthenticationError" xml:space="preserve">
+    <value>Domain Error: Please contact system administrator with Error Code - 2222</value>
+  </data>
+  <data name="DomainNotFound" xml:space="preserve">
+    <value>{0} domain not found or unable to reach.</value>
+  </data>
+  <data name="DomainNotFoundInDB" xml:space="preserve">
+    <value>Domain with domain key '{0}' not found in database.</value>
+  </data>
+  <data name="DrawerPositionIsFull" xml:space="preserve">
+    <value>The selected drawer position is already full</value>
+  </data>
+  <data name="Exception_Parameter_Missing" xml:space="preserve">
+    <value>The value for parameter '{0}' is not specified. It is either missing from the function call, or it is set to null.</value>
+    <comment>x</comment>
+  </data>
+  <data name="InactiveDomain" xml:space="preserve">
+    <value>Domain ({0}) is not active</value>
+    <comment>0 with DnsName</comment>
+  </data>
+  <data name="InvalidDomainParameters" xml:space="preserve">
+    <value>Domain parameters are not valid for domain ({0}). Please check log for more detail info.</value>
+  </data>
+  <data name="InvalidStorageSpaceType" xml:space="preserve">
+    <value>Storage space {0} should be of type MTRXDRWR1</value>
+  </data>
+  <data name="PasswordDontMeetComplexity" xml:space="preserve">
+    <value>The password supplied does not meet the minimum complexity requirements. Please select another password that meets all of the following criteria:\r\n is at least {0} characters;\r\nhas not been used in the previous {1} passwords;\r\nmust not have been changed within the last {2} days;\r\ndoes not contain your account or full name;\r\ncontains at least three of the following four character groups:\r\nEnglish uppercase characters (A through Z);\r\nEnglish lowercase characters (a through z);\r\nNumerals (0 through 9);\r\nNon-alphabetic characters (such as !, $, #, %)</value>
+  </data>
+  <data name="PasswordDontMeetMinimumComplexity" xml:space="preserve">
+    <value>Your password must be at least {0} characters;\r\ncan not repeat any of your previous {1} passwords; and\r\nmust be at least {2} days old. Please type a different password.\r\n</value>
+  </data>
+  <data name="PharmacyOrderOrderingPersonNameFormat" xml:space="preserve">
+    <value>{0}, {1}</value>
+    <comment>Last, First</comment>
+  </data>
+  <data name="PhysicianNameFormat" xml:space="preserve">
+    <value>{0}, {1} {2} {3}</value>
+    <comment>Last, First Middle Suffix</comment>
+  </data>
+  <data name="SignInFailure_AccountDeleted" xml:space="preserve">
+    <value>Account Deleted.</value>
+  </data>
+  <data name="SignInFailure_AccountExpired" xml:space="preserve">
+    <value>Account has Expired.</value>
+    <comment>x</comment>
+  </data>
+  <data name="SignInFailure_AccountInactive" xml:space="preserve">
+    <value>Inactive Account.</value>
+    <comment>x</comment>
+  </data>
+  <data name="SignInFailure_AccountLocked" xml:space="preserve">
+    <value>Account Locked.</value>
+    <comment>x</comment>
+  </data>
+  <data name="SignInFailure_AuthenticationMethodNotSupported" xml:space="preserve">
+    <value>The authentication method '{0}' is not supported.</value>
+  </data>
+  <data name="SignInFailure_DeviceMultipleUserAccount" xml:space="preserve">
+    <value>Multiple users found by this Username. Please resolve your domain.</value>
+  </data>
+  <data name="SignInFailure_DeviceOutOfService" xml:space="preserve">
+    <value>Device is out of service. Only support user can sign in.</value>
+  </data>
+  <data name="SignInFailure_InvalidUserIdPassword" xml:space="preserve">
+    <value>Invalid Username or Password.</value>
+    <comment>x</comment>
+  </data>
+  <data name="SignInFailure_NoCachePwdFound" xml:space="preserve">
+    <value>No cache password found. Please contact your system administrator. Domain error #2222</value>
+  </data>
+  <data name="SignInFailure_TempPasswordExpired" xml:space="preserve">
+    <value>Your temporary password expired. Please call your system administrator for a new password.</value>
+  </data>
+  <data name="SignInFailure_WarnAccountLockout" xml:space="preserve">
+    <value>Invalid Username and/or Password. Another unsuccessful attempt will lock your account.</value>
+  </data>
+  <data name="SignInFailure_WebMultipleUserAccount" xml:space="preserve">
+    <value>Multiple users found by this Username. Please enter Domain\Username. If this is local account then enter {0}\Username.</value>
+  </data>
+  <data name="StorageSpaceIsLoaded" xml:space="preserve">
+    <value>Storage space {0} is loaded</value>
+  </data>
+  <data name="UnknownDomainConfigurationError" xml:space="preserve">
+    <value>Domain configuration error.</value>
+  </data>
+  <data name="SignInFailure_CareFusionPwd" xml:space="preserve">
+    <value>Please sign in using CareFusion credential.</value>
+  </data>
+  <data name="SignInFailure_CPMSPwd" xml:space="preserve">
+    <value>Please sign in using CPMS password. CPMS: {0}</value>
+  </data>
+  <data name="SignInFailure_CPMSPwdException" xml:space="preserve">
+    <value>Exception while validating CPMS password. See error log for detail.</value>
+  </data>
+  <data name="Exception_Validation" xml:space="preserve">
+    <value>'{0}' is invalid. Check validation errors for details.</value>
+    <comment>x</comment>
+  </data>
+  <data name="UnhandledServiceExceptionFormat" xml:space="preserve">
+    <value>An unexpected service operation error occurred. '{0}'</value>
+  </data>
+  <data name="Exception_Delete_Validation" xml:space="preserve">
+    <value>Unable to delete.</value>
+    <comment>x</comment>
+  </data>
+  <data name="Exception_AccessDenied" xml:space="preserve">
+    <value>You are not authorized to perform this action in the following facilities {0}. You must have at least one of the following permissions: {1}</value>
+  </data>
+  <data name="Exception_AccessDeniedSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="ActiveDirectoryFailure_DomainDoesNotExistOrCouldNotBeFound" xml:space="preserve">
+    <value>The domain '{0}' does not exist or could not be found.</value>
+  </data>
+  <data name="SignInFailure_InvalidSyncAcctIdOrPassword" xml:space="preserve">
+    <value>Invalid Synchronization Account ID or password.</value>
+  </data>
+  <data name="InventoryPend_BlockDenied" xml:space="preserve">
+    <value>A pocket must be an empty, unpended matrix pocket to be blocked.</value>
+  </data>
+  <data name="Exception_AccessDeniedRequiredPermissions" xml:space="preserve">
+    <value>You are not authorized to perform this action in the following facilities {0}. You must have all required permissions: {1}</value>
+  </data>
+  <data name="Exception_AccessDenied_NoFacility" xml:space="preserve">
+    <value>You are not authorized to perform this action since you not have access to the current facility.</value>
+  </data>
+  <data name="DomainGroupNotConfigured" xml:space="preserve">
+    <value>No group is configured for domain ({0}).</value>
+    <comment>Replace 0 with Domain name</comment>
+  </data>
+  <data name="SignInFailure_IdentityServerUrl" xml:space="preserve">
+    <value>Identity Server URL has not been configured.</value>
+  </data>
+  <data name="SignInFailure_IdentityServerNotAvailable" xml:space="preserve">
+    <value>Identity Server Not Available</value>
+  </data>
+  <data name="UserAccountAlreadyRegistered" xml:space="preserve">
+    <value>User account ({0}/{1}) is already registered.</value>
+  </data>
+  <data name="UserAccountRegistrationSuccessful" xml:space="preserve">
+    <value>User account registration successful.</value>
+  </data>
+  <data name="UserAccountHasUnresolvedMyItems" xml:space="preserve">
+    <value>User account has unresolved My Items.</value>
+  </data>
+  <data name="SignInFailure_IdentityServerRequestTimedOut" xml:space="preserve">
+    <value>Identity Server request timed out.</value>
+  </data>
+</root>

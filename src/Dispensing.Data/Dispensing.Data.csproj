@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>CareFusion.Dispensing.Data</RootNamespace>
+    <AssemblyName>CareFusion.Dispensing.Data</AssemblyName>   
+    <PackageId>Dispensing.Data</PackageId>       
+  </PropertyGroup> 
+  <ItemGroup>
+    <Reference Include="System.Data.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dispensing.Data.Entities\Dispensing.Data.Entities.csproj" />
+    <ProjectReference Include="..\Dispensing.ResourceLibrary\Dispensing.ResourceLibrary.csproj" />
+    <ProjectReference Include="..\Dispensing\Dispensing.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LinqKit" />
+    <PackageReference Include="Pyxis.Core.Data" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>  
+</Project>

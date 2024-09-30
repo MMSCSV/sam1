@@ -1,0 +1,1558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AltID" xml:space="preserve">
+    <value>Alt ID:</value>
+  </data>
+  <data name="AssignAndLoadViewTitle" xml:space="preserve">
+    <value>Assign and Load</value>
+  </data>
+  <data name="AssignPocketViewTitle" xml:space="preserve">
+    <value>Assign Pocket</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Class:</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ClearShort" xml:space="preserve">
+    <value>Clr</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="LoadAndRefillViewTitle" xml:space="preserve">
+    <value>Load and Refill</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="EnterPocket_MedInformation" xml:space="preserve">
+    <value>Enter pocket/med information</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Enter earliest expiration date for remaining meds</value>
+  </data>
+  <data name="ExpiredMedTracking" xml:space="preserve">
+    <value>Expired Med Tracking</value>
+  </data>
+  <data name="FilterNameAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="FilterNameControlled" xml:space="preserve">
+    <value>Controlled</value>
+  </data>
+  <data name="FilterNameOMNL" xml:space="preserve">
+    <value>OMNL</value>
+    <comment>Order medication not loaded</comment>
+  </data>
+  <data name="FiltersTitle" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="InventoryItemFilterType_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="InventoryItemFilterType_Controlled" xml:space="preserve">
+    <value>Controlled Meds</value>
+  </data>
+  <data name="InventoryItemFilterType_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="InventoryItemFilterType_LoadRefill" xml:space="preserve">
+    <value>Load / Refill</value>
+  </data>
+  <data name="InventoryItemFilterType_Refill" xml:space="preserve">
+    <value>Refill</value>
+  </data>
+  <data name="InventoryItemFilterType_WitnessRequired" xml:space="preserve">
+    <value>Witness Required</value>
+  </data>
+  <data name="LocationStatus_Multiple" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="LocationStatus_NoLocations" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="MaxQuantity" xml:space="preserve">
+    <value>Max Quantity</value>
+  </data>
+  <data name="MinQuantity" xml:space="preserve">
+    <value>Min Quantity</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="OverrideGroup" xml:space="preserve">
+    <value>Override Group</value>
+  </data>
+  <data name="PhysicalCapacity" xml:space="preserve">
+    <value>Physical Capacity</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>Select a date</value>
+  </data>
+  <data name="SelectPocketViewTitle" xml:space="preserve">
+    <value>Select Pocket</value>
+  </data>
+  <data name="StandardMed" xml:space="preserve">
+    <value>Standard Med</value>
+  </data>
+  <data name="FiltersFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="LocationTitle" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>Max: </value>
+  </data>
+  <data name="MedID" xml:space="preserve">
+    <value>Med ID: </value>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>Min: </value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size: </value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type: </value>
+  </data>
+  <data name="BeginningCount" xml:space="preserve">
+    <value>Beginning Count</value>
+  </data>
+  <data name="VerifyCountSubTitle" xml:space="preserve">
+    <value>Is the Beginning Count correct?</value>
+  </data>
+  <data name="VerifyCountTitle" xml:space="preserve">
+    <value>Verify Count</value>
+  </data>
+  <data name="PocketTotalCount" xml:space="preserve">
+    <value>Pocket Total Count</value>
+  </data>
+  <data name="RefillPocketSubTitle" xml:space="preserve">
+    <value>How many are you refilling?</value>
+  </data>
+  <data name="RefillPocketTitle" xml:space="preserve">
+    <value>Refill Pocket</value>
+  </data>
+  <data name="RefillQuantity" xml:space="preserve">
+    <value>Refill Quantity</value>
+  </data>
+  <data name="BlindCountSubTitle" xml:space="preserve">
+    <value>Enter the beginning count</value>
+  </data>
+  <data name="CountTitle" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="ExpiredMed" xml:space="preserve">
+    <value>Expired Med</value>
+  </data>
+  <data name="ExpiredQuantity" xml:space="preserve">
+    <value>Outdate Quantity</value>
+  </data>
+  <data name="RemoveExpiredMedsSubTitle" xml:space="preserve">
+    <value>How many are you removing?</value>
+  </data>
+  <data name="RemoveExpiredMedsTitle" xml:space="preserve">
+    <value>Outdate Meds</value>
+  </data>
+  <data name="WitnessAuthorizationTitle" xml:space="preserve">
+    <value>Please have an authorized witness verify removal of the above meds</value>
+  </data>
+  <data name="WitnessVerificationSubTitle" xml:space="preserve">
+    <value>Items Require Witness Verification</value>
+  </data>
+  <data name="WitnessVerificationTitle" xml:space="preserve">
+    <value>Witness Verification</value>
+  </data>
+  <data name="ExpandFilters" xml:space="preserve">
+    <value>Touch for Filters</value>
+  </data>
+  <data name="UnloadLoadSubTitle" xml:space="preserve">
+    <value>Enter the pocket quantity</value>
+  </data>
+  <data name="UnloadLoadTitle" xml:space="preserve">
+    <value>Unload Meds</value>
+  </data>
+  <data name="UnloadQuantity" xml:space="preserve">
+    <value>Unload Quantity</value>
+  </data>
+  <data name="LoadSubTitle" xml:space="preserve">
+    <value>How many are you loading?</value>
+  </data>
+  <data name="LoadTitle" xml:space="preserve">
+    <value>Load Meds</value>
+  </data>
+  <data name="LoadQuantity" xml:space="preserve">
+    <value>Load Quantity</value>
+  </data>
+  <data name="ExpandSelectedItems" xml:space="preserve">
+    <value>Expand to Show Selected Items</value>
+  </data>
+  <data name="SelectedItemsTitle" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="LoadingDefaultTitle" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="LoadUnitsQuantity" xml:space="preserve">
+    <value>Load Units Quantity</value>
+  </data>
+  <data name="UnitOfIssue" xml:space="preserve">
+    <value>Unit of Issue</value>
+  </data>
+  <data name="UnitOfRefill" xml:space="preserve">
+    <value>Unit of Refill</value>
+  </data>
+  <data name="AcceptWorkflowText" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="BackRemoveExpiredMedicationText" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BlindCountVerifyCount" xml:space="preserve">
+    <value>Please verify count again</value>
+  </data>
+  <data name="CancelWorkflowText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RemoveExpiredMedicationWorkflowText" xml:space="preserve">
+    <value>Outdate</value>
+  </data>
+  <data name="StartLoadRefillText" xml:space="preserve">
+    <value>Load / Refill</value>
+  </data>
+  <data name="SecureHardwareSubTitle" xml:space="preserve">
+    <value>Please secure all hardware to continue</value>
+  </data>
+  <data name="SecureHardwareTitle" xml:space="preserve">
+    <value>Secure Hardware</value>
+  </data>
+  <data name="TotalNumberOfSelectedItems" xml:space="preserve">
+    <value>Selected Items ({0})</value>
+  </data>
+  <data name="ScanPocketSubTitle" xml:space="preserve">
+    <value>Please scan the pocket containing the medication</value>
+  </data>
+  <data name="ScanPocketTitle" xml:space="preserve">
+    <value>Scan Pocket</value>
+  </data>
+  <data name="BlindCountTitle" xml:space="preserve">
+    <value>Enter Count</value>
+  </data>
+  <data name="InvalidBarcode" xml:space="preserve">
+    <value>Invalid Barcode</value>
+  </data>
+  <data name="InvalidBarcodeRetry" xml:space="preserve">
+    <value>Unable to find barcode, please try again</value>
+  </data>
+  <data name="InvalidBarcodeWrongDrawer" xml:space="preserve">
+    <value>Wrong drawer scanned, please try again</value>
+  </data>
+  <data name="ScannedItemNotAvailableToDispense" xml:space="preserve">
+    <value>Scanned item is unavailable to dispense</value>
+  </data>
+  <data name="HardwareErrorSubTitle" xml:space="preserve">
+    <value>There was an error accessing the hardware, press 'Accept' to continue to next action.</value>
+  </data>
+  <data name="HardwareErrorTitle" xml:space="preserve">
+    <value>Hardware Error</value>
+  </data>
+  <data name="SkipRemainingWorkflowText" xml:space="preserve">
+    <value>Skip Remaining</value>
+  </data>
+  <data name="CountCannotBeEmtpyError" xml:space="preserve">
+    <value>{0} cannot be empty.</value>
+  </data>
+  <data name="CountCannotBeGreaterThanPhysicalMax" xml:space="preserve">
+    <value>{0} cannot be greater than Physical Capacity ({1:F0}).</value>
+  </data>
+  <data name="CountCannotBeLessThanZero" xml:space="preserve">
+    <value>{0} cannot be less than 0.</value>
+  </data>
+  <data name="CountMustBeNumericError" xml:space="preserve">
+    <value>{0} must be numeric.</value>
+  </data>
+  <data name="BannerNote" xml:space="preserve">
+    <value>Note(s):</value>
+  </data>
+  <data name="InventoryItemFilterType_Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="InventoryItemFilterType_LeastRemoved" xml:space="preserve">
+    <value>Least Removed</value>
+  </data>
+  <data name="StartUnloadText" xml:space="preserve">
+    <value>Unload</value>
+  </data>
+  <data name="UnloadText" xml:space="preserve">
+    <value>Unload</value>
+  </data>
+  <data name="AssignLoad" xml:space="preserve">
+    <value>Assign &amp; Load</value>
+  </data>
+  <data name="LoadRefill" xml:space="preserve">
+    <value>Load &amp; Refill</value>
+  </data>
+  <data name="Unload" xml:space="preserve">
+    <value>Unload</value>
+  </data>
+  <data name="CountShouldNotBeGreaterThanPar" xml:space="preserve">
+    <value>{0} cannot be greater than Max ({1:F0}).</value>
+  </data>
+  <data name="MaxLabel" xml:space="preserve">
+    <value>Max (Par)</value>
+  </data>
+  <data name="PhysicalMax" xml:space="preserve">
+    <value>Physical Capacity</value>
+  </data>
+  <data name="UnloadViewTitle" xml:space="preserve">
+    <value>Unload</value>
+  </data>
+  <data name="TotalNumberOfSelectedItems1" xml:space="preserve">
+    <value>Selected Items</value>
+  </data>
+  <data name="TotalNumberOfSelectedDevices" xml:space="preserve">
+    <value>Selected Devices</value>
+  </data>
+  <data name="RefillToMax" xml:space="preserve">
+    <value>Refill to Max:</value>
+  </data>
+  <data name="ManualVerificationText" xml:space="preserve">
+    <value>Unable to scan</value>
+  </data>
+  <data name="EmptyReturnBin" xml:space="preserve">
+    <value>Empty Return Bin</value>
+  </data>
+  <data name="ToEmptyReturnBin" xml:space="preserve">
+    <value>Empty Return Bin</value>
+  </data>
+  <data name="ScanIsRequired" xml:space="preserve">
+    <value>Scan is required.</value>
+  </data>
+  <data name="ExpextedCountReturnBin" xml:space="preserve">
+    <value>Expected Count</value>
+  </data>
+  <data name="MedIDReturnBin" xml:space="preserve">
+    <value>Med ID</value>
+  </data>
+  <data name="NumberOfControlledMedItems" xml:space="preserve">
+    <value>CONTROLLED ({0})</value>
+  </data>
+  <data name="NumberOfNonControlledMedItems" xml:space="preserve">
+    <value>UNCONTROLLED ({0})</value>
+  </data>
+  <data name="InventoryItemFilterType_ExpiredMed" xml:space="preserve">
+    <value>Expired Medications</value>
+  </data>
+  <data name="InventoryItemFilterType_ExpiringMed" xml:space="preserve">
+    <value>Expiring Medications</value>
+  </data>
+  <data name="OutDate" xml:space="preserve">
+    <value>Outdate</value>
+  </data>
+  <data name="StartOutDateText" xml:space="preserve">
+    <value>Outdate</value>
+  </data>
+  <data name="CannotGoHomeWarning" xml:space="preserve">
+    <value>Cannot Exit to Home while storage space is not secure!</value>
+  </data>
+  <data name="CannotSignoutWarning" xml:space="preserve">
+    <value>Cannot Signout while the storage space is not secure!</value>
+  </data>
+  <data name="SignoutWarningHeader" xml:space="preserve">
+    <value>SignOut Disabled</value>
+  </data>
+  <data name="InventoryItemFilterType_WitnessNotRequired" xml:space="preserve">
+    <value>Witness Not Required</value>
+  </data>
+  <data name="InventoryCount" xml:space="preserve">
+    <value>Inventory Count</value>
+  </data>
+  <data name="StartInventoryCountText" xml:space="preserve">
+    <value>Inventory Count</value>
+  </data>
+  <data name="NoReturnItemWarnignHeader" xml:space="preserve">
+    <value>Empty Return Bin</value>
+  </data>
+  <data name="NoReturnItemWarning" xml:space="preserve">
+    <value>There are no returned items</value>
+  </data>
+  <data name="WitnessVerificationItems" xml:space="preserve">
+    <value>WITNESS VERIFICATION ({0})</value>
+  </data>
+  <data name="SuspendInventoryCount" xml:space="preserve">
+    <value>Suspend Inventory Count</value>
+  </data>
+  <data name="SuspendInventoryCountQuestion" xml:space="preserve">
+    <value>Are you sure you want to suspend?</value>
+  </data>
+  <data name="AcceptOutdate" xml:space="preserve">
+    <value>Accept &amp; Outdate</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>Suspend</value>
+  </data>
+  <data name="ActualCountReturnBin" xml:space="preserve">
+    <value>Actual Count</value>
+  </data>
+  <data name="VerifiedReturnBin" xml:space="preserve">
+    <value>Verified</value>
+  </data>
+  <data name="ExpirationDateCannotBeInThePast" xml:space="preserve">
+    <value>Expiration Date cannot be in the past.</value>
+  </data>
+  <data name="ExpirationDateCannotBeMoreThanXYearsInTheFuture" xml:space="preserve">
+    <value>Expiration Date cannot be more than 7 years in the future.</value>
+  </data>
+  <data name="CountIsTooLarge" xml:space="preserve">
+    <value>{0} is too large.</value>
+  </data>
+  <data name="MedicationClass" xml:space="preserve">
+    <value>Medication Class</value>
+  </data>
+  <data name="CountCannotBeZeroOrLess" xml:space="preserve">
+    <value>{0} cannot be 0 (zero) or less.</value>
+  </data>
+  <data name="QuantityCannotBeGreaterThanPhysicalMax" xml:space="preserve">
+    <value>In drawer location {0}, quantity cannot be greater than Physical Capacity ({1:F0}).</value>
+  </data>
+  <data name="QuantityCannotBeLessThanZero" xml:space="preserve">
+    <value>Quantity cannot be less than 0 in drawer location {0}.</value>
+  </data>
+  <data name="AcceptAndPrint" xml:space="preserve">
+    <value>Accept &amp; Print</value>
+  </data>
+  <data name="CountCannotBeEmtpyErrorForMiniDrawer" xml:space="preserve">
+    <value>In drawer location {0}, quantity cannot be empty</value>
+  </data>
+  <data name="CountCannotBeGreaterThanTotalParQuantity" xml:space="preserve">
+    <value>Total count in drawers cannot be greater than the total Max ({0}).</value>
+  </data>
+  <data name="CountCannotBeGreaterThanDefaultPhysicalMax" xml:space="preserve">
+    <value>{0} cannot be greater than the default Physical Capacity ({1:F0}).</value>
+  </data>
+  <data name="RefillPocketSubTitleMiniDrawer" xml:space="preserve">
+    <value>Enter Actual Quantity for each pocket.</value>
+  </data>
+  <data name="RefillPocketTitleMiniDrawer" xml:space="preserve">
+    <value>Refill</value>
+  </data>
+  <data name="RefillPocketSubTitle1MiniDrawer" xml:space="preserve">
+    <value>Move Remaining Items to Front.</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="ExpirationDateMustBeEntered" xml:space="preserve">
+    <value>Expiration Date must be entered.</value>
+  </data>
+  <data name="OutdateCannotBeGreaterThanQuantity" xml:space="preserve">
+    <value>Outdate quantity cannot be greater than the quantity ({0}).</value>
+  </data>
+  <data name="CancelOutdateStepText" xml:space="preserve">
+    <value>Cancel Outdate</value>
+  </data>
+  <data name="QuantityGreaterThanMaxWarning" xml:space="preserve">
+    <value>Quantity is greater than Max </value>
+  </data>
+  <data name="SingleDose" xml:space="preserve">
+    <value>Single dose</value>
+  </data>
+  <data name="NumbersFormat" xml:space="preserve">
+    <value>{0:0.####}</value>
+  </data>
+  <data name="ItemDoseStrength" xml:space="preserve">
+    <value>{0:0.####} {1:0.####} ({2:0.####} {3:0.####}) {4:0.####}</value>
+  </data>
+  <data name="ItemDoseStrengthWithoutTotalVolume" xml:space="preserve">
+    <value>{0:0.####} {1:0.####} {2:0.####}</value>
+  </data>
+  <data name="InventoryCount_AllItemsTab" xml:space="preserve">
+    <value>All Items</value>
+  </data>
+  <data name="InventoryCount_DrawersDoorsTab" xml:space="preserve">
+    <value>Drawers / Doors</value>
+  </data>
+  <data name="InventoryCount_MedicationClassTab" xml:space="preserve">
+    <value>Medication Class</value>
+  </data>
+  <data name="CancelItemAndSkipRemainingWorkflowText" xml:space="preserve">
+    <value>Cancel All</value>
+  </data>
+  <data name="ResumeInventoryCount" xml:space="preserve">
+    <value>Resume Inventory Count</value>
+  </data>
+  <data name="WouldYouLikeToResumeInventory" xml:space="preserve">
+    <value>Would you like to resume inventory?</value>
+  </data>
+  <data name="QuantityGreaterThanParError" xml:space="preserve">
+    <value>Quantity is greater than Max({1:F0}) in drawer location {0}.</value>
+  </data>
+  <data name="InventoryCount_ControlledTab" xml:space="preserve">
+    <value>Controlled</value>
+  </data>
+  <data name="AccessedControlled" xml:space="preserve">
+    <value>Accessed Controlled</value>
+  </data>
+  <data name="AllControlled" xml:space="preserve">
+    <value>All Controlled</value>
+  </data>
+  <data name="NonAccessedControlled" xml:space="preserve">
+    <value>Non-accessed Controlled</value>
+  </data>
+  <data name="LastRemovedDays" xml:space="preserve">
+    <value>Last Removed</value>
+  </data>
+  <data name="InventoryItemFilterType_28RemovedDays" xml:space="preserve">
+    <value>28 removed days</value>
+  </data>
+  <data name="InventoryItemFilterType_60RemovedDays" xml:space="preserve">
+    <value>60 removed days</value>
+  </data>
+  <data name="InventoryItemFilterType_7RemovedDays" xml:space="preserve">
+    <value>7 removed days</value>
+  </data>
+  <data name="InventoryItemFilterType_90RemovedDays" xml:space="preserve">
+    <value>90 removed days</value>
+  </data>
+  <data name="InventoryItemFilterType_Deactivated" xml:space="preserve">
+    <value>Deactivated</value>
+  </data>
+  <data name="MiniTrayActual" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="MiniTrayMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="MiniTrayPocketNumber" xml:space="preserve">
+    <value>Pocket#</value>
+  </data>
+  <data name="BeginningCountTitle" xml:space="preserve">
+    <value>Beginning Count:</value>
+  </data>
+  <data name="EndingCountTitle" xml:space="preserve">
+    <value>Ending Count:</value>
+  </data>
+  <data name="EnteredQuantityTitle" xml:space="preserve">
+    <value>Entered Quantity:</value>
+  </data>
+  <data name="HeaderTimeTitle" xml:space="preserve">
+    <value>Date/Time</value>
+  </data>
+  <data name="HeaderTypeTitle" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="HeaderUserTitle" xml:space="preserve">
+    <value>Found By</value>
+  </data>
+  <data name="MedInfoTitle" xml:space="preserve">
+    <value>Med Info:</value>
+  </data>
+  <data name="TransactionQuantityTitle" xml:space="preserve">
+    <value>Transaction Quantity:</value>
+  </data>
+  <data name="DiscrepancyResolution" xml:space="preserve">
+    <value>Discrepancy Created</value>
+  </data>
+  <data name="DeviceRecoveryResolution" xml:space="preserve">
+    <value>Device Recovery Resolution</value>
+  </data>
+  <data name="RecoverStorageSpace" xml:space="preserve">
+    <value>Recover Storage Space</value>
+  </data>
+  <data name="UserNameTitle" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="ReasonMoreInfoTitle" xml:space="preserve">
+    <value>More Info</value>
+  </data>
+  <data name="ReasonTitle" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="TransactionHistory" xml:space="preserve">
+    <value>Transaction History</value>
+  </data>
+  <data name="NotesTitle" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="PhysicalCapacityCannotBeLessThanMax" xml:space="preserve">
+    <value>Physical Capacity cannot be less than Max.</value>
+  </data>
+  <data name="PhysicalMaxCannotBeLessThanQuantity" xml:space="preserve">
+    <value>Physical Capacity cannot be less than Quantity.</value>
+  </data>
+  <data name="ActiveOrdersIconLegend" xml:space="preserve">
+    <value>Active Orders</value>
+  </data>
+  <data name="ExpiredMedicationIconLegend" xml:space="preserve">
+    <value>Expired Medication</value>
+  </data>
+  <data name="StandardStockIconLegend" xml:space="preserve">
+    <value>Standard Stock</value>
+  </data>
+  <data name="WitnessRequiredIconLegend" xml:space="preserve">
+    <value>Witness Required</value>
+  </data>
+  <data name="ExpirationDateTitle" xml:space="preserve">
+    <value>Expiration Date:</value>
+  </data>
+  <data name="StorageUnitSize" xml:space="preserve">
+    <value>Storage Unit Size:</value>
+  </data>
+  <data name="UnverifiedBarcode" xml:space="preserve">
+    <value>The system cannot use an unverified barcode. Please contact your barcode administrator.</value>
+  </data>
+  <data name="ThereAreOnlyThisNumberOfItemLeftToBeMoved" xml:space="preserve">
+    <value>There are only {0} item(s) left to be moved.</value>
+  </data>
+  <data name="SkipWorkflowText" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="ThereAreMoreItemsToBeMoved" xml:space="preserve">
+    <value>There are {0} item(s) left to be moved.</value>
+  </data>
+  <data name="OverrideScanButtonTitle" xml:space="preserve">
+    <value>Unable to scan</value>
+  </data>
+  <data name="SecurityAccessIsRequired" xml:space="preserve">
+    <value>You do not have permission to access one or more items in the storage unit.</value>
+  </data>
+  <data name="ItemsLeftTobeMoved" xml:space="preserve">
+    <value>  Items are left to be moved.</value>
+  </data>
+  <data name="HeaderBeginningQtyTitle" xml:space="preserve">
+    <value>Beginning ({0})</value>
+  </data>
+  <data name="HeaderEndingQtyTitle" xml:space="preserve">
+    <value>Ending ({0})</value>
+  </data>
+  <data name="HeaderDiscrepancyTitle" xml:space="preserve">
+    <value>Discrepancy ({0})</value>
+  </data>
+  <data name="WitnessNameTitle" xml:space="preserve">
+    <value>Witness Name:</value>
+  </data>
+  <data name="EmptyReturnBinVerifyItemError" xml:space="preserve">
+    <value>Action not allowed. Verify an item from the list then try again.</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="CountAgainWarning" xml:space="preserve">
+    <value>Unexpected count value. Count again.</value>
+  </data>
+  <data name="DiscrepancyHeader" xml:space="preserve">
+    <value>Discrepancy Header</value>
+  </data>
+  <data name="ItemDoseStrengthConcentration" xml:space="preserve">
+    <value>{0:0.####} {1:0.####}/{2:0.####} {3:0.####} ({4:0.####} {5:0.####}) {6:0.####}</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="QuantityCannotBeGreaterThanOne" xml:space="preserve">
+    <value>Single-dose mini trays can only have a quantity of 0 or 1</value>
+  </data>
+  <data name="MaintenanceIconLegend" xml:space="preserve">
+    <value>Maintenance Mode</value>
+  </data>
+  <data name="Resolve" xml:space="preserve">
+    <value>Resolve</value>
+  </data>
+  <data name="RefillUnitOfMeasureFormat" xml:space="preserve">
+    <value>{0:0.####} {1} = 1 {2}</value>
+  </data>
+  <data name="OutdateCannotBeGreaterThanQuantityInThisLocation" xml:space="preserve">
+    <value>In drawer location {0}, Outdate quantity cannot be greater than the quantity ({1}).</value>
+  </data>
+  <data name="StorageSpaceStateFailureReasonGeneric" xml:space="preserve">
+    <value>Storage space is failed</value>
+  </data>
+  <data name="MultiDose" xml:space="preserve">
+    <value>Multi dose</value>
+  </data>
+  <data name="StorageSpace" xml:space="preserve">
+    <value>Storage Space</value>
+  </data>
+  <data name="TabItemCUBIEs" xml:space="preserve">
+    <value>CUBIEs</value>
+  </data>
+  <data name="TabItemMatrixPockets" xml:space="preserve">
+    <value>Matrix Pockets</value>
+  </data>
+  <data name="TabItemMiniTrays" xml:space="preserve">
+    <value>Mini Trays</value>
+  </data>
+  <data name="AssignLoadEmpty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="BlockedStatus" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="EmptyStatus" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="EmptyStorageSpaceState" xml:space="preserve">
+    <value>Storage space is empty</value>
+  </data>
+  <data name="LoadedLabel" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="LoadedStatus" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="PendedLabel" xml:space="preserve">
+    <value>Pended</value>
+  </data>
+  <data name="PendedStatus" xml:space="preserve">
+    <value>Pended</value>
+  </data>
+  <data name="SizeLabel" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="StateLabel" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="TypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UnPendLabel" xml:space="preserve">
+    <value>Unpend</value>
+  </data>
+  <data name="BlockedStorageSpaceState" xml:space="preserve">
+    <value>Storage space is blocked</value>
+  </data>
+  <data name="UnblockLabel" xml:space="preserve">
+    <value>Unblock</value>
+  </data>
+  <data name="QuantityOnlyAllowZero" xml:space="preserve">
+    <value>Drawer location {0} is a single-dose pocket and can only have a quantity of 0 </value>
+  </data>
+  <data name="FormularySelection" xml:space="preserve">
+    <value>Formulary Selection</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="PendAttributes" xml:space="preserve">
+    <value>Assign Attributes</value>
+  </data>
+  <data name="UnableToCountAnyMedicationDueToInaccessableStorageSpace" xml:space="preserve">
+    <value>Unable to count any medication due to inaccessible storage space.</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attributes</value>
+  </data>
+  <data name="AttributesSubTitle" xml:space="preserve">
+    <value>Data to be collected</value>
+  </data>
+  <data name="Par" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="RefillPoint" xml:space="preserve">
+    <value>Min (Refill Point)</value>
+  </data>
+  <data name="FailureReasonBlocked" xml:space="preserve">
+    <value>Storage space is blocked </value>
+  </data>
+  <data name="FailureReasonBlockedCannotUnblock" xml:space="preserve">
+    <value>Storage space is blocked. Insufficient privilege, user cannot unblock</value>
+  </data>
+  <data name="FailureReasonPended" xml:space="preserve">
+    <value>Storage space has pended items</value>
+  </data>
+  <data name="FailureReasonPendedCannotUnpend" xml:space="preserve">
+    <value>Storage space has pended items. Insufficient privilege, user cannot unpend</value>
+  </data>
+  <data name="UnableToCountSomeOfMedicationsDueToInaccessableStorageSpace" xml:space="preserve">
+    <value>Unable to count {0} medication(s) due to inaccessible storage space.</value>
+  </data>
+  <data name="MedicationsInThisCategoryAreInInaccessableStorageSpace" xml:space="preserve">
+    <value>Medications in this category are in inaccessible storage space(s).</value>
+  </data>
+  <data name="MedicationsInThisClassAreInInaccessableStorageSpace" xml:space="preserve">
+    <value>Medications in this category are in inaccessible storage space(s).</value>
+  </data>
+  <data name="LoadWorkflowText" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="SaveWorkflowText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ReturnedItemsInFailedDrawer" xml:space="preserve">
+    <value>The returned items are in a failed drawer. Recover the failed drawer then try again.</value>
+  </data>
+  <data name="PatientNameTitle" xml:space="preserve">
+    <value>Patient Name:</value>
+  </data>
+  <data name="External" xml:space="preserve">
+    <value>External</value>
+  </data>
+  <data name="InaccessibleSecurityGroupString" xml:space="preserve">
+    <value>You do not have permission to access the returned items.</value>
+  </data>
+  <data name="ItemDoseStrengthWithoutTotalVolumeWithConcentration" xml:space="preserve">
+    <value>{0:0.####} {1:0.####}/{2:0.####} {3:0.####} {4:0.####}</value>
+  </data>
+  <data name="UpdatingTitle" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="WitnessItemsSelectedAllRequired" xml:space="preserve">
+    <value>Please verify all items requiring witness</value>
+  </data>
+  <data name="RequiringAuthorizedWitnessString" xml:space="preserve">
+    <value>Insufficient privilege. User cannot act as witness.</value>
+  </data>
+  <data name="AssignLoadBlocked" xml:space="preserve">
+    <value>Unblocked</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value> - Cancelled</value>
+  </data>
+  <data name="CannotOutdateZeroCount" xml:space="preserve">
+    <value>There are no items to outdate.</value>
+  </data>
+  <data name="Matrix" xml:space="preserve">
+    <value>Matrix</value>
+  </data>
+  <data name="SetAttributes" xml:space="preserve">
+    <value>Minitray attributes</value>
+  </data>
+  <data name="AssignLoadPocketsCannottBeGreaterThanMax" xml:space="preserve">
+    <value>Number of pockets cannot be greater than the total configured ({0:F0}).</value>
+  </data>
+  <data name="ChangeType" xml:space="preserve">
+    <value>Change Type</value>
+  </data>
+  <data name="Enter3LettersOrMore" xml:space="preserve">
+    <value>Enter 3 letters or more</value>
+  </data>
+  <data name="SelectItemError" xml:space="preserve">
+    <value>Must select a formulary item to continue</value>
+  </data>
+  <data name="ThreeOrMoreCharsNeeded" xml:space="preserve">
+    <value>3 or more characters are needed to search</value>
+  </data>
+  <data name="InventoryItemFilterType_CustomRemovedDays" xml:space="preserve">
+    <value>{0} removed days</value>
+  </data>
+  <data name="UnpendItemQuestion" xml:space="preserve">
+    <value>Are you sure you want to unpend this item: {0}({1})?</value>
+  </data>
+  <data name="BlockLabel" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="RefillPointCannotBeEmpty" xml:space="preserve">
+    <value>Min Quantity cannot be empty.</value>
+  </data>
+  <data name="DaysUnused" xml:space="preserve">
+    <value>Days Unused</value>
+  </data>
+  <data name="NumberOfDays" xml:space="preserve">
+    <value>{0} Days</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="TrackingExpirationIconLegend" xml:space="preserve">
+    <value>Tracking Expiration</value>
+  </data>
+  <data name="TabItemRemoteStock" xml:space="preserve">
+    <value>Remote Stock</value>
+  </data>
+  <data name="TabItemSRM" xml:space="preserve">
+    <value>SRM / RM</value>
+  </data>
+  <data name="CubieFullHeightFilterTitle" xml:space="preserve">
+    <value>Full Height</value>
+  </data>
+  <data name="CubieHalfHeightFilterTitle" xml:space="preserve">
+    <value>Half Height</value>
+  </data>
+  <data name="FullHeightCubiePocketName" xml:space="preserve">
+    <value>BD Pyxis™ Full-Height CUBIE™ Pocket</value>
+  </data>
+  <data name="HalfHeightCubiePocketName" xml:space="preserve">
+    <value>BD Pyxis™ Legacy Half-Height CUBIE™ Pocket</value>
+  </data>
+  <data name="MatrixDrawerPocketFullName" xml:space="preserve">
+    <value>Matrix drawer pocket</value>
+  </data>
+  <data name="MiniDrawerPocketFullName" xml:space="preserve">
+    <value>Mini drawer pocket</value>
+  </data>
+  <data name="MiniMatrix" xml:space="preserve">
+    <value>Mini Matrix</value>
+  </data>
+  <data name="MiniTray" xml:space="preserve">
+    <value>Mini Tray</value>
+  </data>
+  <data name="RemoteStockPocketFullName" xml:space="preserve">
+    <value>Remote stock pocket</value>
+  </data>
+  <data name="SRMPocketFullName" xml:space="preserve">
+    <value>BD Pyxis™ SMART remote manager pocket</value>
+  </data>
+  <data name="Tower" xml:space="preserve">
+    <value>Tower</value>
+  </data>
+  <data name="TowerPocketFullName" xml:space="preserve">
+    <value>Tower pocket</value>
+  </data>
+  <data name="CannotPendSameItem" xml:space="preserve">
+    <value>This Item is already loaded, cannot pend same item.</value>
+  </data>
+  <data name="CurrentQtyLabel" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="DaysSincePended" xml:space="preserve">
+    <value>Days Since Pended</value>
+  </data>
+  <data name="CannotPendMatrixModeOnLoadedMiniTray" xml:space="preserve">
+    <value>The storage space is already loaded, cannot pend Matrix mode.</value>
+  </data>
+  <data name="BinHeight" xml:space="preserve">
+    <value>Bin Height</value>
+  </data>
+  <data name="BinHeightBinMatrixName" xml:space="preserve">
+    <value>Bin height bin</value>
+  </data>
+  <data name="FailureReasonAssignOverStandardStock" xml:space="preserve">
+    <value>Cannot pend over Standard Stock</value>
+  </data>
+  <data name="CountCannotBeLessThanZeroError" xml:space="preserve">
+    <value>In drawer location {0}, quantity cannot be less than 0.</value>
+  </data>
+  <data name="FailureReasonAssigned" xml:space="preserve">
+    <value>Storage space has pended items</value>
+  </data>
+  <data name="CannotAssignScannedItem" xml:space="preserve">
+    <value>Cannot pend scanned item.</value>
+  </data>
+  <data name="HasRefillPermission" xml:space="preserve">
+    <value>You have to unload the item in this storage location before loading.  You don't have unload permission during load and refill.</value>
+  </data>
+  <data name="OverMax" xml:space="preserve">
+    <value>Over Max</value>
+  </data>
+  <data name="RefillPointCannotGreaterThanPar" xml:space="preserve">
+    <value>Min cannot be greater than or equal to Max.</value>
+  </data>
+  <data name="RefillPointCannotGreaterThanTotalParForMiniDrawer" xml:space="preserve">
+    <value>The minimum number cannot be greater than the sum of all the pocket max quantities</value>
+  </data>
+  <data name="NumberOfPockets" xml:space="preserve">
+    <value>Number of Pockets</value>
+  </data>
+  <data name="IssueUnitLabel" xml:space="preserve">
+    <value>Issue Unit = {0}</value>
+  </data>
+  <data name="SetMinitrayMode" xml:space="preserve">
+    <value>Set tray mode</value>
+  </data>
+  <data name="UnableToUnloadInaccessableStorageSpaceOrInsufficientPemissions" xml:space="preserve">
+    <value>Unable to Unload {0} medication(s) due to inaccessible storage space or insufficient permissions.</value>
+  </data>
+  <data name="UnableToCountInaccessableStorageSpaceOrInsufficientPemissions" xml:space="preserve">
+    <value>Unable to count {0} medication(s) due to inaccessible storage space or insufficient permissions.</value>
+  </data>
+  <data name="UnableToCountSomeOfMedicationsDueToInsufficientPermissions" xml:space="preserve">
+    <value>Unable to count {0} medication(s) due to insufficient permissions.</value>
+  </data>
+  <data name="InitializingLoadProgressStatus" xml:space="preserve">
+    <value>Initializing Load ...</value>
+  </data>
+  <data name="LoadingProgressStatus" xml:space="preserve">
+    <value>Loading ...</value>
+  </data>
+  <data name="SavingProgressStatus" xml:space="preserve">
+    <value>Saving ...</value>
+  </data>
+  <data name="CurrentQuantity" xml:space="preserve">
+    <value>Current Quantity</value>
+  </data>
+  <data name="DaysFormat" xml:space="preserve">
+    <value>{0} days</value>
+  </data>
+  <data name="UnableToCountAnyMedicationDueToInaccessableStorageSpaceorPermission" xml:space="preserve">
+    <value>Unable to count medication due to inaccessible storage space or insufficient permissions.</value>
+  </data>
+  <data name="UnpendNoPermission" xml:space="preserve">
+    <value>You do not have permissions to unpend this item</value>
+  </data>
+  <data name="StorageSpaceAlreadyPended" xml:space="preserve">
+    <value>Storage space already pended at the server. Check with pharmacy. To use, please unpend then try again.</value>
+  </data>
+  <data name="EachUnitOfMeasureText" xml:space="preserve">
+    <value>EA</value>
+  </data>
+  <data name="ScannedItemNotAccessible" xml:space="preserve">
+    <value>Scanned item is not accessible or in a failed drawer</value>
+  </data>
+  <data name="NumberAvailable" xml:space="preserve">
+    <value>({0} available)</value>
+  </data>
+  <data name="DescriptionStatus" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PositionStringFormat" xml:space="preserve">
+    <value>#{0}</value>
+  </data>
+  <data name="CurrentText" xml:space="preserve">
+    <value>Current:</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not available</value>
+  </data>
+  <data name="HeaderPreviousUserTitle" xml:space="preserve">
+    <value>Prior User</value>
+  </data>
+  <data name="DiscrepancyCannotCountReturnBin" xml:space="preserve">
+    <value>This item cannot be counted because it is in the Return Bin</value>
+  </data>
+  <data name="DiscrepancyCannotCountUnloaded" xml:space="preserve">
+    <value>This item cannot be counted because it is no longer loaded</value>
+  </data>
+  <data name="AllItems" xml:space="preserve">
+    <value>All Items</value>
+  </data>
+  <data name="ShowList" xml:space="preserve">
+    <value>Show List</value>
+  </data>
+  <data name="ShowMap" xml:space="preserve">
+    <value>Show Map</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Refill" xml:space="preserve">
+    <value>Refill</value>
+  </data>
+  <data name="LoadToMax" xml:space="preserve">
+    <value>Load to Max:</value>
+  </data>
+  <data name="OverrideScanPrompt" xml:space="preserve">
+    <value>Would you like to override the scan for {0}?</value>
+  </data>
+  <data name="QuantityGreaterThanParWarning" xml:space="preserve">
+    <value>Quantity is greater than Max ({0:F0})</value>
+  </data>
+  <data name="Controlled" xml:space="preserve">
+    <value>Controlled</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="Expiring" xml:space="preserve">
+    <value>Expiring</value>
+  </data>
+  <data name="LastFillDate" xml:space="preserve">
+    <value>Last Fill:</value>
+  </data>
+  <data name="NAText" xml:space="preserve">
+    <value>: N/A</value>
+  </data>
+  <data name="DaysSinceLastUseOrLoad" xml:space="preserve">
+    <value>Days Unused / Loaded :</value>
+  </data>
+  <data name="ExpirationDateLoaded" xml:space="preserve">
+    <value>Enter earliest expiration date for loaded items</value>
+  </data>
+  <data name="BarcodeInvalidDevice" xml:space="preserve">
+    <value>The item you scanned is not valid for this device. Please scan another item.</value>
+  </data>
+  <data name="MedLoadedInSecuredLocation" xml:space="preserve">
+    <value>The scanned medication is loaded in a secured drawer.</value>
+  </data>
+  <data name="CloseSecuredDrawerToVerifyCount" xml:space="preserve">
+    <value>Please close the secured drawer and scan again to verify count.</value>
+  </data>
+  <data name="TabItemAccessibleMatrixPockets" xml:space="preserve">
+    <value>Accessible Matrix pockets</value>
+  </data>
+  <data name="MiniTrayMaxQuantityCannotBeGreaterThanPhysicalMax" xml:space="preserve">
+    <value>In pocket {0}, max quantity cannot be greater than Physical Capacity ({1:F0}).</value>
+  </data>
+  <data name="OverridePocketScanPrompt" xml:space="preserve">
+    <value>Would you like to override the scan for {0}?</value>
+  </data>
+  <data name="Counted" xml:space="preserve">
+    <value>Counted</value>
+  </data>
+  <data name="RefillMiniTrayPocketSubTitle" xml:space="preserve">
+    <value>Refill the pockets to match the representation below</value>
+  </data>
+  <data name="RemoveMiniTrayExpiredMedsSubTitle" xml:space="preserve">
+    <value>Enter how many meds you are removing from each pocket</value>
+  </data>
+  <data name="ItemDoseTotalVolumeWithoutStrengthAndConcentration" xml:space="preserve">
+    <value>{0:0.####} {1:0.####} {2:0.####}</value>
+  </data>
+  <data name="Destock" xml:space="preserve">
+    <value>Destock</value>
+  </data>
+  <data name="ToDestock" xml:space="preserve">
+    <value>Destock</value>
+  </data>
+  <data name="DestockViewTitle" xml:space="preserve">
+    <value>Destock</value>
+  </data>
+  <data name="StartDestockText" xml:space="preserve">
+    <value>Destock</value>
+  </data>
+  <data name="DestockTitle" xml:space="preserve">
+    <value>Destock Meds</value>
+  </data>
+  <data name="DestockSubTitle" xml:space="preserve">
+    <value>How many are you destocking?</value>
+  </data>
+  <data name="DestockCannotBeGreaterThanQuantity" xml:space="preserve">
+    <value>Destock quantity cannot be greater than the quantity ({0:0.####}).</value>
+  </data>
+  <data name="TrackingExpirationNo" xml:space="preserve">
+    <value>Tracking Expiration : No</value>
+  </data>
+  <data name="TrackingExpirationYes" xml:space="preserve">
+    <value>Tracking Expiration : Yes</value>
+  </data>
+  <data name="MiniDrawerMode" xml:space="preserve">
+    <value>{0} ({1} pockets)</value>
+  </data>
+  <data name="MiniTrayDescription" xml:space="preserve">
+    <value>Touch pocket to change the quantity</value>
+  </data>
+  <data name="MiniTrayFront" xml:space="preserve">
+    <value>Front</value>
+  </data>
+  <data name="TrayMax" xml:space="preserve">
+    <value>Tray Max: </value>
+  </data>
+  <data name="TrayQuantity" xml:space="preserve">
+    <value>Tray Quantity: </value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="FractionalDispense" xml:space="preserve">
+    <value>Remove Fractional Units</value>
+  </data>
+  <data name="FractionalDispenseNo" xml:space="preserve">
+    <value>Remove Fractional Units : No</value>
+  </data>
+  <data name="FractionalDispenseYes" xml:space="preserve">
+    <value>Remove Fractional Units : Yes</value>
+  </data>
+  <data name="CannotAssignFractionalToSingleMuliMini" xml:space="preserve">
+    <value>Cannot assign as single dose or multi dose mini, item is already loaded with ‘Remove Fractional Units’.</value>
+  </data>
+  <data name="MoveItems" xml:space="preserve">
+    <value>Move the items in the back to the front pockets</value>
+  </data>
+  <data name="CannotBeGreaterThan" xml:space="preserve">
+    <value>{0} cannot be greater than {1}</value>
+  </data>
+  <data name="MultiDoseMaxLabel" xml:space="preserve">
+    <value>Max/Pocket (Par)*</value>
+  </data>
+  <data name="TrayQuantityGreaterMaxSingleDoseMiniTray" xml:space="preserve">
+    <value>The tray quantity can't be greater than the tray max for single dose mini tray</value>
+  </data>
+  <data name="ReconciledTo" xml:space="preserve">
+    <value>Reconciled to:</value>
+  </data>
+  <data name="FractionalSettingChangeText" xml:space="preserve">
+    <value>The Fractional setting applies to all pockets for the item in the dispensing device.</value>
+  </data>
+  <data name="TrayQuantityMustEqualOriginalQuantity" xml:space="preserve">
+    <value>Tray quantity must equal original quantity</value>
+  </data>
+  <data name="RemoveFractionalExpiredMedsSubTitle" xml:space="preserve">
+    <value>How much are you removing?</value>
+  </data>
+  <data name="TrayRefillPoint" xml:space="preserve">
+    <value>Min/Tray (Refill Point)</value>
+  </data>
+  <data name="InvalidExpirationDate" xml:space="preserve">
+    <value>Invalid expiration date</value>
+  </data>
+  <data name="RxCheck" xml:space="preserve">
+    <value>RxCheck</value>
+  </data>
+  <data name="InventoryItemFilterType_HighRisk" xml:space="preserve">
+    <value>High Risk</value>
+  </data>
+  <data name="AdjustInventory" xml:space="preserve">
+    <value>Adjust Inventory</value>
+  </data>
+  <data name="RxCheckSubTitle" xml:space="preserve">
+    <value>Enter quantity of non dispensable meds</value>
+  </data>
+  <data name="RxCheckTitle" xml:space="preserve">
+    <value>RxCheck Med</value>
+  </data>
+  <data name="Adjust" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="AdjustAcceptInstruction" xml:space="preserve">
+    <value>Press 'Accept' if there is nothing to remove</value>
+  </data>
+  <data name="AdjustAmountGreatherThanCurrent" xml:space="preserve">
+    <value>Adjust quantity cannot be greater than current quantity</value>
+  </data>
+  <data name="AdjustInstruction" xml:space="preserve">
+    <value>Press 'Adjust' if there are un-dispensable items you need to remove</value>
+  </data>
+  <data name="AdjustInventoryComment" xml:space="preserve">
+    <value>Adjustment Comment</value>
+  </data>
+  <data name="AdjustInventoryReason" xml:space="preserve">
+    <value>Adjustment Reason</value>
+  </data>
+  <data name="CountItemsInPocket" xml:space="preserve">
+    <value>Count the number of items that are currently in the pocket</value>
+  </data>
+  <data name="EnterEarliestExpirationDateRemainingMeds" xml:space="preserve">
+    <value>Enter earliest expiration date for remaining meds</value>
+  </data>
+  <data name="NoItemToAdjust" xml:space="preserve">
+    <value>No items available to adjust</value>
+  </data>
+  <data name="LoadByDrawerDoor" xml:space="preserve">
+    <value>Load by Drawer/ Door</value>
+  </data>
+  <data name="Autoload" xml:space="preserve">
+    <value>Autoload</value>
+  </data>
+  <data name="PocketsPendingLoad" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="AutoloadConfirmationMessage" xml:space="preserve">
+    <value>The items pending load in the selected storage spaces will be recorded as loaded without physically loading or confirming pocket counts. The selected storage spaces bypass all formulary and station settings such as Witness to Load, Rx Check, Scan Required to Load, Expiration Date and Block Med.</value>
+  </data>
+  <data name="NotAutoloadedMessage" xml:space="preserve">
+    <value>{0} item(s) did not AutoLoad.  Please go to Load/Refill List to continue loading items.</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="GlobalFind" xml:space="preserve">
+    <value>Global Find</value>
+  </data>
+  <data name="LocalAreas" xml:space="preserve">
+    <value>Local Areas</value>
+  </data>
+  <data name="NonAccessibleAreas" xml:space="preserve">
+    <value>Non Accessible Areas</value>
+  </data>
+  <data name="OtherAreas" xml:space="preserve">
+    <value>Other Areas</value>
+  </data>
+  <data name="GlobalFindQuantity" xml:space="preserve">
+    <value>({0} {1})</value>
+  </data>
+  <data name="NoServerCommunication" xml:space="preserve">
+    <value>Server connection failed</value>
+  </data>
+  <data name="GlobalFindBlindCountQuantity" xml:space="preserve">
+    <value>(&gt; 0 {0})</value>
+  </data>
+  <data name="NoAlternateLocation" xml:space="preserve">
+    <value>No alternate locations found</value>
+  </data>
+  <data name="EnterMedicationName" xml:space="preserve">
+    <value>Enter medication name</value>
+  </data>
+  <data name="GlobalFindResults" xml:space="preserve">
+    <value>Global Find Results</value>
+  </data>
+  <data name="NoPriorTransactionsMessage" xml:space="preserve">
+    <value>No prior transactions found</value>
+  </data>
+  <data name="UnloadStandardStockMessage" xml:space="preserve">
+    <value>Do you want to skip the Standard Stock items?</value>
+  </data>
+  <data name="TwoItemsPendedError" xml:space="preserve">
+    <value>Two items are pended for the same pocket, select any one item to load</value>
+  </data>
+  <data name="UnloadActiveOrderMessage" xml:space="preserve">
+    <value>Do you want to skip the Active Order items?</value>
+  </data>
+  <data name="UnloadItems" xml:space="preserve">
+    <value>Unload Items</value>
+  </data>
+  <data name="UnloadSkipActiveOrders" xml:space="preserve">
+    <value>Skip Active Order Items</value>
+  </data>
+  <data name="UnloadSkipStandardStockItems" xml:space="preserve">
+    <value>Skip Standard Stock Items</value>
+  </data>
+  <data name="HeaderTransactionTitle" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="VerifyCurrentCount" xml:space="preserve">
+    <value>Verify Current Count</value>
+  </data>
+  <data name="OutdateButton" xml:space="preserve">
+    <value>Outdate</value>
+  </data>
+  <data name="AutoloadButton" xml:space="preserve">
+    <value>AutoLoad</value>
+  </data>
+  <data name="AllCubies" xml:space="preserve">
+    <value>All CUBIEs</value>
+  </data>
+  <data name="AvailableSlots" xml:space="preserve">
+    <value>Available Slots</value>
+  </data>
+  <data name="DaysUnusedLoadedFormat" xml:space="preserve">
+    <value>{0} Days Unused/Loaded</value>
+  </data>
+  <data name="EmptyCubies" xml:space="preserve">
+    <value>Empty CUBIEs</value>
+  </data>
+  <data name="CubieMap" xml:space="preserve">
+    <value>CUBIE™ Map</value>
+  </data>
+  <data name="ManageCubieMap" xml:space="preserve">
+    <value>Manage CUBIE™ Map</value>
+  </data>
+  <data name="CannotInsertCubieWithExpiredMed" xml:space="preserve">
+    <value>The inserted CUBIE™ has expired medication</value>
+  </data>
+  <data name="CannotInsertUncheckedCubie" xml:space="preserve">
+    <value>The CUBIE™ is unchecked</value>
+  </data>
+  <data name="UncheckedCubie" xml:space="preserve">
+    <value>Unchecked CUBIE™</value>
+  </data>
+  <data name="WantToContinueWithInsert" xml:space="preserve">
+    <value>Do you want to continue with the insert?</value>
+  </data>
+  <data name="CannotInsertWrongDestinationCubie" xml:space="preserve">
+    <value>Inserted CUBIE™ has wrong destination</value>
+  </data>
+  <data name="WrongDestination" xml:space="preserve">
+    <value>Wrong Destination</value>
+  </data>
+  <data name="CubieDrawerFailure" xml:space="preserve">
+    <value>CUBIE™ Drawer Failed</value>
+  </data>
+  <data name="CubieFailure" xml:space="preserve">
+    <value>CUBIE™ Failed</value>
+  </data>
+  <data name="CannotInsertCubieWithBlockedMed" xml:space="preserve">
+    <value>Cannot insert CUBIE™ with blocked medication</value>
+  </data>
+  <data name="BlockedMed" xml:space="preserve">
+    <value>Blocked Medication</value>
+  </data>
+  <data name="CannotInsertCubieWithInvalidMed" xml:space="preserve">
+    <value>Cannot insert CUBIE™ with invalid medication</value>
+  </data>
+  <data name="InvalidMed" xml:space="preserve">
+    <value>Invalid Medication</value>
+  </data>
+  <data name="EjectPendingMedQuestion" xml:space="preserve">
+    <value>Ejecting the CUBIE™ will cancel the pending medication. Do you want to continue?</value>
+  </data>
+  <data name="EjectPendingMed" xml:space="preserve">
+    <value>Eject Pending Medication</value>
+  </data>
+  <data name="CheckRejected" xml:space="preserve">
+    <value>Check Rejected</value>
+  </data>
+  <data name="CannotInsertCheckRejectedCubie" xml:space="preserve">
+    <value>The CUBIE™ was rejected during check</value>
+  </data>
+  <data name="FailedIconLegend" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="LoadedPendedIconLegend" xml:space="preserve">
+    <value>Loaded and Pended</value>
+  </data>
+  <data name="PendedIconLegend" xml:space="preserve">
+    <value>Pended</value>
+  </data>
+  <data name="WitnessOnEjectIconLegend" xml:space="preserve">
+    <value>Witness on Eject</value>
+  </data>
+  <data name="StockedOutCubies" xml:space="preserve">
+    <value>Stocked-out Cubies</value>
+  </data>
+  <data name="InventoryItemFilterType_BelowMax" xml:space="preserve">
+    <value>Below Max</value>
+  </data>
+  <data name="TabItemRefgAuxOpen" xml:space="preserve">
+    <value>REFR Open</value>
+  </data>
+  <data name="TabItemRefgAuxSecure" xml:space="preserve">
+    <value>REFR TrayPockets</value>
+  </data>
+  <data name="InventoryCount_RestrictedTab" xml:space="preserve">
+    <value>Restricted</value>
+  </data>
+  <data name="Worklist" xml:space="preserve">
+    <value>Worklist</value>
+  </data>
+  <data name="RestrictedStockIconLegend" xml:space="preserve">
+    <value>Restricted Stock</value>
+  </data>
+  <data name="InventoryItemFilterType_ExcessStock" xml:space="preserve">
+    <value>Excess stock</value>
+  </data>
+  <data name="TabItemDestructionBin" xml:space="preserve">
+    <value>Destruction Bin</value>
+  </data>
+  <data name="DEAFormRequiredIconLegend" xml:space="preserve">
+    <value>This location is associated to a different DEA License number</value>
+  </data>
+  <data name="DiscrepancyUnableToCount" xml:space="preserve">
+    <value>Unable to count for this discrepancy type.</value>
+  </data>
+  <data name="DiscrepancyHeaderUserTitle" xml:space="preserve">
+    <value>Found By:</value>
+  </data>
+  <data name="DiscrepancyHeaderTypeTitle" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="DiscrepancyHeaderPreviousUserTitle" xml:space="preserve">
+    <value>Prior User:</value>
+  </data>
+  <data name="DiscrepancyHeaderMedIdTitle" xml:space="preserve">
+    <value>Med ID:</value>
+  </data>
+  <data name="BarcodeNotPermitted" xml:space="preserve">
+    <value>The barcode you scanned is not permitted. Please scan a medication barcode.</value>
+  </data>
+  <data name="BarcodeNotAllowed" xml:space="preserve">
+    <value>The barcode you scanned is not allowed. Please scan a medication barcode.</value>
+  </data>
+</root>
